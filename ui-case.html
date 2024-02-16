@@ -3,13 +3,39 @@
 	<meta charset="UTF-8">
 	<meta name="viewport", content="width=devide-width, initial-scale=1.0">
 	<title>Eugene's portfolio</title>
-	<link rel="stylesheet" media="screen and (min-width: 1240px)" href="desktop-styles.css">
-	<link rel="stylesheet" media="screen and (min-width: 600px) and (max-width: 1239px)" href="tablet-styles.css">
-	<link rel="stylesheet" media="screen and (max-width: 599px)" href="mobile-styles.css">
+	<link rel="stylesheet" href="styles.css">
+
+	<script>
+			document.addEventListener('DOMContentLoaded', function() {
+			    const emailButton = document.getElementById('email-button');
+			    const emailToCopy = 'eo.belokurov@gmail.com'; // Change this to your predefined email
+
+			    emailButton.addEventListener('click', function() {
+			        // Copy email to clipboard
+			        navigator.clipboard.writeText(emailToCopy)
+			            .then(function() {
+			                // Change button text to indicate success
+			                emailButton.innerText = 'COPIED!';
+			                // Add class to apply clicked state
+			                emailButton.classList.add('clicked');
+
+			                // Reset button after a short delay
+			                setTimeout(function() {
+			                    emailButton.innerText = 'COPY @';
+			                    emailButton.classList.remove('clicked');
+			                }, 600); // Change delay as needed
+			            })
+			            .catch(function(err) {
+			                console.error('Failed to copy: ', err);
+			            });
+			    });
+			});
+		</script>
+
 </head>
 <body>
 	<main>
-		<header class="header el-padding">
+		<header class="header">
 			<div class="header-logo">
 				<a href="index.html">
 					<img src="logo.png" alt="logo">
@@ -17,34 +43,6 @@
 			</div>
 			<div class="header-buttons">
 				<button class="primary-button" id="email-button">COPY @</button>
-
-				<script>
-					document.addEventListener('DOMContentLoaded', function() {
-					    const emailButton = document.getElementById('email-button');
-					    const emailToCopy = 'eo.belokurov@gmail.com'; // Change this to your predefined email
-
-					    emailButton.addEventListener('click', function() {
-					        // Copy email to clipboard
-					        navigator.clipboard.writeText(emailToCopy)
-					            .then(function() {
-					                // Change button text to indicate success
-					                emailButton.innerText = 'COPIED!';
-					                // Add class to apply clicked state
-					                emailButton.classList.add('clicked');
-
-					                // Reset button after a short delay
-					                setTimeout(function() {
-					                    emailButton.innerText = 'COPY @';
-					                    emailButton.classList.remove('clicked');
-					                }, 600); // Change delay as needed
-					            })
-					            .catch(function(err) {
-					                console.error('Failed to copy: ', err);
-					            });
-					    });
-					});
-				</script>
-
 			</div>
 		</header>
 		<div class="case-study" id="ui-case">
@@ -52,7 +50,7 @@
 				<img src="ui-case-cover.png" alt="ui case cover">
 			</div>
 		</div>
-		<div class="el-padding">
+		<div>
 			<h1>Deep dive into crafting UI elements</h1>
 			<div class="ui-element" id="status-bar">
 				<h2>Status bar for background tasks</h2>
