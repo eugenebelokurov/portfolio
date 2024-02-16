@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport", content="width=devide-width, initial-scale=1.0">
+	<meta name="viewport", content="width=device-width, initial-scale=1.0">
 	<title>Eugene's portfolio</title>
 	<link rel="stylesheet" href="styles.css">
+
+	<script>
+			document.addEventListener('DOMContentLoaded', function() {
+			    const emailButton = document.getElementById('email-button');
+			    const emailToCopy = 'eo.belokurov@gmail.com'; // Change this to your predefined email
+
+			    emailButton.addEventListener('click', function() {
+			        // Copy email to clipboard
+			        navigator.clipboard.writeText(emailToCopy)
+			            .then(function() {
+			                // Change button text to indicate success
+			                emailButton.innerText = 'COPIED!';
+			                // Add class to apply clicked state
+			                emailButton.classList.add('clicked');
+
+			                // Reset button after a short delay
+			                setTimeout(function() {
+			                    emailButton.innerText = 'COPY @';
+			                    emailButton.classList.remove('clicked');
+			                }, 600); // Change delay as needed
+			            })
+			            .catch(function(err) {
+			                console.error('Failed to copy: ', err);
+			            });
+			    });
+			});
+		</script>
+
 </head>
 <body>
 	<main>
-		<header class="header el-padding">
+		<header class="header">
 			<div class="header-logo">
 				<a href="index.html">
 					<img src="logo.png" alt="logo">
 				</a>
 			</div>
-			<div class="header-buttons">
-				<button onclick="location.href='#case-studies'">CASES</button>
-				<button onclick="location.href='#about'">ABOUT</button>
-				<button onclick="location.href='#fun'">FUN</button>
-				<button onclick="location.href='#links'">LINKS</button>
+			<div class="nav-menu">
+				<nav>
+					<ul>
+						<li><button onclick="location.href='#case-studies'">CASES</button></li>
+						<li><button onclick="location.href='#about'">ABOUT</button></li>
+						<li><button onclick="location.href='#fun'">FUN</button></li>
+						<li><button onclick="location.href='#links'">LINKS</button></li>
+					</ul>
+				</nav>
 				<button class="primary-button" id="email-button">COPY @</button>
-
-				<script>
-					document.addEventListener('DOMContentLoaded', function() {
-					    const emailButton = document.getElementById('email-button');
-					    const emailToCopy = 'eo.belokurov@gmail.com'; // Change this to your predefined email
-
-					    emailButton.addEventListener('click', function() {
-					        // Copy email to clipboard
-					        navigator.clipboard.writeText(emailToCopy)
-					            .then(function() {
-					                // Change button text to indicate success
-					                emailButton.innerText = 'COPIED!';
-					                // Add class to apply clicked state
-					                emailButton.classList.add('clicked');
-
-					                // Reset button after a short delay
-					                setTimeout(function() {
-					                    emailButton.innerText = 'COPY @';
-					                    emailButton.classList.remove('clicked');
-					                }, 600); // Change delay as needed
-					            })
-					            .catch(function(err) {
-					                console.error('Failed to copy: ', err);
-					            });
-					    });
-					});
-				</script>
-
 			</div>
 		</header>
-		<div class="description el-padding">
+		<div class="description">
 			<p>I'M EUGENE</p>
 			<p>UX/UI DESIGNER</p>
 			<p>BASED IN LONDON, UK</p>
 		</div>
-		<div class="section el-padding" id="case-studies">
+		<div class="section" id="case-studies">
 			<h1>CASE STUDIES</h1>
 		</div>
 		<div class="case-studies">
@@ -86,10 +90,10 @@
 				</div>
 			</a>
 		</div>
-		<div class="section el-padding" id="about">
+		<div class="section" id="about">
 			<h1>GET TO KNOW ME BETTER</h1>
 		</div>
-		<div class="about el-padding">
+		<div class="about">
 			<p>I am a UX/UI Designer switched from Product Management. BS and MS in Computer Science. Looking for traction in UX/UI projects.</p>
 			<p>→ My experience with mobile and web apps
 				• UK-based B2B startup | Web app | Created major features sold as add-ons. Also redesigned sorting, filtering and settings functionality;
@@ -102,7 +106,7 @@
 				• Product management: I understand the whole process of working on tech products. I can manage a group of people and work as a part of the team;
 			• Founder experience: have a sense of costs associated with development. Can do design that earns money;• Computer Science: I have coding experience and can speak with engineers in the same language</p>
 		</div>
-		<div class="section el-padding" id="fun">
+		<div class="section" id="fun">
 			<h1>FUN STUFF I DO</h1>
 		</div>
 		<div class="case-studies">
@@ -122,15 +126,15 @@
 				<p>Occasionally I exercise in folding paper to interact with real world objects</p>
 			</div>
 		</div>
-		<div class="section el-padding" id="links-title">
+		<div class="section" id="links-title">
 			<h1>MY DIGITAL FOOTPRINT</h1>
 		</div>
-		<div class="el-padding" id="links">
+		<div id="links">
 			<a href="http://linkedin.com/in/eugenebelokurov/" target="_blank">LinkedIn &#8599;</a>
 			<a href="http://instagram.com/evgenybelokurov/" target="_blank">Instagram &#8599;</a>
 			<a href="https://www.are.na/eugene-belokurov/channels" target="_blank">Are.na &#8599;</a>
 		</div>
-		<footer class="el-padding">
+		<footer >
 			<p>Last updated: February, 2024</p>
 			<p>Made by me using ♡, HTML, CSS and JS</p>
 		</footer>
