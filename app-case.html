@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport", content="width=devide-width, initial-scale=1.0">
+	<title>Eugene's portfolio</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main>
+		<header class="header el-padding">
+			<div class="header-logo">
+				<a href="index.html">
+					<img src="logo.png" alt="logo">
+				</a>
+			</div>
+			<div class="header-buttons">
+				<button class="primary-button" id="email-button">COPY @</button>
+
+				<script>
+					document.addEventListener('DOMContentLoaded', function() {
+					    const emailButton = document.getElementById('email-button');
+					    const emailToCopy = 'eo.belokurov@gmail.com'; // Change this to your predefined email
+
+					    emailButton.addEventListener('click', function() {
+					        // Copy email to clipboard
+					        navigator.clipboard.writeText(emailToCopy)
+					            .then(function() {
+					                // Change button text to indicate success
+					                emailButton.innerText = 'COPIED!';
+					                // Add class to apply clicked state
+					                emailButton.classList.add('clicked');
+
+					                // Reset button after a short delay
+					                setTimeout(function() {
+					                    emailButton.innerText = 'COPY @';
+					                    emailButton.classList.remove('clicked');
+					                }, 600); // Change delay as needed
+					            })
+					            .catch(function(err) {
+					                console.error('Failed to copy: ', err);
+					            });
+					    });
+					});
+				</script>
+
+			</div>
+		</header>
+		<div class="case-study" id="end-to-end-case">
+			<div>
+				<img src="app-case-cover.png" alt="app case cover">
+			</div>
+		</div>
+		<div class="el-padding">
+			<h1>How I designed mobile app from scratch</h1>
+			<h2>Problem and idea</h2>
+			<ol>
+				<li>I am advanced english speaker. BUT I want to achieve native’s level</li>
+				<li>Need to grow my vocabulary
+					<ol>
+						<li>english word <-> translation. WRONG WAY</li>
+						<li>english word <-> definition. RIGHT WAY</li>
+					</ol>
+				</li>
+				<li>Need a tool to effortlessly save and practice relevant to me words</li>
+			</ol>
+			<h2>Competitors</h2>
+			<div class="logos">
+				<img src="app-case/logos/cambridge-dictionary-plus.png">
+				<img src="app-case/logos/elsa-speak.png">
+				<img src="app-case/logos/fluent-forever.png">
+				<img src="app-case/logos/lingvist.png">
+				<img src="app-case/logos/linq.png">
+				<img src="app-case/logos/lockcard.png">
+				<img src="app-case/logos/magoosh-gre.png">
+				<img src="app-case/logos/oxford-dictionary.png">
+				<img src="app-case/logos/word-of-the-day.png">
+				<img src="app-case/logos/word-up.png">
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Can save definition</th>
+						<th>Can practice</th>
+						<th>Revenue model</th>
+						<th># of users</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Oxford dictionary</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>Subscription</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Cambridge Dictionary +Plus</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>Subscription</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Fluent Forever</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>Subscription</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Word Up</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>Subscription</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Word of the Day</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>Subscription</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>LinQ</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>Subscription</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Lingvist</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>Subscription</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>GRE Vocabulary Flashcards</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>Subscription</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>ELSA Speak</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>Subscription</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Lockcard</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>Subscription</td>
+						<td>TBD</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2>Business model</h2>
+			<p>TBD</p>
+			<h2>Desing process</h2>
+			<h3>JTBD and sections</h3>
+			<p>I found the Job Stories are the most exhaustive way to frame the problem. They allow me to start with a problem rather then solution.</p>
+			<h4>Saving new word</h4>
+			<div class="ui-image">
+				<img src="app-case/jtbd-saving-new-word.png" alt="Saving new word JTBD">
+			</div>
+			<h4>Accessing saved words</h4>
+			<div class="ui-image">
+				<img src="app-case/jtbd-accessing-words.png" alt="Accessing saved words JTBD">
+			</div>
+			<h4>Practicing your words</h4>
+			<div class="ui-image">
+				<img src="app-case/jtbd-practicing.png" alt="Practicing your words JTBD">
+			</div>
+			<h3>Sketches and low fidelity wireframes</h3>
+			<p>I started with exploring the structure of modern printed dictionaries</p>
+			<div class="inspiration">
+				<img src="app-case/explore-structure.png">
+				<img src="app-case/explore-old-dict.png">
+				<img src="app-case/explore-book.png">
+				<img src="app-case/explore-structure-full.png">
+			</div>
+			<p>Researched other apps</p>
+			<div class="ui-image">
+				<img src="app-case/explore-references.png">
+			</div>
+			<p>Did sketches</p>
+			<div class="inspiration">
+				<img src="app-case/explore-sketch-one.png">
+				<img src="app-case/explore-sketch-two.png">
+			</div>
+			<p>Started with low-fidelity mockups</p>
+			<div class="ui-image">
+				<img src="app-case/low-fidelity-mockups.png">
+			</div>
+			<p>And experimented with forms</p>
+			<div class="ui-image">
+				<img src="app-case/experiments.png">
+			</div>
+			<h2>Colour palette</h2>
+			<p>Primary. The core of each dictionary are words and their background. Black and white. I wanted to stick with classics.</p>
+			<p>Secondary. Red often used to for accents e.g. in old books. Green is a complementary colour.</p>
+			<p>Tertiary. I needed a bunch of different colours to distinguish 8 parts of speech.</p>
+			<div class="ui-image">
+				<img src="app-case/colour-palette.png">
+			</div>
+			<p>I combined colours to make sure they work on each other</p>
+			<div class="ui-image">
+				<img src="app-case/combined-colours.png">
+			</div>
+			<h2>Typography</h2>
+			<p>TBD</p>
+			<h2>Result: high fidelity wireframes</h2>
+			<h3>Saving new words</h3>
+			<div class="ui-image">
+				<img src="app-case/prototype.png">
+			</div>
+			<h3>Accessing saved words</h3>
+			<div class="ui-image">
+				<img src="app-case/prototype.png">
+			</div>
+			<h3>Practicing your words</h3>
+			<div class="ui-image">
+				<img src="app-case/prototype.png">
+			</div>
+			<h2>Next steps/backlog</h2>
+			<ul>
+				<li>teacher’s side of interface</li>
+				<li>profile</li>
+				<li>subscription page</li>
+				<li>onboarding</li>
+				<li>web version</li>
+				<li>more user interviews</li>
+				<li>find engineering buddy or learn Swift myself</li>
+			</ul>
+			<div class="other-cases">
+				<button onclick="location.href='research-case.html'">
+					<p>RESEARCH CASE</p>
+					<p>&#8594;</p>
+				</button>
+				<button onclick="location.href='ui-case.html'">
+					<p>UI CASE</p>
+					<p>&#8594;</p>
+				</button>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

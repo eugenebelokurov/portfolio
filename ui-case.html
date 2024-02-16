@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport", content="width=devide-width, initial-scale=1.0">
+	<title>Eugene's portfolio</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main>
+		<header class="header el-padding">
+			<div class="header-logo">
+				<a href="index.html">
+					<img src="logo.png" alt="logo">
+				</a>
+			</div>
+			<div class="header-buttons">
+				<button class="primary-button" id="email-button">COPY @</button>
+
+				<script>
+					document.addEventListener('DOMContentLoaded', function() {
+					    const emailButton = document.getElementById('email-button');
+					    const emailToCopy = 'eo.belokurov@gmail.com'; // Change this to your predefined email
+
+					    emailButton.addEventListener('click', function() {
+					        // Copy email to clipboard
+					        navigator.clipboard.writeText(emailToCopy)
+					            .then(function() {
+					                // Change button text to indicate success
+					                emailButton.innerText = 'COPIED!';
+					                // Add class to apply clicked state
+					                emailButton.classList.add('clicked');
+
+					                // Reset button after a short delay
+					                setTimeout(function() {
+					                    emailButton.innerText = 'COPY @';
+					                    emailButton.classList.remove('clicked');
+					                }, 600); // Change delay as needed
+					            })
+					            .catch(function(err) {
+					                console.error('Failed to copy: ', err);
+					            });
+					    });
+					});
+				</script>
+
+			</div>
+		</header>
+		<div class="case-study" id="ui-case">
+			<div>
+				<img src="ui-case-cover.png" alt="ui case cover">
+			</div>
+		</div>
+		<div class="el-padding">
+			<h1>Deep dive into crafting UI elements</h1>
+			<div class="ui-element" id="status-bar">
+				<h2>Status bar for background tasks</h2>
+				<p>Popup elements that indicates that there are tasks performed in the background</p>
+				<h3>Anatomy</h3>
+				<div class="ui-image">
+					<img src="ui-case-status-bar-anatomy.png" alt="Status bar anatomy">
+				</div>
+				<h3>Behaviour</h3>
+				<div class="ui-image">
+					<img src="ui-case-status-bar-behaviour.png" alt="Status bar behaviour">
+				</div>
+				<h3>Specs</h3>
+				<div class="ui-image">
+					<img src="ui-case-status-bar-specs.png" alt="Status bar specs">
+				</div>
+			</div>
+
+			<div class="ui-element" id="flash-card">
+				<h2>Flash card</h2>
+				<!-- <p>Popup elements that indicates that there are tasks performed in the background</p> -->
+				<h3>Anatomy</h3>
+				<div class="ui-image">
+					<img src="ui-case-flash-card-anatomy.png" alt="Flash card anatomy">
+				</div>
+				<h3>Behaviour</h3>
+				<h4>Learning state</h4>
+				<div class="multi-img">
+					<div class="ui-image">
+						<img src="ui-case-flash-card-behaviour.png" alt="Status bar behaviour">
+					</div>
+					<div class="ui-image">
+						<img src="ui-case-flash-card-behaviour.png" alt="Status bar behaviour">
+					</div>
+					<div class="ui-image">
+						<img src="ui-case-flash-card-behaviour.png" alt="Status bar behaviour">
+					</div>
+				</div>
+				<h4>Practicing state</h4>
+				<div class="ui-image">
+					<img src="ui-case-flash-card-behaviour-learing.png" alt="Flash card behaviour learning">
+				</div>
+				<h3>Specs</h3>
+				<div class="ui-image">
+					<img src="ui-case-flash-card-specs.png" alt="Flash card specs">
+				</div>
+			</div>
+
+			<div class="ui-element" id="word-definitions">
+				<h2>Word definitions</h2>
+				<!-- <p>Popup elements that indicates that there are tasks performed in the background</p> -->
+				<h3>Anatomy</h3>
+				<div class="ui-image">
+					<img src="ui-case-word-definition-anatomy.png" alt="Word definition anatomy">
+				</div>
+				<h3>Behaviour</h3>
+				<div class="ui-image">
+					<img src="ui-case-word-definition-behaviour.png" alt="Word definition behaviour">
+				</div>
+				<h3>Specs</h3>
+				<div class="ui-image">
+					<img src="ui-case-word-definition-specs.png" alt="Word definition specs">
+				</div>
+			</div>
+			<div class="other-cases">
+				<button onclick="location.href='research-case.html'">
+					<p>RESEARCH CASE</p>
+					<p>&#8594;</p>
+				</button>
+				<button onclick="location.href='app-case.html'">
+					<p>END-TO-END CASE</p>
+					<p>&#8594;</p>
+				</button>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
