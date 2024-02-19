@@ -40,13 +40,13 @@ nav ul li:last-child {
     margin-right: 0;
 }
 
-a {
+/*a {
 	font-size: 20px;
-}
+}*/
 
-a:link a:visited {
+/*a:link a:visited {
 	border-bottom-color: #686868;
-}
+}*/
 
 a:hover {
 	color: #686868;
@@ -93,7 +93,7 @@ button:active {
 	width: 160px;
 }
 
-.description {
+#description {
 	display: flex;
 	flex-flow: column;
 
@@ -101,7 +101,7 @@ button:active {
 	margin-bottom: 64px;
 }
 
-.description p {
+#description p {
 	margin-top: 0px;
 	margin-bottom: 0px;
 
@@ -111,23 +111,12 @@ button:active {
 
 .section {
 	display: flex;
-	flex-direction: row;
-	gap: 8px;
-	overflow: hidden;
-	justify-content: flex-start;
-	align-items: center;
 }
 
 .section h1 {
 	color: #FFFFFF;
 	background-color: #000000;
-	font-size: 2rem;
 	font-weight: 600;
-}
-
-.section img {
-	margin-top: 64px;
-	margin-bottom: 64px;
 }
 
 .case-studies {
@@ -136,40 +125,60 @@ button:active {
 	gap: 80px;
 }
 
-.case-study {
-	display: flex;
-	gap: 24px;
-	flex-direction: column;
+.case-studies a {
+	text-decoration: none;
+}
+
+.cover {
 	background-color: #282828;
 	padding-top: 24px;
 	padding-bottom: 32px;
-	padding-left: 200px;
-	padding-right: 200px;
 }
 
-.case-study h1 {
+.cover-content {
+	display: flex;
+	gap: 24px;
+	flex-direction: column;
+}
+
+.cover-content h1 {
 	color: #FFFFFF;
-	font-size: 2rem;
 }
 
-.case-study p {
+.cover-content p {
 	color: #FFFFFF;
 }
 
-.case-study div {
+.centered-img {
 	display: flex;
 	justify-content: center;
 }
 
-.case-study img {
+.cover-content img {
 	flex: 1; /* Make child elements grow to fill the available space */
     max-width: calc(33.33% - 24px); /* Set maximum width for child elements */
     max-width: 80%; /* Allow the image to resize based on container width */
 }
 
-.case-study a {
+.cover-content a {
 	color: #FFFFFF;
 	font-weight: 600;
+}
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	column-gap: 8px;
+	row-gap: 8px;
+	width: 100%;
+}
+
+.tag {
+	border: 2px solid #FFFFFF;
+	border-radius: 64px;
+	padding: 8px 12px 8px 12px;
+	margin: 0px;
 }
 
 #links {
@@ -177,6 +186,7 @@ button:active {
 	flex-direction: column;
 	gap: 16px;
 }
+
 
 /*ui-case styles start*/
 
@@ -215,6 +225,7 @@ button:active {
 }
 
 /*ui-case styles end*/
+
 
 /*app-case styles start*/
 
@@ -286,62 +297,120 @@ footer {
 	padding-top: 80px;
 }
 
+footer p {
+	width: 50%;
+}
+
+#tech {
+	text-align: right;
+}
+
 /* Phone */
 @media only screen and (max-width: 599px) {
-    body {
-        margin: 16px;
+    .main-margin {
+        margin-left: 16px;
+        margin-right: 16px;
     }
 
     nav ul {
     	display: none;
     }
 
-    .case-study {
-    	padding-left: 32px;
-		padding-right: 32px;
+    .main-padding {
+    	padding-left: 16px;
+		padding-right: 16px;
     }
+
+    h1 {
+    	font-size: 1.5rem;
+    }
+
+    .cover-content img {
+    	max-width: 100%;
+    }
+
+    footer {
+    	width: 100%;
+    	flex-direction: column;
+    }
+
+    footer p {
+		width: 100%;
+	}
+
+	#tech {
+		text-align: left;
+	}
 }
 
 /* Small tablet */
 @media only screen and (min-width: 600px) and (max-width: 904px) {
-    body {
-        margin: 32px;
+    .main-margin {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+
+    .main-padding {
+    	padding-left: 32px;
+		padding-right: 32px;
+    }
+
+    h1 {
+    	font-size: 2rem;
     }
 }
 
 /* Big tablet */
 @media only screen and (min-width: 905px) and (max-width: 1239px) {
-    body {
-        margin: calc((100vw - 905px) * 0.05);
+    .main-margin {
+		width: 840px;
+		margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-padding {
+    	width: 840px;
+		margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1 {
+    	font-size: 2rem;
     }
 }
 
 /* Medium laptop */
 @media only screen and (min-width: 1240px) and (max-width: 1439px) {
-    body {
+    .main-margin {
         margin-left: 200px;
         margin-right: 200px;
     }
-}
 
-/* Big laptop */
-@media only screen and (min-width: 1440px) {
-    body {
-        margin: calc((100vw - 1440px) * 0.05);
+    .main-padding {
+    	padding-left: 200px;
+		padding-right: 200px;
+    }
+
+    h1 {
+    	font-size: 2rem;
     }
 }
 
-/* Main content scaling */
-@media only screen and (max-width: 1239px) {
-    main {
-        max-width: 840px;
-        margin: auto;
-    }
-}
-
+/* Large desktop */
 @media only screen and (min-width: 1440px) {
-    main {
-        max-width: 1040px;
-        margin: auto;
+    .main-margin {
+        width: 1040px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-padding {
+    	width: 1040px;
+		margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1 {
+    	font-size: 2rem;
     }
 }
