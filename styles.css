@@ -12,7 +12,7 @@ main {
 	flex-direction: column;
 }
 
-header {
+.header {
 	font-weight: 900;
 	display: flex;
 	justify-content: space-between;
@@ -154,7 +154,8 @@ button:active {
 	justify-content: center;
 }
 
-.cover-content img {
+.cover-content img,
+.cover-secondary img {
 	flex: 1; /* Make child elements grow to fill the available space */
     max-width: calc(33.33% - 24px); /* Set maximum width for child elements */
     max-width: 80%; /* Allow the image to resize based on container width */
@@ -195,12 +196,10 @@ button:active {
 	flex-direction: column;
 }
 
-.ui-image {
+.cover-secondary {
 	background-color: #F7F7F7;
-	padding-top: 48px;
-	padding-bottom: 48px;
-	padding-left: 64px;
-	padding-right:64px;
+	padding-top: 24px;
+	padding-bottom: 32px;
 }
 
 .ui-image img {
@@ -329,10 +328,10 @@ footer p {
     	max-width: 100%;
     }
 
-    footer {
+    /*footer {
     	width: 100%;
     	flex-direction: column;
-    }
+    }*/
 
     footer p {
 		width: 100%;
