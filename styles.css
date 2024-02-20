@@ -135,8 +135,8 @@ button:active {
 
 .cover {
 	background-color: #282828;
-	padding-top: 24px;
-	padding-bottom: 32px;
+	padding-top: 32px;
+	padding-bottom: 48px;
 }
 
 .cover-content {
@@ -185,9 +185,8 @@ button:active {
 }
 
 .cover-content img {
-	flex: 1; /* Make child elements grow to fill the available space */
-    max-width: calc(33.33% - 24px); /* Set maximum width for child elements */
-    max-width: 80%; /* Allow the image to resize based on container width */
+	flex: 1;
+    max-width: 100%; 
 }
 
 .cover-secondary img {
@@ -202,13 +201,35 @@ button:active {
 	font-weight: 600;
 }
 
+.cover-action-button p {
+	border: 2px solid #FFFFFF;
+	color: #FFFFFF;
+	background-color: transparent;
+	border-radius: 64px;
+	display: flex;
+	align-items: center;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin: 0px;
+	height: 100%;
+
+	font-size: 2rem;
+}
+
+.tag-and-button {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 32px;
+}
+
 .tags {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	column-gap: 8px;
 	row-gap: 8px;
-	width: 100%;
+/*	width: 100%;*/
 }
 
 .tag {
