@@ -259,13 +259,6 @@ button:active {
 	padding-bottom: 32px;
 }
 
-.ui-image img {
-	flex: 1; /* Make child elements grow to fill the available space */
-    max-width: calc(33.33% - 24px); /* Set maximum width for child elements */
-    max-width: 80%; /* Allow the image to resize based on container width */
-    max-height: 900px;
-}
-
 .multi-img {
 	display: flex;
 	flex-direction: row;
@@ -296,7 +289,8 @@ video {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 96px;
+	column-gap: 16%;
+	row-gap: 8%;
 
 	background-color: #F7F7F7;
 	padding-top: 48px;
@@ -305,9 +299,32 @@ video {
 	padding-right:64px;
 }
 
-.logos img  {
-	max-width: 80px;
-	border-radius: 16px;
+.logo {
+	display: flex;
+	flex-direction: column;
+/*	justify-content: space-between;*/
+	gap: 16px;
+/*	align-items: center;*/
+	max-width: 10%;
+	height: auto;
+}
+
+.logo img  {
+	flex: 1;
+	max-width: 100%;
+	min-width: 48px;
+	height: auto;
+	border-radius: 16%;
+}
+
+.logo p {
+	text-align: center;
+	margin-top: 0px;
+}
+
+.table-container {
+	overflow-x: auto; /* Enable horizontal scrolling */
+    max-width: 100%; /* Ensure container fits the screen */
 }
 
 table {
@@ -323,6 +340,7 @@ th, td {
     border: 1px solid #ddd; /* Set border color for table cells */
     padding: 8px; /* Add padding to table cells */
     text-align: left; /* Align text to the left within table cells */
+    width: 16%;
 }
 
 .inspiration {
@@ -340,6 +358,31 @@ th, td {
 
 .inspiration img  {
 	max-width: 300px;
+}
+
+.jtbd {
+	background-color: #69D978;
+	border: 3px solid #000000;
+	border-radius: 16px;
+	padding: 16px;
+}
+
+.jtbd-two-columns {
+	display: flex;
+	flex-direction: row;
+	gap: 64px;
+}
+
+.jtbs-column {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.jtbd-list-item {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
 }
 
 /*app-case styles end*/
