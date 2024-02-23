@@ -12,17 +12,11 @@ main {
 	flex-direction: column;
 }
 
-.header {
-	font-weight: 900;
+section {
+/*	margin-bottom: 6rem;*/
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.nav-menu {
-	display: flex;
-	flex-direction: row;
-	gap: 8px;
+	flex-direction: column;
+	gap: 1rem;
 }
 
 nav ul {
@@ -33,7 +27,7 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin-right: 8px;
+    margin-right: 0.5rem;
 }
 
 nav ul li:last-child {
@@ -78,6 +72,47 @@ button:hover {
 
 button:active {
 	background-color: #989898;
+}
+
+h1, h2, h3, h4, p, ol, ul {
+	margin: 0px;
+}
+
+.s1-gap {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+}
+
+.s2-gap {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.s3-gap {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.s4-gap {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.header {
+	font-weight: 900;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-menu {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
 }
 
 .primary-button {
@@ -126,7 +161,7 @@ button:active {
 .case-studies {
 	display: flex;
 	flex-direction: column;
-	gap: 80px;
+	gap: 4rem;
 }
 
 .case-studies a {
@@ -135,13 +170,13 @@ button:active {
 
 .cover {
 	background-color: #282828;
-	padding-top: 32px;
-	padding-bottom: 48px;
+	padding-top: 2rem;
+	padding-bottom: 3rem;
 }
 
 .cover-content {
 	display: flex;
-	gap: 24px;
+	gap: 1rem;
 	flex-direction: column;
 }
 
@@ -242,7 +277,7 @@ button:active {
 #links {
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
+	gap: 1rem;
 }
 
 
@@ -452,6 +487,10 @@ th, td {
     .main-padding {
     	padding-left: 32px;
 		padding-right: 32px;
+    }
+
+    nav ul {
+    	display: none;
     }
 
     h1 {
