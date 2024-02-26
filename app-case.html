@@ -36,8 +36,8 @@
 <body>
 	<header class="header main-margin">
 		<div class="header-logo">
-			<a href="index.html">
-				<img src="logo.png" alt="logo">
+			<a href="index.html" id="home">
+				<p>HOME</p>
 			</a>
 		</div>
 		<div class="header-buttons">
@@ -56,7 +56,9 @@
 		<div class="main-margin s1-gap">
 			<h1>How I designed mobile app from scratch</h1>
 			<section>
-				<h2>Problem and idea</h2>
+				<div class="section">
+					<h2>Problem and idea</h2>
+				</div>
 				<ol>
 					<li>I am advanced english speaker. BUT I want to achieve native’s level</li>
 					<li>Need to grow my vocabulary
@@ -69,7 +71,9 @@
 				</ol>
 			</section>
 			<section>
-				<h2>Competitors</h2>
+				<div class="section">
+					<h2>Competitors</h2>
+				</div>
 				<div class="table-container">
 					<table>
 						<thead>
@@ -176,193 +180,41 @@
 				</div>
 			</section>
 			<section>
-				<h2>Business model</h2>
+				<div class="section">
+					<h2>Business model</h2>
+				</div>
 				<p>TBD</p>
 			</section>
 			<section class="s2-gap">
-				<h2>Design process</h2>
+				<div class="section">
+					<h2>Design process</h2>
+				</div>
 				<div class="s3-gap">
 					<h3>JTBD and sections</h3>
 					<p>I found the Job Stories framework the most exhaustive way to frame my ideation process. It allows me to start with a problem rather than solution.</p>
 					<div class="s4-gap">
 						<h4>Saving new word</h4>
-						<div class="jtbd-two-columns">
-							<div class="jtbs-column">
-								<div class="jtbd-list-item">
-									<p>1.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> have a word which meaning I don’t know,</p>
-										<p><strong>I want</strong> to know what it means,</p>
-										<p><strong>So I can</strong> choose the most relevant ones and save it for later</p>
-									</div>
-								</div>
-								<div class="jtbd-list-item">
-									<p>1.1.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> have a word which meaning I don’t know,</p>
-										<p><strong>I want</strong> to read through available meanings,</p>
-										<p><strong>So I can</strong> choose the most relevant ones and save it for later</p>
-									</div>
-								</div>
-								<div class="jtbd-list-item">
-									<p>1.2.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> have a word which meaning I don’t know and I have the source,</p>
-										<p><strong>I want</strong> to know the most relevant definition (if the word have multiple definitions),</p>
-										<p><strong>So I can</strong> choose save the word for later and don’t spend time choosing the right definition</p>
-									</div>
-								</div>
-							</div>
-							<div class="jtbs-column">
-								<div class="jtbd-list-item">
-									<p>2.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> have a word to add and it appeared that I already saved it,</p>
-										<p><strong>I want</strong> to see that if I already saved it,</p>
-										<p><strong>So I can</strong> don’t create any duplicates</p>
-									</div>
-								</div>
-								<div class="jtbd-list-item">
-									<p>3.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> have a word to add and it has multiple meanings,</p>
-										<p><strong>I want</strong> to be able to save several of them in on go,</p>
-										<p><strong>So I can</strong> don’t waste time saving them one by one</p>
-									</div>
-								</div>
-								<div class="jtbd-list-item">
-									<p>4.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> have a word to add and its definition has an unknown words as well,</p>
-										<p><strong>I want</strong> to get the definition of these words without leaving the initial word not saved,</p>
-										<p><strong>So I can</strong> don’t loose any words</p>
-									</div>
-								</div>
-								<div class="jtbd-list-item">
-									<p>5.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> have a word which meaning I don’t know but there is no such word in the dictionary,</p>
-										<p><strong>I want</strong> to see the closest words and be able to save one of the suggested options,</p>
-										<p><strong>So I can</strong> still learn it</p>
-									</div>
-								</div>
+						<div class="cover-secondary">
+							<div class="centered-img">
+								<img src="app-case/jtbd-saving-new-word.png" alt="jtbd saving new words">
 							</div>
 						</div>
-					</div>
 					<div class="s4-gap">
 						<h4>Accessing saved words</h4>
-						<div class="jtbd-two-columns">
-							<div class="jtbs-column">
-								<div class="jtbd-list-item">
-									<p>1.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> need to revise the word I added recently,</p>
-										<p><strong>I want</strong> to search for it or manually find it,</p>
-										<p><strong>So I can</strong> can check the meaning</p>
-									</div>
-								</div>
-								<div class="jtbd-list-item">
-									<p>2.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> revising the word I already added,</p>
-										<p><strong>I want</strong> to be able to check its other meanings and origins,</p>
-										<p><strong>So I can</strong> make sure I got a sense of a range of meanings</p>
-									</div>
-								</div>
-								<div class="jtbd-list-item">
-									<p>2.1.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> revising the word I already added,</p>
-										<p><strong>I want</strong> check meanings of other words in definitions,</p>
-										<p><strong>So I can</strong> can save them to my dictionary</p>
-									</div>
-								</div>
-							</div>
-							<div class="jtbs-column">
-								<div class="jtbd-list-item">
-									<p>3.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> have a fuzzy question,</p>
-										<p><strong>I want</strong> to ask the app in natural language,</p>
-										<p><strong>So I can</strong> get the response to my question</p>
-									</div>
-								</div>
-								<div class="jtbd-list-item">
-									<p>3.1.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> have a fuzzy question,</p>
-										<p><strong>I want</strong> to find the right word to use,</p>
-										<p><strong>So I can</strong> get a word based on definition</p>
-									</div>
-								</div>
+						<div class="cover-secondary">
+							<div class="centered-img">
+								<img src="app-case/jtbd-saving-new-word.png" alt="jtbd saving new words">
 							</div>
 						</div>
-					</div>
 					<div class="s4-gap">
 						<h4>Practicing your words</h4>
-						<div class="jtbd-two-columns">
-							<div class="jtbs-column">
-								<div class="jtbd-list-item">
-									<p>1.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> in the mood for practicing words,</p>
-										<p><strong>I want</strong> to start my practice session in one click within an app,</p>
-										<p><strong>So I can</strong> don’t skip or avoid learning new words</p>
-									</div>
-								</div>
-								<div class="jtbd-list-item">
-									<p>2.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> started practice session,</p>
-										<p><strong>I want</strong> to see the part of the speech,</p>
-										<p><strong>So I can</strong> have a better understand of the meaning I have to recollect</p>
-									</div>
-								</div>
-								<div class="jtbd-list-item">
-									<p>2.1.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> practice the definitions,</p>
-										<p><strong>I want</strong> to type the definition in my own words,</p>
-										<p><strong>So I can</strong> practice active learning</p>
-									</div>
-								</div>
-								<div class="jtbd-list-item">
-									<p>3.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> finished my practice session,</p>
-										<p><strong>I want</strong> to stay motivated,</p>
-										<p><strong>So I can</strong> know if I expanding my vocabulary</p>
-									</div>
-								</div>
-							</div>
-							<div class="jtbs-column">
-								<div class="jtbd-list-item">
-									<p>4.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> practice the definitions,</p>
-										<p><strong>I want</strong> to see the example of the word used,</p>
-										<p><strong>So I can</strong> better understand its meaning</p>
-									</div>
-								</div>
-								<div class="jtbd-list-item">
-									<p>4.1.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> practice the definitions,</p>
-										<p><strong>I want</strong> to get more examples of how the word used,</p>
-										<p><strong>So I can</strong> better understand its meaning</p>
-									</div>
-								</div>
-								<div class="jtbd-list-item">
-									<p>4.2.</p>
-									<div class="jtbd">
-										<p><strong>When I</strong> practice the definitions,</p>
-										<p><strong>I want</strong> to know pronunciation,</p>
-										<p><strong>So I can</strong> I know how to say the word</p>
-									</div>
-								</div>
+						<div class="cover-secondary">
+							<div class="centered-img">
+								<img src="app-case/jtbd-practicing.png" alt="jtbd saving new words">
 							</div>
 						</div>
-					</div>
+						
+						
 				</div>
 				<div class="s3-gap">
 					<h3>Sketches and low fidelity wireframes</h3>
@@ -402,7 +254,9 @@
 				</div>
 			</section>
 			<section>
-				<h2>Colour palette</h2>
+				<div class="section">
+					<h2>Colour palette</h2>
+				</div>
 				<p>Primary. The core of each dictionary are words and their background. Black and white. I wanted to stick with classics.</p>
 				<p>Secondary. Red often used to for accents e.g. in old books. Green is a complementary colour.</p>
 				<p>Tertiary. I needed a bunch of different colours to distinguish 8 parts of speech.</p>
@@ -419,12 +273,16 @@
 				</div>
 			</section>
 			<section>
-				<h2>Typography</h2>
+				<div class="section">
+					<h2>Typography</h2>
+				</div>
 				<p>TBD</p>
 			</section>
 			<section>
 				<div class="s2-gap">
-					<h2>Result: high fidelity wireframes</h2>
+					<div class="section">
+						<h2>Result: high fidelity wireframes</h2>
+					</div>
 					<div class="s2-gap">
 						<h3>Saving new words</h3>
 						<div class="video-layout">
@@ -467,7 +325,9 @@
 				</div>
 			</section>
 			<section>
-				<h2>Next steps/backlog</h2>
+				<div class="section">
+					<h2>Next steps/backlog</h2>
+				</div>
 				<ul>
 					<li>teacher’s side of interface</li>
 					<li>profile</li>

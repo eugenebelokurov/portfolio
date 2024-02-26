@@ -1,7 +1,127 @@
+/* Regular */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('JetBrainsMono-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('JetBrainsMono-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Extra Bold */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('JetBrainsMono-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Extra Bold Italic */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('JetBrainsMono-ExtraBoldItalic.woff2') format('woff2');
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* Extra Light */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('JetBrainsMono-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* Extra Light Italic */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('JetBrainsMono-ExtraLightItalic.woff2') format('woff2');
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* Light */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('JetBrainsMono-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Light Italic */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('JetBrainsMono-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Medium */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('JetBrainsMono-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Medium Italic */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('JetBrainsMono-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Semi Bold */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('JetBrainsMono-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Semi Bold Italic */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('JetBrainsMono-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Thin */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('JetBrainsMono-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Thin Italic */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('JetBrainsMono-ThinItalic.woff2') format('woff2');
+    font-weight: 100;
+    font-style: italic;
+}
+
 /* Base styles */
 body {
     margin: 0;
-    font-family: system-ui, sans-serif;
+    font-family: 'JetBrains Mono', monospace;
 	font-size: 16px;
 	font-weight: 400;
 	max-width: 100vw;
@@ -19,19 +139,10 @@ section {
 	gap: 1rem;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 0.5rem;
-}
-
-nav ul li:last-child {
-    margin-right: 0;
+nav {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
 }
 
 img {
@@ -50,19 +161,22 @@ a:hover {
 	color: #686868;
 }
 
+
 .header-logo img {
-	height: 75.5px;
+	height: 70px;
 }
 
 button {
 	padding: 24px 32px;
-	font-size: 20px;
+	font-size: 1.5rem;
 	color: #000000;
 	font-weight: bold;
 	background-color: #F1F0F0;
 	border: none;
 	border-radius: 8px;
 	cursor: pointer;
+
+	font-family: 'JetBrains Mono', monospace;;
 }
 
 button:hover {
@@ -76,6 +190,15 @@ button:active {
 
 h1, h2, h3, h4, p, ol, ul {
 	margin: 0px;
+}
+
+ul {
+	list-style-type: "* ";
+	line-height: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
 }
 
 .s1-gap {
@@ -103,16 +226,19 @@ h1, h2, h3, h4, p, ol, ul {
 }
 
 .header {
-	font-weight: 900;
+	font-weight: 800;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }
 
 .nav-menu {
 	display: flex;
 	flex-direction: row;
-	gap: 8px;
+	gap: 0.5rem;
 }
 
 .primary-button {
@@ -135,8 +261,13 @@ h1, h2, h3, h4, p, ol, ul {
 	display: flex;
 	flex-flow: column;
 
-	margin-top: 64px;
-	margin-bottom: 64px;
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+}
+
+.description-line {
+	display: flex;
+	flex-direction: row;
 }
 
 #description p {
@@ -144,7 +275,14 @@ h1, h2, h3, h4, p, ol, ul {
 	margin-bottom: 0px;
 
 	font-weight: 900;
-	font-size: 2rem;
+	font-size: 3rem;
+}
+
+.askii-letter {
+	white-space: pre-wrap;
+	font-family: 'BlurVision ASCII';
+	line-height: 110%;
+	letter-spacing: -0.03rem;
 }
 
 .section {
@@ -153,15 +291,23 @@ h1, h2, h3, h4, p, ol, ul {
 
 .section h1,
 .section h2 {
-	color: #FFFFFF;
-	background-color: #000000;
+/*	color: #FFFFFF;
+	background-color: #000000;*/
 	font-weight: 600;
+}
+
+.my-section {
+	color: #831A4A;
+}
+
+.section-value {
+	color: #16459A;
 }
 
 .case-studies {
 	display: flex;
 	flex-direction: column;
-	gap: 4rem;
+	gap: 1rem;
 }
 
 .case-studies a {
@@ -180,7 +326,7 @@ h1, h2, h3, h4, p, ol, ul {
 	flex-direction: column;
 }
 
-.cover-content h1 {
+.cover-content h2 {
 	color: #FFFFFF;
 }
 
@@ -395,30 +541,6 @@ th, td {
 	max-width: 300px;
 }
 
-.jtbd {
-	background-color: #69D978;
-	border: 3px solid #000000;
-	border-radius: 16px;
-	padding: 16px;
-}
-
-.jtbd-two-columns {
-	display: flex;
-	flex-direction: row;
-	gap: 64px;
-}
-
-.jtbs-column {
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
-}
-
-.jtbd-list-item {
-	display: flex;
-	flex-direction: row;
-	gap: 8px;
-}
 
 /*app-case styles end*/
 
@@ -440,6 +562,12 @@ th, td {
 	text-align: right;
 }
 
+#home {
+	text-decoration: none;
+	color: #000000;
+	font-size: 1.5rem;
+}
+
 /* Phone */
 @media only screen and (max-width: 599px) {
     .main-margin {
@@ -447,7 +575,7 @@ th, td {
         margin-right: 16px;
     }
 
-    nav ul {
+    nav {
     	display: none;
     }
 
@@ -475,6 +603,10 @@ th, td {
 	.stack-of-examples {
     	flex-direction: column;
     }
+
+    #description p {
+    	font-size: 2.5rem;
+    }
 }
 
 /* Small tablet */
@@ -489,7 +621,7 @@ th, td {
 		padding-right: 32px;
     }
 
-    nav ul {
+    nav {
     	display: none;
     }
 

@@ -37,18 +37,18 @@
 	<header>
 		<div class="header main-margin">
 			<div class="header-logo">
-				<a href="index.html">
-					<img src="logo.png" alt="logo">
+				<a href="index.html" id="home">
+					<p>HOME</p>
+					<!-- <img src="logo.png" alt="logo"> -->
 				</a>
 			</div>
+
 			<div class="nav-menu">
 				<nav>
-					<ul>
-						<li><button onclick="location.href='#case-studies'">CASES</button></li>
-						<li><button onclick="location.href='#about'">ABOUT</button></li>
-						<li><button onclick="location.href='#fun'">FUN</button></li>
-						<li><button onclick="location.href='#links'">LINKS</button></li>
-					</ul>
+					<button onclick="location.href='#case-studies'">CASES</button>
+					<button onclick="location.href='#about'">ABOUT</button>
+					<button onclick="location.href='#fun'">FUN</button>
+					<button onclick="location.href='#links'">LINKS</button>
 				</nav>
 				<button class="primary-button" id="email-button">COPY @</button>
 			</div>
@@ -59,13 +59,13 @@
 			<div id="description">
 				<p>I'M EUGENE</p>
 				<p>UX/UI DESIGNER</p>
-				<p>BASED IN LONDON, UK</p>
+				<p>BASED IN LONDON</p>
 			</div>
 		</div>
 		<div class="s1-gap">
 			<section>
 				<div class="section main-margin" id="case-studies">
-					<h1>[section] CASE STUDIES</h1>
+					<h1><span class="my-section">&lt;section&gt;</span> <span class="section-value">Case studies</span></h1>
 				</div>
 				<div class="case-studies">
 					<a href="ui-case.html">
@@ -74,55 +74,28 @@
 								<div class="centered-img">
 									<img src="ui-case-cover.png" alt="ui case cover">
 								</div>
-								<h1>[case 1] UI ELEMENTS I CRAFTED</h1>
+								<h2>&lt;case 1&gt; UI ELEMENTS I CRAFTED</h2>
 							</div>
 						</div>
 					</a>
-					<!-- <div style="white-space: pre; display: flex; flex-direction: row;">
-						<p style="margin: 0px;">
-						          ,  | `.                      .                                                        .      .
-	--- --+-<#>-+- ---  --  -               ;                                                      ;      ;
-	          `._|_,'                  - --+- -                                         - --+- -         - --+- -
-	             T                         !                                              !                   !
-						</p>
-						<p style="margin: 0px;">
-						         ,  | `.                      .                                                        .      .
-	--- --+-<#>-+- ---  --  -               ;                                                      ;      ;
-	          `._|_,'                  - --+- -                                         - --+- -         - --+- -
-	             T                         !                                              !                   !
-						</p>
-					</div> -->
 					<a href="research-case.html">
 						<div class="cover" id="research-case">
 							<div class="cover-content main-margin">
 								<div class="centered-img">
 									<img src="research-case-cover.png" alt="research case cover">
 								</div>
-								<h1>[case 2] MY RESEARCH SKILLS</h1>
+								<h2>&lt;case 2&gt; MY RESEARCH SKILLS</h2>
 							</div>
 						</div>
 					</a>
-					<!-- <div style="white-space: pre; display: flex; flex-direction: row;">
-						<p style="margin: 0px;">
-						          ,  | `.                      .                                                        .      .
-	--- --+-<#>-+- ---  --  -               ;                                                      ;      ;
-	          `._|_,'                  - --+- -                                         - --+- -         - --+- -
-	             T                         !                                              !                   !
-						</p>
-						<p style="margin: 0px;">
-						         ,  | `.                      .                                                        .      .
-	--- --+-<#>-+- ---  --  -               ;                                                      ;      ;
-	          `._|_,'                  - --+- -                                         - --+- -         - --+- -
-	             T                         !                                              !                   !
-						</p>
-					</div> -->
+					
 					<a href="app-case.html">
 						<div class="cover" id="app-case">
 							<div class="cover-content main-margin">
 								<div class="centered-img">
 									<img src="app-case-cover.png" alt="end-to-end case cover">
 								</div>
-								<h1>[case 3] MOBILE APP I DESIGNED</h1>
+								<h2>&lt;case 3&gt; MOBILE APP I DESIGNED</h2>
 							</div>
 						</div>
 					</a>
@@ -130,25 +103,27 @@
 			</section>
 			<section>
 				<div class="section main-margin" id="about">
-					<h1>[section] GET TO KNOW ME BETTER</h1>
+					<h1><span class="my-section">&lt;section&gt;</span> <span class="section-value">Get to know me better</span></h1>
 				</div>
 				<div class="about main-margin">
-					<p>I am a UX/UI Designer switched from Product Management. BS and MS in Computer Science. Looking for traction in UX/UI projects.</p>
-					<p>→ My experience with mobile and web apps
-						• UK-based B2B startup | Web app | Created major features sold as add-ons. Also redesigned sorting, filtering and settings functionality;
-					• B2C app | Mobile app | Map-focused application wireframes made from scratch, 90 screens;</p>
-					<p>→ My hard skills
-						• Figma: design systems, interactive prototypes, mockups, Auto layout, Components, Variants;
-					• User research: conducting user interviews to discover their core problems. I led up to 150 interviews;</p>
-
-					<p>→ How my previous experience might be relevant
-						• Product management: I understand the whole process of working on tech products. I can manage a group of people and work as a part of the team;
-					• Founder experience: have a sense of costs associated with development. Can do design that earns money;• Computer Science: I have coding experience and can speak with engineers in the same language</p>
+					<ul>
+						<li>
+							My name is Eugene. I’m ux/ui designer located in London, UK.
+						</li>
+						<li>I have 4+ years of experience in B2B startups.</li>
+						<li>Industries I worked in: e-commerce, fintech, and construction
+							<ul>
+								<li>zipsale: helped preloved and vintage sellers in the UK get more revenue</li>
+								<li>fishlook: brought transparency into wholesale fish trading</li>
+								<li>pik.pro: automated quality assurance on construction sites</li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 			</section>
 			<section>
 				<div class="section main-margin" id="fun">
-					<h1>[section] FUN STUFF I DO</h1>
+					<h1><span class="my-section">&lt;section&gt;</span> <span class="section-value">Fun stuff I do</span></h1>
 				</div>
 				<div class="case-studies">
 					<div class="cover" id="1sec-per-day">
@@ -156,7 +131,7 @@
 							<div class="centered-img">
 								<img src="1sec-fun-cover.png" alt="folding fun cover">
 							</div>
-							<h1>FILMING MY LIFE</h1>
+							<h2>FILMING MY LIFE</h2>
 							<p>Every (almost) day I record a video of what I do. Every month I edit a video with one second from each day. Helps me to reflect on my life journey.</p>
 							<a href="http://instagram.com/evgenybelokurov/" target="_blank">Check out my Instagram >></a>
 						</div>
@@ -166,7 +141,7 @@
 							<div class="centered-img">
 								<img src="folding-fun-cover.png" alt="folding fun cover">
 							</div>
-							<h1>FOLDING PAPER</h1>
+							<h2>FOLDING PAPER</h2>
 							<p>Occasionally I exercise in folding paper to interact with real world objects</p>
 						</div>
 					</div>
@@ -174,7 +149,7 @@
 			</section>
 			<section>
 				<div class="section main-margin" id="links-title">
-					<h1>[section] MY DIGITAL FOOTPRINT</h1>
+					<h1><span class="my-section">&lt;section&gt;</span> <span class="section-value">My digital footprint</span></h1>
 				</div>
 				<div class="main-margin" id="links">
 					<a href="http://linkedin.com/in/eugenebelokurov/" target="_blank">LinkedIn >></a>
