@@ -195,10 +195,20 @@ h1, h2, h3, h4, p, ol, ul {
 ul {
 	list-style-type: "* ";
 	line-height: 1.5rem;
+	padding-left: 1.25rem;
 }
 
 ul li {
   margin-bottom: 0.5rem;
+}
+
+ol {
+	line-height: 1.5rem;
+	padding: 0px;
+}
+
+ol li {
+	list-style-position: inside;
 }
 
 .s1-gap {
@@ -548,14 +558,16 @@ th, td {
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
-	padding-top: 80px;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
 }
 
 .footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding-top: 80px;
+	padding-top: 5rem;
+	padding-bottom: 2rem;
 }
 
 #tech {
@@ -605,7 +617,7 @@ th, td {
     }
 
     #description p {
-    	font-size: 2.5rem;
+    	font-size: 2rem;
     }
 }
 
