@@ -149,13 +149,13 @@ img {
 	object-fit: contain;
 }
 
-/*a {
-	font-size: 20px;
-}*/
+#links a {
+	font-size: 1.5rem;
+}
 
-/*a:link a:visited {
-	border-bottom-color: #686868;
-}*/
+a:visited {
+	color: #000000;
+}
 
 a:hover {
 	color: #686868;
@@ -580,6 +580,10 @@ th, td {
 	font-size: 1.5rem;
 }
 
+ #instagram a {
+    	font-size: 1rem;
+    }
+
 /* Phone */
 @media only screen and (max-width: 599px) {
     .main-margin {
@@ -598,6 +602,10 @@ th, td {
 
     h1 {
     	font-size: 1.5rem;
+    }
+
+    h2 {
+    	font-size: 1.25rem;
     }
 
     .cover-content img {
