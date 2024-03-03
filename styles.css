@@ -1,130 +1,15 @@
-/* Regular */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* Bold */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-
-/* Italic */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-Italic.woff2') format('woff2');
-    font-weight: 400;
-    font-style: italic;
-}
-
-/* Extra Bold */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-ExtraBold.woff2') format('woff2');
-    font-weight: 800;
-    font-style: normal;
-}
-
-/* Extra Bold Italic */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-ExtraBoldItalic.woff2') format('woff2');
-    font-weight: 800;
-    font-style: italic;
-}
-
-/* Extra Light */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-ExtraLight.woff2') format('woff2');
-    font-weight: 200;
-    font-style: normal;
-}
-
-/* Extra Light Italic */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-ExtraLightItalic.woff2') format('woff2');
-    font-weight: 200;
-    font-style: italic;
-}
-
-/* Light */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-Light.woff2') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-}
-
-/* Light Italic */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-LightItalic.woff2') format('woff2');
-    font-weight: 300;
-    font-style: italic;
-}
-
-/* Medium */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-}
-
-/* Medium Italic */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-MediumItalic.woff2') format('woff2');
-    font-weight: 500;
-    font-style: italic;
-}
-
-/* Semi Bold */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-SemiBold.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-}
-
-/* Semi Bold Italic */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-SemiBoldItalic.woff2') format('woff2');
-    font-weight: 600;
-    font-style: italic;
-}
-
-/* Thin */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-Thin.woff2') format('woff2');
-    font-weight: 100;
-    font-style: normal;
-}
-
-/* Thin Italic */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-ThinItalic.woff2') format('woff2');
-    font-weight: 100;
-    font-style: italic;
-}
-
 /* Base styles */
-body {
+body{
     margin: 0;
     font-family: 'JetBrains Mono', monospace;
-	font-size: 16px;
+	font-size: 22px;
 	font-weight: 400;
 	max-width: 100vw;
+}
+
+p, ul {
+	font-family: 'Crimson Pro', sans-serif;
+	max-width: 600px;
 }
 
 main {
@@ -147,6 +32,10 @@ nav {
 
 img {
 	object-fit: contain;
+}
+
+#home p {
+	font-family: 'JetBrains Mono', monospace;
 }
 
 #links a {
@@ -195,7 +84,7 @@ h1, h2, h3, h4, p, ol, ul {
 ul {
 	list-style-type: "* ";
 	line-height: 1.5rem;
-	padding-left: 1.25rem;
+	padding-left: 0.8rem;
 }
 
 ul li {
@@ -220,13 +109,13 @@ ol li {
 .s2-gap {
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 3rem;
 }
 
 .s3-gap {
 	display: flex;
 	flex-direction: column;
-	gap: 1.5rem;
+	gap: 2rem;
 }
 
 .s4-gap {
@@ -284,8 +173,22 @@ ol li {
 	margin-top: 0px;
 	margin-bottom: 0px;
 
+	font-family: 'JetBrains Mono', monospace;
+	line-height: 120%;
+	letter-spacing: -2px;
 	font-weight: 900;
 	font-size: 3rem;
+}
+
+#project-description {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.project-description-item {
+	display: flex;
+	flex-direction: column;
 }
 
 .askii-letter {
@@ -627,6 +530,17 @@ th, td {
     #description p {
     	font-size: 2rem;
     }
+
+    #project-description {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.project-description-item {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 /* Small tablet */
@@ -719,4 +633,252 @@ th, td {
     .stack-of-examples {
     	flex-direction: row;
     }
+}
+
+/* Regular */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Extra Bold */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Extra Bold Italic */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-ExtraBoldItalic.woff2') format('woff2');
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* Extra Light */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* Extra Light Italic */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-ExtraLightItalic.woff2') format('woff2');
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* Light */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Light Italic */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Medium */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Medium Italic */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Semi Bold */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Semi Bold Italic */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Thin */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Thin Italic */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-ThinItalic.woff2') format('woff2');
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* Crimson Pro Black */
+@font-face {
+    font-family: 'Crimson Pro';
+    font-style: normal;
+    font-weight: 900;
+    src: url('fonts/CrimsonPro-Black.ttf') format('truetype');
+}
+
+/* Crimson Pro Black Italic */
+@font-face {
+    font-family: 'Crimson Pro';
+    font-style: italic;
+    font-weight: 900;
+    src: url('fonts/CrimsonPro-BlackItalic.ttf') format('truetype');
+}
+
+/* Crimson Pro ExtraBold */
+@font-face {
+    font-family: 'Crimson Pro';
+    font-style: normal;
+    font-weight: 800;
+    src: url('fonts/CrimsonPro-ExtraBold.ttf') format('truetype');
+}
+
+/* Crimson Pro ExtraBold Italic */
+@font-face {
+    font-family: 'Crimson Pro';
+    font-style: italic;
+    font-weight: 800;
+    src: url('fonts/CrimsonPro-ExtraBoldItalic.ttf') format('truetype');
+}
+
+/* Crimson Pro Bold */
+@font-face {
+    font-family: 'Crimson Pro';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/CrimsonPro-Bold.ttf') format('truetype');
+}
+
+/* Crimson Pro Bold Italic */
+@font-face {
+    font-family: 'Crimson Pro';
+    font-style: italic;
+    font-weight: 700;
+    src: url('fonts/CrimsonPro-BoldItalic.ttf') format('truetype');
+}
+
+/* Crimson Pro SemiBold */
+@font-face {
+    font-family: 'Crimson Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: url('fonts/CrimsonPro-SemiBold.ttf') format('truetype');
+}
+
+/* Crimson Pro SemiBold Italic */
+@font-face {
+    font-family: 'Crimson Pro';
+    font-style: italic;
+    font-weight: 600;
+    src: url('fonts/CrimsonPro-SemiBoldItalic.ttf') format('truetype');
+}
+
+/* Crimson Pro Medium */
+@font-face {
+    font-family: 'Crimson Pro';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/CrimsonPro-Medium.ttf') format('truetype');
+}
+
+/* Crimson Pro Medium Italic */
+@font-face {
+    font-family: 'Crimson Pro';
+    font-style: italic;
+    font-weight: 500;
+    src: url('fonts/CrimsonPro-MediumItalic.ttf') format('truetype');
+}
+
+/* Crimson Pro Italic */
+@font-face {
+    font-family: 'Crimson Pro';
+    font-style: italic;
+    font-weight: 400;
+    src: url('fonts/CrimsonPro-Italic.ttf') format('truetype');
+}
+
+/* Crimson Pro Regular */
+@font-face {
+    font-family: 'Crimson Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/CrimsonPro-Regular.ttf') format('truetype');
+}
+
+/* Crimson Pro Light */
+@font-face {
+    font-family: 'Crimson Pro';
+    font-style: normal;
+    font-weight: 300;
+    src: url('fonts/CrimsonPro-Light.ttf') format('truetype');
+}
+
+/* Crimson Pro Light Italic */
+@font-face {
+    font-family: 'Crimson Pro';
+    font-style: italic;
+    font-weight: 300;
+    src: url('fonts/CrimsonPro-LightItalic.ttf') format('truetype');
+}
+
+/* Crimson Pro ExtraLight */
+@font-face {
+    font-family: 'Crimson Pro';
+    font-style: normal;
+    font-weight: 200;
+    src: url('fonts/CrimsonPro-ExtraLight.ttf') format('truetype');
+}
+
+/* Crimson Pro ExtraLight Italic */
+@font-face {
+    font-family: 'Crimson Pro';
+    font-style: italic;
+    font-weight: 200;
+    src: url('fonts/CrimsonPro-ExtraLightItalic.ttf') format('truetype');
 }

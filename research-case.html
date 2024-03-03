@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport", content="width=devide-width, initial-scale=1.0">
+	<meta name="viewport", content="width=device-width, initial-scale=1.0">
 	<title>Eugene's portfolio</title>
 	<link rel="stylesheet" href="styles.css">
 
 	<script>
-			document.addEventListener('DOMContentLoaded', function() {
-			    const emailButton = document.getElementById('email-button');
-			    const emailToCopy = 'eo.belokurov@gmail.com'; // Change this to your predefined email
+		document.addEventListener('DOMContentLoaded', function() {
+		    const emailButton = document.getElementById('email-button');
+		    const emailToCopy = 'eo.belokurov@gmail.com'; // Change this to your predefined email
 
-			    emailButton.addEventListener('click', function() {
-			        // Copy email to clipboard
-			        navigator.clipboard.writeText(emailToCopy)
-			            .then(function() {
-			                // Change button text to indicate success
-			                emailButton.innerText = 'COPIED!';
-			                // Add class to apply clicked state
-			                emailButton.classList.add('clicked');
+		    emailButton.addEventListener('click', function() {
+		        // Copy email to clipboard
+		        navigator.clipboard.writeText(emailToCopy)
+		            .then(function() {
+		                // Change button text to indicate success
+		                emailButton.innerText = 'COPIED!';
+		                // Add class to apply clicked state
+		                emailButton.classList.add('clicked');
 
-			                // Reset button after a short delay
-			                setTimeout(function() {
-			                    emailButton.innerText = 'COPY @';
-			                    emailButton.classList.remove('clicked');
-			                }, 600); // Change delay as needed
-			            })
-			            .catch(function(err) {
-			                console.error('Failed to copy: ', err);
-			            });
-			    });
-			});
-		</script>
+		                // Reset button after a short delay
+		                setTimeout(function() {
+		                    emailButton.innerText = 'COPY @';
+		                    emailButton.classList.remove('clicked');
+		                }, 600); // Change delay as needed
+		            })
+		            .catch(function(err) {
+		                console.error('Failed to copy: ', err);
+		            });
+		    });
+		});
+	</script>
 
 </head>
 <body>
@@ -53,26 +53,49 @@
 			</div>
 		</div>
 		<div class="main-margin s1-gap">
-			<h1 style="padding-top: 2rem;">MY RESEARCH SKILLS</h1>
-			<div class="s2-gap">
+			<div class="s4-gap">
+				<h1 style="padding-top: 2rem;">MY RESEARCH SKILLS</h1>
+				<p>Time to read: 4 minutes</p>
+				<div id="project-description">
+					<div class="project-description-item">
+						<h3>My role</h3>
+						<p style="max-width: 100%;">Product designer</p>
+					</div>
+					<div class="project-description-item">
+						<h3>Year</h3>
+						<p style="max-width: 100%;">2023</p>
+					</div>
+					<div class="project-description-item">
+						<h3>Timeline</h3>
+						<p style="max-width: 100%;">2 months</p>
+					</div>
+					<div class="project-description-item">
+						<h3>Team</h3>
+						<ul style="max-width: 100%;">
+							<li>2 full-stack engineers</li>
+							<li>1 customer support agent</li>
+							<li>1 CEO</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="s4-gap">
 				<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Product</span></h2>
 				<div class="s4-gap">
 					<p>
 						Software for professional resellers in the UK.
 					</p>
-					<p>
-						Problem we solve: 
+					<p>Problem we solve:</p>
 						<ul>
 							<li>imagine having 100s items to sell e.g. vintage/preloved clothes, shoes or antiques. To sell your items faster, you want to be present on multiple marketplaces such as Ebay, Depop, Etsy, Vinted, or Shopify.</li>
 							<li>managing items manually across all these platforms can be a daunting task and can limit your ability to scale your business. That's where our product comes in to automate the process of cross-listing and auto-delisting.</li>
 						</ul>
-					</p>
 					<p>
 						Numbers: launched 3 years ago, hundreds of paying customers, 2,500,000+ listings made.
 					</p>
 				</div>
 			</div>
-			<div class="s2-gap">
+			<div class="s4-gap">
 				<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Task</span></h2>
 				<div class="s4-gap">
 					<p>
@@ -88,7 +111,7 @@
 			</div>
 			<div class="s2-gap">
 				<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Research</span></h2>
-				<div class="s3-gap">
+				<div class="s4-gap">
 					<h3>Qualitative research</h3>
 					<p>Launched an email campaign to confirm the problem {↓}</p>
 					<div class="cover-secondary">
@@ -114,7 +137,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="s3-gap">
+				<div class="s4-gap">
 					<h3>User interviews</h3>
 					<ul>
 						<li>Created 3 interactive prototypes to test potential solutions.</li>
@@ -132,14 +155,14 @@
 					</p>
 				</div>
 			</div>
-			<div class="s2-gap">
+			<div class="s4-gap">
 				<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Discussing outcomes with the team</span></h2>
 				<ul>
 					<li>Engineering team lead: we had a tight timeline and limited resources. I wanted to make sure that the solutions I came up with are feasible</li>
 					<li>Founder of the company: I aligned with the founder to make sure the solution is compliant with company’s strategy</li>
 				</ul>
 			</div>
-			<div class="s2-gap">
+			<div class="s4-gap">
 				<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Final changes and handoff to developers</span></h2>
 				<p>I refined the final version and prepared the task description for engineers.</p>
 				<!-- <ul>
@@ -153,12 +176,12 @@
 			<div class="other-cases">
 				<h2>Other case studies</h2>
 				<button onclick="location.href='ui-case.html'">
-					<p>UI CASE</p>
-					<p>-></p>
+					<div>UI CASE</div>
+					<div>-></div>
 				</button>
 				<button onclick="location.href='app-case.html'">
-					<p>END-TO-END CASE</p>
-					<p>-></p>
+					<div>MOBILE APP CASE</div>
+					<div>-></div>
 				</button>
 			</div>
 		</div>
