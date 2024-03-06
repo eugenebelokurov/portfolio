@@ -156,17 +156,43 @@ ol li {
 	width: 160px;
 }
 
+.description-line {
+	display: flex;
+	flex-direction: row;
+}
+
 #description {
+	display: flex; 
+	flex-direction: row; 
+	justify-content: space-between;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+#description p {
+	letter-spacing: -0.6vw;
+	font-weight: 900; 
+/*	font-size: 6rem;*/
+	font-size: 6.5vw;
+	white-space: nowrap;
+	font-family: 'JetBrains Mono', monospace; 
+	max-width: 100%;
+	margin-left: -6px;
+}
+
+#short-description {
+	font-size: 2.5rem;
+	font-style: italic;
+	margin-bottom: 5rem;
+	max-width: 100%;
+}
+
+/*#description {
 	display: flex;
 	flex-flow: column;
 
 	margin-top: 2rem;
 	margin-bottom: 3rem;
-}
-
-.description-line {
-	display: flex;
-	flex-direction: row;
 }
 
 #description p {
@@ -178,7 +204,7 @@ ol li {
 	letter-spacing: -2px;
 	font-weight: 900;
 	font-size: 3rem;
-}
+}*/
 
 #project-description {
 	display: flex;
@@ -541,6 +567,14 @@ th, td {
 		display: flex;
 		flex-direction: column;
 	}
+
+	#description p {
+    	font-size: 8vw;
+    }
+
+    #short-description {
+		font-size: 2rem;
+	}
 }
 
 /* Small tablet */
@@ -566,6 +600,14 @@ th, td {
     .stack-of-examples {
     	flex-direction: row;
     }
+
+    #description p {
+    	font-size: 8vw;
+    }
+
+    #short-description {
+		font-size: 2rem;
+	}
 }
 
 /* Big tablet */
