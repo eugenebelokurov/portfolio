@@ -1,5 +1,5 @@
 /* Base styles */
-body{
+body {
     margin: 0;
     font-family: 'JetBrains Mono', monospace;
 	font-size: 22px;
@@ -8,8 +8,9 @@ body{
 }
 
 p, ul, ol, th, tr {
-	font-family: 'Crimson Pro', sans-serif;
+	font-family: 'Crimson Pro', serif;
 	max-width: 600px;
+	line-height: 1.4em;
 }
 
 main {
@@ -36,11 +37,12 @@ img {
 
 #home p {
 	font-family: 'JetBrains Mono', monospace;
+	font-weight: 700;
 }
 
-#links a {
+/*#links a {
 	font-size: 1.5rem;
-}
+}*/
 
 a:visited {
 	color: #000000;
@@ -57,7 +59,7 @@ a:hover {
 
 button {
 	padding: 24px 32px;
-	font-size: 1.5rem;
+	font-size: 1.802rem;
 	color: #000000;
 	font-weight: bold;
 	background-color: #F1F0F0;
@@ -83,16 +85,19 @@ h1, h2, h3, h4, p, ol, ul {
 
 ul {
 	list-style-type: "* ";
-	line-height: 1.5rem;
 	padding-left: 0.8rem;
 }
 
-ul li {
-  margin-bottom: 0.5rem;
+li+li {
+    margin-top: 0.9em;
+}
+
+li>ul>li:first-child {
+    margin-top: 0.9em;
 }
 
 ol {
-	line-height: 1.5rem;
+/*	line-height: 1.5rem;*/
 	padding: 0px;
 }
 
@@ -125,7 +130,7 @@ ol li {
 }
 
 .header {
-	font-weight: 800;
+	font-weight: 700;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -171,17 +176,17 @@ ol li {
 
 #description p {
 	letter-spacing: -0.6vw;
-	font-weight: 900; 
-/*	font-size: 6rem;*/
+	font-weight: 900;
 	font-size: 6.5vw;
 	white-space: nowrap;
-	font-family: 'JetBrains Mono', monospace; 
+	font-family: 'JetBrains Mono', monospace;
 	max-width: 100%;
 	margin-left: -6px;
 }
 
 #short-description {
-	font-size: 2.5rem;
+/*	font-size: 2.5rem;*/
+	font-size: 2.027rem;
 	font-style: italic;
 	margin-bottom: 5rem;
 	max-width: 100%;
@@ -217,22 +222,13 @@ ol li {
 	flex-direction: column;
 }
 
-.askii-letter {
-	white-space: pre-wrap;
-	font-family: 'BlurVision ASCII';
-	line-height: 110%;
-	letter-spacing: -0.03rem;
-}
-
 .section {
 	display: flex;
 }
 
 .section h1,
 .section h2 {
-/*	color: #FFFFFF;
-	background-color: #000000;*/
-	font-weight: 600;
+	font-weight: 700;
 }
 
 .my-section {
@@ -318,7 +314,6 @@ ol li {
 
 .cover-content a {
 	color: #FFFFFF;
-	font-weight: 600;
 }
 
 .cover-action-button p {
@@ -463,6 +458,10 @@ th, td {
     width: 16%;
 }
 
+th {
+	font-weight: 700;
+}
+
 .inspiration {
 	display: flex;
 	flex-wrap: wrap;
@@ -506,12 +505,12 @@ th, td {
 #home {
 	text-decoration: none;
 	color: #000000;
-	font-size: 1.5rem;
+	font-size: 1.802rem;
 }
 
- #instagram a {
+/* #instagram a {
     	font-size: 1rem;
-    }
+    }*/
 
 /* Phone */
 @media only screen and (max-width: 599px) {
@@ -530,11 +529,19 @@ th, td {
     }
 
     h1 {
-    	font-size: 1.5rem;
+    	font-size: 2.027rem;
     }
 
     h2 {
-    	font-size: 1.25rem;
+    	font-size: 1.802rem;
+    }
+
+    h3 {
+    	font-size: 1.602rem;
+    }
+
+    h4 {
+    	font-size: 1.424rem;
     }
 
     .cover-content img {
@@ -594,7 +601,19 @@ th, td {
     }
 
     h1 {
-    	font-size: 2rem;
+    	font-size: 2.027rem;
+    }
+
+    h2 {
+    	font-size: 1.802rem;
+    }
+
+    h3 {
+    	font-size: 1.602rem;
+    }
+
+    h4 {
+    	font-size: 1.424rem;
     }
 
     .stack-of-examples {
@@ -625,7 +644,19 @@ th, td {
     }
 
     h1 {
-    	font-size: 2rem;
+    	font-size: 2.027rem;
+    }
+
+    h2 {
+    	font-size: 1.802rem;
+    }
+
+    h3 {
+    	font-size: 1.602rem;
+    }
+
+    h4 {
+    	font-size: 1.424rem;
     }
 
     .stack-of-examples {
@@ -646,7 +677,19 @@ th, td {
     }
 
     h1 {
-    	font-size: 2rem;
+    	font-size: 2.027rem;
+    }
+
+    h2 {
+    	font-size: 1.802rem;
+    }
+
+    h3 {
+    	font-size: 1.602rem;
+    }
+
+    h4 {
+    	font-size: 1.424rem;
     }
 
     .stack-of-examples {
@@ -669,7 +712,19 @@ th, td {
     }
 
     h1 {
-    	font-size: 2rem;
+    	font-size: 2.027rem;
+    }
+
+    h2 {
+    	font-size: 1.802rem;
+    }
+
+    h3 {
+    	font-size: 1.602rem;
+    }
+
+    h4 {
+    	font-size: 1.424rem;
     }
 
     .stack-of-examples {
@@ -677,43 +732,19 @@ th, td {
     }
 }
 
-/* Regular */
+/* Thin */
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-Regular.woff2') format('woff2');
-    font-weight: 400;
+    src: url('fonts/JetBrainsMono-Thin.woff2') format('woff2');
+    font-weight: 100;
     font-style: normal;
 }
 
-/* Bold */
+/* Thin Italic */
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-
-/* Italic */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-Italic.woff2') format('woff2');
-    font-weight: 400;
-    font-style: italic;
-}
-
-/* Extra Bold */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-ExtraBold.woff2') format('woff2');
-    font-weight: 800;
-    font-style: normal;
-}
-
-/* Extra Bold Italic */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-ExtraBoldItalic.woff2') format('woff2');
-    font-weight: 800;
+    src: url('fonts/JetBrainsMono-ThinItalic.woff2') format('woff2');
+    font-weight: 100;
     font-style: italic;
 }
 
@@ -749,6 +780,22 @@ th, td {
     font-style: italic;
 }
 
+/* Regular */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+
 /* Medium */
 @font-face {
     font-family: 'JetBrains Mono';
@@ -781,19 +828,35 @@ th, td {
     font-style: italic;
 }
 
-/* Thin */
+/* Bold */
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-Thin.woff2') format('woff2');
-    font-weight: 100;
+    src: url('fonts/JetBrainsMono-Bold.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
 }
 
-/* Thin Italic */
+/* Bold Italic */
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-ThinItalic.woff2') format('woff2');
-    font-weight: 100;
+    src: url('fonts/JetBrainsMono-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Extra Bold */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Extra Bold Italic */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-ExtraBoldItalic.woff2') format('woff2');
+    font-weight: 800;
     font-style: italic;
 }
 
@@ -836,6 +899,7 @@ th, td {
     font-weight: 700;
     src: url('fonts/CrimsonPro-Bold.ttf') format('truetype');
 }
+
 
 /* Crimson Pro Bold Italic */
 @font-face {
