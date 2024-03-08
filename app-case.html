@@ -8,7 +8,7 @@
 	<script>
 			document.addEventListener('DOMContentLoaded', function() {
 			    const emailButton = document.getElementById('email-button');
-			    const emailToCopy = 'eo.belokurov@gmail.com'; // Change this to your predefined email
+			    const emailToCopy = 'eo.belokurov@gmail.com';
 
 			    emailButton.addEventListener('click', function() {
 			        // Copy email to clipboard
@@ -34,13 +34,9 @@
 
 </head>
 <body>
-	<header class="header main-margin">
-		<div class="header-logo">
-			<a href="index.html" id="home">
-				<p>HOME</p>
-			</a>
-		</div>
-		<div class="header-buttons">
+	<header>
+		<div class="header full-screen-margin">
+			<button onclick="location.href='index.html'" id="home" style="border: 2px solid #000000; background-color: #ffffff; box-sizing: border-box; border-radius: 64px;">HOME</button>
 			<button class="primary-button" id="email-button">COPY @</button>
 		</div>
 	</header>

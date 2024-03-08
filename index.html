@@ -7,8 +7,8 @@
 
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
-		    const emailButton = document.getElementById('email-button');
-		    const emailToCopy = 'eo.belokurov@gmail.com'; // Change this to your predefined email
+		    const emailButton = document.getElementById('this-is-email-button');
+		    const emailToCopy = 'eo.belokurov@gmail.com';
 
 		    emailButton.addEventListener('click', function() {
 		        // Copy email to clipboard
@@ -35,14 +35,21 @@
 </head>
 <body>
 	<header>
-		<div class="header main-margin">
-			<div class="header-logo">
+		<div class="header full-screen-margin">
+			<button onclick="location.href='#index'" style="border: 2px solid #000000; background-color: #ffffff; box-sizing: border-box; border-radius: 64px;">HOME</button>
+			<button onclick="location.href='#case-studies'" class="nav-bar-button">CASES</button>
+			<button onclick="location.href='#about'" class="nav-bar-button">ABOUT</button>
+			<button onclick="location.href='#fun'" class="nav-bar-button">FUN</button>
+			<button onclick="location.href='#links'" class="nav-bar-button">LINKS</button>
+			<button class="primary-button" id="this-is-email-button">COPY @</button>
+		</div>
+			<!-- <div class="header-logo">
 				<a href="index.html" id="home">
 					<p>HOME</p>
 				</a>
-			</div>
+			</div> -->
 
-			<div class="nav-menu">
+			<!-- <div class="nav-menu">
 				<nav>
 					<button onclick="location.href='#case-studies'">CASES</button>
 					<button onclick="location.href='#about'">ABOUT</button>
@@ -51,16 +58,18 @@
 				</nav>
 				<button class="primary-button" id="email-button">COPY @</button>
 			</div>
-		</div>
+		</div> -->
 	</header>
 	<main>
-		<div class="main-margin">
+		
+		<div class="full-screen-margin">
 			<div id="description">
 				<p>EUGENE</p>
-				<!-- <p>_</p> -->
-				<p>UX/UI DESIGNER</p>
+				<p>UX/UI</p>
+				<p>DESIGNER</p>
 			</div>
-			<p id="short-description">4+ years in B2B startups. Based in London, UK.</p>
+			<p id="short-description">4+ years in B2B startups. Based in London, UK</p>
+			<p id="open-to-opportunities">Open to opportunities . ݁₊ ⊹ . ݁˖ .</p>
 		</div>
 		<div class="s1-gap">
 			<section>
