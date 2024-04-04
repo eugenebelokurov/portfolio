@@ -190,13 +190,23 @@ ol li {
 }
 
 #description p {
-	letter-spacing: -0.8vw;
-	font-weight: 900;
-	font-size: 9vw;
+	letter-spacing: -1.4vw;
+	font-weight: 700;
+	font-size: 12.5vw;
 	white-space: nowrap;
 	font-family: 'JetBrains Mono', monospace;
 	max-width: 100%;
 	margin-left: -6px;
+	line-height: 1.1em;
+}
+
+#my-name {
+	text-align: right;
+	max-width: 100%;
+	font-size: 2.027rem;
+	font-style: italic;
+	margin-right: 100px;
+	margin-bottom: 2rem;
 }
 
 #short-description {
@@ -568,6 +578,13 @@ th {
 		margin-right: 16px;
     }
 
+    #my-name {
+    	margin-right: 0px;
+    	margin-bottom: 1rem;
+    	text-align: left;
+    	font-size: 1.602rem;
+    }
+
     #short-description {
     	margin-left: 0px;
     	margin-bottom: 1rem;
@@ -637,9 +654,9 @@ th {
     	flex-direction: column;
     }
 
-    #description p {
+    /*#description p {
     	font-size: 2rem;
-    }
+    }*/
 
     #project-description {
 		display: flex;
@@ -652,9 +669,9 @@ th {
 		flex-direction: column;
 	}
 
-	#description p {
-    	font-size: 8vw;
-    }
+	/*#description p {
+    	font-size: 12vw;
+    }*/
 
     #home-button {
     	flex-grow: 1;
@@ -677,6 +694,12 @@ th {
     .main-padding {
     	padding-left: 32px;
 		padding-right: 32px;
+    }
+
+    #my-name {
+    	margin-right: 0px;
+    	text-align: right;
+    	font-size: 1.802rem;
     }
 
     #short-description {
@@ -722,9 +745,9 @@ th {
     	flex-direction: row;
     }
 
-    #description p {
-    	font-size: 8vw;
-    }
+    /*#description p {
+    	font-size: 12vw;
+    }*/
 }
 
 /* Big tablet */
@@ -832,6 +855,23 @@ th {
     .stack-of-examples {
     	flex-direction: row;
     }
+}
+
+@font-face {
+  	font-family: 'Nouvelle Grotesquerie';
+  	src: url('fonts/NouvelleGrotesquerie-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  	font-family: 'Mattone';
+ 	src: url('fonts/Mattone-Black.woff2') format('woff2');
+}
+
+@font-face {
+  	font-family: 'Dogma';
+  	font-weight: normal;
+    font-style: normal;
+  	src: url('fonts/xe_dogma.ttf') format('truetype');
 }
 
 /* Thin */
