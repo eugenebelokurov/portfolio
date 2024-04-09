@@ -43,10 +43,10 @@ a:hover {
 }
 
 button {
-	padding-top: 24px;
-	padding-bottom: 24px;
+	padding-top: 32px;
+	padding-bottom: 32px;
 	flex-grow: 1;
-	font-size: 1.802rem;
+	font-size: 1.602rem;
 	color: #000000;
 	font-weight: bold;
 	background-color: #F1F0F0;
@@ -102,7 +102,7 @@ h1, h2, h3, h4, p, ol, ul {
 }
 
 ul {
-	list-style-type: "* ";
+	list-style-type: "~ ";
 	padding-left: 0.8rem;
 }
 
@@ -185,18 +185,18 @@ ol li {
 	display: flex; 
 	flex-direction: row; 
 	justify-content: space-between;
-/*	margin-top: 1rem;*/
-	margin-bottom: 1rem;
+	margin-top: -1rem;
+/*	margin-bottom: 1rem;*/
 }
 
 #description p {
-	letter-spacing: -1.4vw;
+	letter-spacing: -0.4vw;
 	font-weight: 700;
-	font-size: 12.5vw;
+	font-size: 6.98vw;
 	white-space: nowrap;
-	font-family: 'JetBrains Mono', monospace;
+	font-family: 'Mattone', monospace;
 	max-width: 100%;
-	margin-left: -6px;
+/*	margin-left: -6px;*/
 	line-height: 1.1em;
 }
 
@@ -232,25 +232,6 @@ ol li {
 	margin-right: 24px;
 }
 
-/*#description {
-	display: flex;
-	flex-flow: column;
-
-	margin-top: 2rem;
-	margin-bottom: 3rem;
-}
-
-#description p {
-	margin-top: 0px;
-	margin-bottom: 0px;
-
-	font-family: 'JetBrains Mono', monospace;
-	line-height: 120%;
-	letter-spacing: -2px;
-	font-weight: 900;
-	font-size: 3rem;
-}*/
-
 #project-description {
 	display: flex;
 	flex-direction: row;
@@ -272,11 +253,13 @@ ol li {
 }
 
 .my-section {
-	color: #831A4A;
+/*	color: #831A4A;*/
+	color: #696969;
 }
 
 .section-value {
-	color: #16459A;
+/*	color: #16459A;*/
+	color: #696969;
 }
 
 .case-studies {
@@ -654,10 +637,6 @@ th {
     	flex-direction: column;
     }
 
-    /*#description p {
-    	font-size: 2rem;
-    }*/
-
     #project-description {
 		display: flex;
 		flex-direction: column;
@@ -669,10 +648,6 @@ th {
 		flex-direction: column;
 	}
 
-	/*#description p {
-    	font-size: 12vw;
-    }*/
-
     #home-button {
     	flex-grow: 1;
     	padding-left: 0px; padding-right: 0px;
@@ -681,6 +656,12 @@ th {
     #email-button {
     	flex-grow: 1;
     	padding-left: 0px; padding-right: 0px;
+    }
+
+    #description p {
+    	padding-top: 0.5rem;
+    	font-size: 3.35rem;
+    	white-space: normal;
     }
 }
 
@@ -744,10 +725,6 @@ th {
     .stack-of-examples {
     	flex-direction: row;
     }
-
-    /*#description p {
-    	font-size: 12vw;
-    }*/
 }
 
 /* Big tablet */
