@@ -233,16 +233,16 @@ header {
 	margin: auto;
 }
 
-.card-v2 img:last-child {
+#case-studies-v2 .card-v2 img:last-child {
   display: none;  
 }
 
 @media (hover: hover) and (pointer: fine) {
-	.card-v2:hover img:last-child {
+	#case-studies-v2 .card-v2:hover img:last-child {
 	  display: block;  
 	}
 
-	.card-v2:hover img:first-child {
+	#case-studies-v2 .card-v2:hover img:first-child {
 	  display: none;  
 	}
 }
