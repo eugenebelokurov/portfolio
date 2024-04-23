@@ -7,28 +7,25 @@
 
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
-		    const emailButton = document.getElementById('email-button');
-		    const emailToCopy = 'eo.belokurov@gmail.com';
+			const emailLink = document.getElementById('email-link');
+			const email = 'eo.belokurov@gmail.com';
 
-		    emailButton.addEventListener('click', function() {
-		        // Copy email to clipboard
-		        navigator.clipboard.writeText(emailToCopy)
-		            .then(function() {
-		                // Change button text to indicate success
-		                emailButton.innerText = 'COPIED!';
-		                // Add class to apply clicked state
-		                emailButton.classList.add('clicked');
+			emailLink.addEventListener('click', function(event) {
+			  event.preventDefault(); // Prevent the default link behavior
 
-		                // Reset button after a short delay
-		                setTimeout(function() {
-		                    emailButton.innerText = 'COPY @';
-		                    emailButton.classList.remove('clicked');
-		                }, 600); // Change delay as needed
-		            })
-		            .catch(function(err) {
-		                console.error('Failed to copy: ', err);
-		            });
-		    });
+			  navigator.clipboard.writeText(email)
+			    .then(() => {
+			      const originalText = emailLink.textContent;
+			      emailLink.textContent = 'Copied!';
+
+			      setTimeout(function() {
+			        emailLink.textContent = originalText;
+			      }, 400); // Change the text back after 1 second
+			    })
+			    .catch((error) => {
+			      console.error('Failed to copy text: ', error);
+			    });
+			});
 		});
 	</script>
 
@@ -61,29 +58,30 @@
 </head>
 <body>
 	<header>
-		<div class="header full-screen-margin">
-			<button onclick="location.href='index.html'" id="home-button">HOME</button>
-			<button class="primary-button" id="email-button">COPY @</button>
-		</div>
+		<nav class="full-screen-margin">
+			<a href="index.html">Home</a>
+			<a href="#" id="email-link">Copy my email</a>
+		</nav>
 	</header>
+	
 	<main>
-		<div class="cover" id="research-case">
+		<div class="main-cover-img">
+			<img src="research-case-cover-v2.png">
+		</div>
+		<!-- <div class="cover" id="research-case">
 			<div class="cover-content main-margin">
 				<div>
 					<img src="research-case-cover.png" alt="Research case cover">
 				</div>
 			</div>
-		</div>
-		<div class="main-margin s1-gap">
-			<div class="s4-gap">
-				<div  class="s4-gap">
-					<h1 style="padding-top: 2rem;">MY RESEARCH SKILLS</h1>
-					<div class="case-study-description">
-						<p style="font-style: italic;">
-							An examplar of user experience part of my work. I did quantitative research, interactive prototypes and launched a new feature within 2 months.
-						</p>
-					</div>
-				</div>	
+		</div> -->
+		<div class="main-margin">
+				<h1>My research skills</h1>
+				<div class="case-study-description">
+					<p style="font-style: italic;">
+						An examplar of user experience part of my work. I did quantitative research, interactive prototypes and launched a new feature within 2 months.
+					</p>
+				</div>
 				<p>Time to read: 4 minutes</p>
 				<div id="project-description">
 					<div class="project-description-item">
@@ -107,9 +105,7 @@
 						</ul>
 					</div>
 				</div>
-			</div>
-			<div class="s4-gap">
-				<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Product</span></h2>
+				<h2>Product</h2>
 				<div class="s4-gap">
 					<p>
 						Zipsale – software for professional resellers in the UK.
@@ -123,10 +119,7 @@
 						Numbers: launched 3 years ago, hundreds of paying customers, 2,500,000+ listings made.
 					</p>
 				</div>
-			</div>
-			<div class="s4-gap">
-				<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Task</span></h2>
-				<div class="s4-gap">
+				<h2>Task</h2>
 					<p>
 						"High-level" task: increase retention
 					</p>
@@ -136,11 +129,7 @@
 					<p>
 						Problem: we don't support important workflow. There is a way to get more sales: delete and list again stagnant items. The items you sell must be fresh. I was assigned to research, design and launch the feature.
 					</p>
-				</div>
-			</div>
-			<div class="s2-gap">
-				<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Research</span></h2>
-				<div class="s4-gap">
+				<h2>Research</h2>
 					<h3>Qualitative research</h3>
 					<p>Launched an email campaign to confirm the problem {↓}</p>
 					<div class="cover-secondary">
@@ -165,8 +154,6 @@
 							</ul>
 						</li>
 					</ul>
-				</div>
-				<div class="s4-gap">
 					<h3>User interviews</h3>
 					<ul>
 						<li>Created 3 interactive prototypes to test potential solutions.</li>
@@ -204,17 +191,12 @@
 					<p>
 						The simplest version won: the one with less clicks and allowing to work with one marketplace at a time. You will find it below.
 					</p>
-				</div>
-			</div>
-			<div class="s4-gap">
-				<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Discussing outcomes with the team</span></h2>
+				<h2>Discussing outcomes with the team</h2>
 				<ul>
 					<li>Engineering team lead: we had a tight timeline and limited resources. I wanted to make sure that the solutions I came up with are feasible.</li>
 					<li>Founder: I aligned with the founder to make sure the solution is compliant with company’s strategy.</li>
 				</ul>
-			</div>
-			<div class="s4-gap">
-				<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Final changes and handoff to developers</span></h2>
+				<h2>Final changes and handoff to developers</h2>
 				<p>I refined the final version based on feedback from users and the team. Then prepared the task description for engineers.</p>
 				<p>I usually use the following structure when describing taks: [1] Context; [2] How users face FEATURE; [3] What should happen when users interact with FEATURE; [4] How does it influence the product; [5] Link to interactive prototype in Figma.</p>
 				<p>It allows to explain engineers why we are working on a feature and how it impacts the whole product.</p>
@@ -223,10 +205,8 @@
 						<img src="task-description.png" alt="task description">
 					</div>
 				</div>
-			</div>
 
-			<div class="s4-gap">
-				<h2 id="final-design"><span class="my-section">&lt;section&gt;</span> <span class="section-value">Final design</span></h2>
+				<h2>Final design</h2>
 				<div class="cover-video">
 					<div class="video-layout">
 						<video controls>
@@ -235,7 +215,7 @@
 					</div>
 				</div>
 				<div>
-					<h4>Running extra mile</h4>
+					<h3>Running extra mile</h3>
 					<p>To drive users into the new feature I came up with an idea of a new type of notification. If a user has any items older than 90 days, a yellow clock icon will automatically pop up. When clicking on a notification, a tooltip with an explanation and link to the FAQ will appear.</p>
 					<div class="cover-secondary">
 						<div class="centered-img">
@@ -243,9 +223,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="s4-gap">
-				<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Key takeways</span></h2>
+				<h2>Key takeways</h2>
 				<h3>Results</h3>
 				<ul>
 					<li>Customers found new feature very useful.</li>
@@ -266,7 +244,6 @@
 					<li>Add support of more marketplaces</li>
 					<li>Speed up the performance</li>
 				</ul>
-			</div>
 			<div class="other-cases">
 				<h2>Other case studies</h2>
 				<button onclick="location.href='ui-case.html'">

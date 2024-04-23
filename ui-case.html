@@ -6,31 +6,28 @@
 	<link rel="stylesheet" href="styles.css">
 
 	<script>
-			document.addEventListener('DOMContentLoaded', function() {
-			    const emailButton = document.getElementById('email-button');
-			    const emailToCopy = 'eo.belokurov@gmail.com';
+		document.addEventListener('DOMContentLoaded', function() {
+			const emailLink = document.getElementById('email-link');
+			const email = 'eo.belokurov@gmail.com';
 
-			    emailButton.addEventListener('click', function() {
-			        // Copy email to clipboard
-			        navigator.clipboard.writeText(emailToCopy)
-			            .then(function() {
-			                // Change button text to indicate success
-			                emailButton.innerText = 'COPIED!';
-			                // Add class to apply clicked state
-			                emailButton.classList.add('clicked');
+			emailLink.addEventListener('click', function(event) {
+			  event.preventDefault(); // Prevent the default link behavior
 
-			                // Reset button after a short delay
-			                setTimeout(function() {
-			                    emailButton.innerText = 'COPY @';
-			                    emailButton.classList.remove('clicked');
-			                }, 600); // Change delay as needed
-			            })
-			            .catch(function(err) {
-			                console.error('Failed to copy: ', err);
-			            });
+			  navigator.clipboard.writeText(email)
+			    .then(() => {
+			      const originalText = emailLink.textContent;
+			      emailLink.textContent = 'Copied!';
+
+			      setTimeout(function() {
+			        emailLink.textContent = originalText;
+			      }, 400); // Change the text back after 1 second
+			    })
+			    .catch((error) => {
+			      console.error('Failed to copy text: ', error);
 			    });
 			});
-		</script>
+		});	
+	</script>
 
 		<script>
 		  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -61,170 +58,136 @@
 </head>
 <body>
 	<header>
-		<div class="header full-screen-margin">
-			<button onclick="location.href='index.html'" id="home-button">HOME</button>
-			<button class="primary-button" id="email-button">COPY @</button>
-		</div>
-		<!-- <div class="header main-margin">
-			<div class="header-logo">
-				<a href="index.html" id="home">
-					<p>HOME</p>
-				</a>
-			</div>
-			<div class="header-buttons">
-				<button class="primary-button" id="email-button">COPY @</button>
-			</div>
-		</div> -->
+		<nav class="full-screen-margin">
+			<a href="index.html">Home</a>
+			<a href="#" id="email-link">Copy my email</a>
+		</nav>
 	</header>
+
 	<main>
-		<div class="cover" id="ui-case">
+		<div class="main-cover-img">
+			<img src="ui-case-cover-v2.png">
+		</div>
+		<!-- <div class="cover" id="ui-case">
 			<div class="cover-content main-margin">
 				<div class="centered-img">
 					<img src="ui-case-cover.png" alt="ui case cover">
 				</div>
 			</div>
-		</div>
-		<div class="main-margin s1-gap">
-			<div class="s4-gap">
+		</div> -->
+		<div class="main-margin">
 				<h1 style="padding-top: 2rem;">UI ELEMENTS I CRAFTED</h1>
 				<div class="case-study-description">
 					<p style="font-style: italic;">
 						Deep dive into individual elements from	different projects. Check out my approach to paddings, margins, layouts, animations etc.
 					</p>
 				</div>
-			</div>
-			<div class="ui-element s4-gap" id="status-bar">
+			<div class="ui-element" id="status-bar">
 				<div class="section">
-					<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Status bar for background tasks</span></h2>
+					<h2>Status bar for background tasks</h2>
 				</div>
 				<p>Popup element indicating that there are tasks performed in the background</p>
-				<div class="s3-gap">
-					<div class="s4-gap">
 						<h3>Anatomy</h3>
 						<div class="cover-secondary">
 							<div class="centered-img">
 								<img src="ui-case/ui-case-status-bar-anatomy.png" alt="Status bar anatomy">
 							</div>
 						</div>
-					</div>
-					<div class="s4-gap">
 						<h3>Behaviour</h3>
 						<div class="cover-secondary">
 							<div class="centered-img">
 								<img src="ui-case/ui-case-status-bar-behaviour.png" alt="Status bar behaviour">
 							</div>
 						</div>
-					</div>
-					<div class="s4-gap">
 						<h3>Specs</h3>
 						<div class="cover-secondary">
 							<div class="centered-img">
 								<img src="ui-case/ui-case-status-bar-specs.png" alt="Status bar specs">
 							</div>
 						</div>
+			</div>
+
+			<div class="ui-element" id="flash-card">
+				<div class="section">
+					<h2>Flash card</h2>
+				</div>
+				<!-- <p>Popup elements that indicates that there are tasks performed in the background</p> -->
+				<h3>Anatomy</h3>
+				<div class="cover-secondary">
+					<div class="centered-img">
+						<img src="ui-case/ui-case-flash-card-anatomy.png" alt="Flash card anatomy">
+					</div>
+				</div>
+				<h3>Behaviour</h3>
+				<h4>Learning state</h4>
+				<div class="stack-of-examples">
+					<div class="cover-video">
+						<h4>Tap to reveal definition</h4>
+						<div class="video-layout">
+							<video controls>
+							    <source src="ui-case/flipping-card.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+					<div class="cover-video">
+						<h4>Swipe anywhere to reveal next card</h4>
+						<div class="video-layout">
+							<video controls>
+							    <source src="ui-case/swiping-cards.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+				</div>
+				<h4>Practicing state</h4>
+				<div class="cover-video">
+					<h4>Swipe left or right to indicate if you remember a definition</h4>
+					<div class="video-layout">
+						<video controls>
+						    <source src="ui-case/practicing-words.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+				<h3>Specs</h3>
+				<div class="cover-secondary">
+					<div class="centered-img">
+						<img src="ui-case/ui-case-flash-card-specs.png" alt="Flash card specs">
 					</div>
 				</div>
 			</div>
 
-			<div class="ui-element s2-gap" id="flash-card">
+			<div class="ui-element" id="word-definitions">
 				<div class="section">
-					<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Flash card</span></h2>
+					<h2>Word definitions</h2>
 				</div>
 				<!-- <p>Popup elements that indicates that there are tasks performed in the background</p> -->
-				<div class="s3-gap">
-					<div class="s4-gap">
-						<h3>Anatomy</h3>
-						<div class="cover-secondary">
-							<div class="centered-img">
-								<img src="ui-case/ui-case-flash-card-anatomy.png" alt="Flash card anatomy">
-							</div>
-						</div>
+				<h3>Anatomy</h3>
+				<div class="cover-secondary">
+					<div class="centered-img">
+						<img src="ui-case/ui-case-word-definition-anatomy.png" alt="Word definition anatomy">
 					</div>
-					<div class="s4-gap">
-						<h3>Behaviour</h3>
-						<h4>Learning state</h4>
-						<div class="stack-of-examples">
-							<div class="cover-video">
-								<h4>Tap to reveal definition</h4>
-								<div class="video-layout">
-									<video controls>
-									    <source src="ui-case/flipping-card.mp4" type="video/mp4">
-									</video>
-								</div>
-							</div>
-							<div class="cover-video">
-								<h4>Swipe anywhere to reveal next card</h4>
-								<div class="video-layout">
-									<video controls>
-									    <source src="ui-case/swiping-cards.mp4" type="video/mp4">
-									</video>
-								</div>
-							</div>
-						</div>
-						<h4>Practicing state</h4>
-						<div class="cover-video">
-							<h4>Swipe left or right to indicate if you remember a definition</h4>
-							<div class="video-layout">
-								<video controls>
-								    <source src="ui-case/practicing-words.mp4" type="video/mp4">
-								</video>
-							</div>
-						</div>
+				</div>
+				<h3>Behaviour</h3>
+				<div class="cover-video">
+					<h4>Select and save definitions to your dictionary</h4>
+					<div class="video-layout">
+						<video controls>
+						    <source src="ui-case/saving-words.mp4" type="video/mp4">
+						</video>
 					</div>
-					<div class="s4-gap">
-						<h3>Specs</h3>
-						<div class="cover-secondary">
-							<div class="centered-img">
-								<img src="ui-case/ui-case-flash-card-specs.png" alt="Flash card specs">
-							</div>
-						</div>
+				</div>
+				<h3>Specs</h3>
+				<div class="cover-secondary">
+					<div class="centered-img">
+						<img src="ui-case/ui-case-word-definition-specs.png" alt="Word definition specs">
 					</div>
 				</div>
 			</div>
-
-			<div class="ui-element s2-gap" id="word-definitions">
-				<div class="section">
-					<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Word definitions</span></h2>
-				</div>
-				<!-- <p>Popup elements that indicates that there are tasks performed in the background</p> -->
-				<div class="s3-gap">
-					<div class="s4-gap">
-						<h3>Anatomy</h3>
-						<div class="cover-secondary">
-							<div class="centered-img">
-								<img src="ui-case/ui-case-word-definition-anatomy.png" alt="Word definition anatomy">
-							</div>
-						</div>
-					</div>
-					<div class="s4-gap">
-						<h3>Behaviour</h3>
-						<div class="cover-video">
-							<h4>Select and save definitions to your dictionary</h4>
-							<div class="video-layout">
-								<video controls>
-								    <source src="ui-case/saving-words.mp4" type="video/mp4">
-								</video>
-							</div>
-						</div>
-					</div>
-					<div class="s4-gap">
-						<h3>Specs</h3>
-						<div class="cover-secondary">
-							<div class="centered-img">
-								<img src="ui-case/ui-case-word-definition-specs.png" alt="Word definition specs">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="s4-gap">
-				<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Key takeways</span></h2>
-				<h3>Lessons learned</h3>
-				<ul>
-					<li><b>More detailed design specifications = fewer questions from engineers.</b> I always collaborate closely with engineers. In the early stages of my career, my designs were less consistent in terms of layout, colours and typography. It caused some friction during handoff to engineers and time wasted. This is not the case anymore.</li>
-					<li><b>How to work with mature design systems.</b> I studied design systems made by Uber, Atlassian and OpenAI when crafting my own. From these systems, I learned the structure and required level of detail when describing individual elements and entire workflows.</li>
-				</ul>
-			</div>
+			<h2>Key takeways</h2>
+			<h3>Lessons learned</h3>
+			<ul>
+				<li><b>More detailed design specifications = fewer questions from engineers.</b> I always collaborate closely with engineers. In the early stages of my career, my designs were less consistent in terms of layout, colours and typography. It caused some friction during handoff to engineers and time wasted. This is not the case anymore.</li>
+				<li><b>How to work with mature design systems.</b> I studied design systems made by Uber, Atlassian and OpenAI when crafting my own. From these systems, I learned the structure and required level of detail when describing individual elements and entire workflows.</li>
+			</ul>
 			<div class="other-cases">
 				<h2>Other case studies</h2>
 				<button onclick="location.href='research-case.html'">

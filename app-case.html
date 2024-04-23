@@ -6,31 +6,28 @@
 	<link rel="stylesheet" href="styles.css">
 
 	<script>
-			document.addEventListener('DOMContentLoaded', function() {
-			    const emailButton = document.getElementById('email-button');
-			    const emailToCopy = 'eo.belokurov@gmail.com';
+		document.addEventListener('DOMContentLoaded', function() {
+			const emailLink = document.getElementById('email-link');
+			const email = 'eo.belokurov@gmail.com';
 
-			    emailButton.addEventListener('click', function() {
-			        // Copy email to clipboard
-			        navigator.clipboard.writeText(emailToCopy)
-			            .then(function() {
-			                // Change button text to indicate success
-			                emailButton.innerText = 'COPIED!';
-			                // Add class to apply clicked state
-			                emailButton.classList.add('clicked');
+			emailLink.addEventListener('click', function(event) {
+			  event.preventDefault(); // Prevent the default link behavior
 
-			                // Reset button after a short delay
-			                setTimeout(function() {
-			                    emailButton.innerText = 'COPY @';
-			                    emailButton.classList.remove('clicked');
-			                }, 600); // Change delay as needed
-			            })
-			            .catch(function(err) {
-			                console.error('Failed to copy: ', err);
-			            });
+			  navigator.clipboard.writeText(email)
+			    .then(() => {
+			      const originalText = emailLink.textContent;
+			      emailLink.textContent = 'Copied!';
+
+			      setTimeout(function() {
+			        emailLink.textContent = originalText;
+			      }, 400); // Change the text back after 1 second
+			    })
+			    .catch((error) => {
+			      console.error('Failed to copy text: ', error);
 			    });
 			});
-		</script>
+		});	
+	</script>
 
 		<script>
 		  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -61,32 +58,34 @@
 </head>
 <body>
 	<header>
-		<div class="header full-screen-margin">
-			<button onclick="location.href='index.html'" id="home-button">HOME</button>
-			<button class="primary-button" id="email-button">COPY @</button>
-		</div>
+		<nav class="full-screen-margin">
+			<a href="index.html">Home</a>
+			<a href="#" id="email-link">Copy my email</a>
+		</nav>
 	</header>
+
 	<main>
-		<div class="cover" id="end-to-end-case">
+		<div class="main-cover-img">
+			<img src="app-case-cover-v2.png">
+		</div>
+		<!-- <div class="cover" id="end-to-end-case">
 			<div class="cover-content main-margin">
 				<div>
 					<img src="app-case-cover.png" alt="app case cover">
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="spacer"></div>
-		<div class="main-margin s1-gap">
-			<div class="s4-gap">
+		<div class="main-margin">
 				<h1 style="padding-top: 2rem;">How I designed mobile app from scratch</h1>
 				<div class="case-study-description">
 					<p style="font-style: italic;">
 						The app solves my problem of expanding my vocabulary. I consider it more of an exercise to familiarise myself with the design of mobile apps. But I have plans to code and launch the product.
 					</p>
 				</div>
-			</div>
 			<section>
 				<div class="section">
-					<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Problem and idea</span></h2>
+					<h2>Problem and idea</h2>
 				</div>
 				<ol>
 					<li>I am advanced english speaker. BUT I want to achieve native’s level</li>
@@ -99,9 +98,9 @@
 					<li>Need a tool to effortlessly save and practice relevant to me words</li>
 				</ol>
 			</section>
-			<section  class="s3-gap">
+			<section>
 				<div class="section">
-					<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Competitors</span></h2>
+					<h2>Competitors</h2>
 				</div>
 				<p>
 					I don't want to solve the problem that is already solved. Are there any products fitting my criteria?
@@ -206,9 +205,9 @@
 				</div>
 				<p>Conclusion: "Atlas" app solves fits my criteria. But it focuses on B2C segment.</p>
 			</section>
-			<section class="s3-gap">
+			<section>
 				<div class="section">
-					<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Business model</span></h2>
+					<h2>Business model</h2>
 				</div>
 				<p>Solution and user segments are only a few parameters defining the product. How can I distinguish myself from competitors and make a 10x better product?</p>
 				<p>I use "Lean Canvas" when business modeling. I find it more intuitive and comprehensive rather than Business Model Canvas, Value Propositions Canvas and other models.</p>
@@ -218,28 +217,24 @@
 					</div>
 				</div>
 			</section>
-			<section class="s2-gap">
+			<section>
 				<div class="section">
-					<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Design process</span></h2>
+					<h2>Design process</h2>
 				</div>
-				<div class="s3-gap">
 					<h3>Jobs To Be Done</h3>
 					<p>I found the Job Stories framework the most exhaustive way to frame my ideation process. It allows me to start with a problem rather than solution.</p>
-					<div class="s4-gap">
 						<h4>Saving new word</h4>
 						<div class="cover-secondary">
 							<div class="centered-img">
 								<img src="app-case/jtbd-saving-new-word.png" alt="jtbd saving new words">
 							</div>
 						</div>
-					<div class="s4-gap">
 						<h4>Accessing saved words</h4>
 						<div class="cover-secondary">
 							<div class="centered-img">
 								<img src="app-case/jtbd-saving-new-word.png" alt="jtbd saving new words">
 							</div>
 						</div>
-					<div class="s4-gap">
 						<h4>Practicing your words</h4>
 						<div class="cover-secondary">
 							<div class="centered-img">
@@ -248,8 +243,6 @@
 						</div>
 						
 						
-				</div>
-				<div class="s3-gap">
 					<h3>Sketches and low fidelity wireframes</h3>
 					<p>I started with exploring the structure of modern printed dictionaries. Advanced learners already use dictionaries. I don't want to disrupt familiar workflows.</p>
 					<div class="inspiration">
@@ -284,11 +277,10 @@
 							<img src="app-case/examples-experiments.png">
 						</div>
 					</div>
-				</div>
 			</section>
 			<section>
 				<div class="section">
-					<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Colour palette</span></h2>
+					<h2>Colour palette</h2>
 				</div>
 				<p>WORK IN PROGRESS</p>
 				<p>Primary. The core of each dictionary are words and their background. Black and white. I wanted to stick with classics.</p>
@@ -308,24 +300,20 @@
 			</section>
 			<section>
 				<div class="section">
-					<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Typography</span></h2>
+					<h2>Typography</h2>
 				</div>
 				<p>WORK IN PROGRESS</p>
 			</section>
 			<section>
-				<div class="s2-gap">
 					<div class="section">
-						<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Result: high fidelity wireframes</span></h2>
+						<h2>Result: high fidelity wireframes</h2>
 					</div>
-					<div class="s2-gap">
 						<h3>Saving new words</h3>
 						<div class="video-layout">
 							<video controls>
 							    <source src="app-case/saving-new-words.mp4" type="video/mp4">
 							</video>
 						</div>
-					</div>
-					<div class="s3-gap">
 						<h3>Accessing saved words</h3>
 						<div class="stack-of-examples">
 							<div class="cover-video">
@@ -345,8 +333,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="s3-gap">
 						<h3>Practicing your words</h3>
 						<div class="cover-video">
 							<div class="video-layout">
@@ -355,12 +341,9 @@
 								</video>
 							</div>
 						</div>
-					</div>
-				</div>
 			</section>
 			<section>
-				<div class="s4-gap">
-					<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">Key takeways</span></h2>
+					<h2>Key takeways</h2>
 					<h3>Results</h3>
 					<ul>
 						<li>The whole mobile app I designed myself and quite happy with :)</li>
@@ -382,7 +365,6 @@
 						<li>more user interviews</li>
 						<li>find engineering buddy or learn Swift myself</li>
 					</ul>
-				</div>
 			</section>
 			<div class="other-cases">
 				<h2>Other case studies</h2>

@@ -7,28 +7,30 @@
 
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
-		    const emailButton = document.getElementById('this-is-email-button');
-		    const emailToCopy = 'eo.belokurov@gmail.com';
+			const emailLink = document.getElementById('email-link');
+			const email = 'eo.belokurov@gmail.com';
 
-		    emailButton.addEventListener('click', function() {
-		        // Copy email to clipboard
-		        navigator.clipboard.writeText(emailToCopy)
-		            .then(function() {
-		                // Change button text to indicate success
-		                emailButton.innerText = 'COPIED!';
-		                // Add class to apply clicked state
-		                emailButton.classList.add('clicked');
+			emailLink.addEventListener('click', function(event) {
+				event.preventDefault(); // Prevent the default link behavior
 
-		                // Reset button after a short delay
-		                setTimeout(function() {
-		                    emailButton.innerText = 'COPY @';
-		                    emailButton.classList.remove('clicked');
-		                }, 600); // Change delay as needed
-		            })
-		            .catch(function(err) {
-		                console.error('Failed to copy: ', err);
-		            });
-		    });
+				// Get the initial width of the email link
+    			const initialWidth = emailLink.offsetWidth;
+
+				navigator.clipboard.writeText(email)
+					.then(() => {
+			    	const originalText = emailLink.textContent;
+			    	emailLink.textContent = 'Copied!';
+			    	emailLink.style.width = `${initialWidth}px`; // Set the width to the initial width
+
+			    	setTimeout(function() {
+			    		emailLink.textContent = originalText;
+			    		emailLink.style.width = ''; // Reset the width
+			    	}, 400); // Change the text back after 1 second
+			    })
+		    	.catch((error) => {
+		    		console.error('Failed to copy text: ', error);
+		    	});
+			});
 		});
 	</script>
 
@@ -61,152 +63,163 @@
 </head>
 <body>
 	<header>
-		<div class="header full-screen-margin">
-			<button onclick="location.href='#index'" id="home-button">HOME</button>
-			<button onclick="location.href='#case-studies'" class="nav-bar-button">CASES</button>
-			<button onclick="location.href='#about'" class="nav-bar-button">ABOUT</button>
-			<button onclick="location.href='#fun'" class="nav-bar-button">FUN</button>
-			<button onclick="location.href='#links'" class="nav-bar-button">LINKS</button>
-			<button class="primary-button" id="this-is-email-button">COPY @</button>
-		</div>
+		<nav class="full-screen-margin">
+			<a href="">Home</a>
+			<a href="#case-studies-v2">Cases</a>
+			<a href="#about">About</a>
+			<a href="#fun-cases-v2">Fun</a>
+			<a href="#links">Links</a>
+			<a href="#" id="email-link">Copy my email</a>
+		</nav>
 	</header>
+
 	<main>
-		<div class="full-screen-margin">
-			<div id="description">
-				<p>PRODUCT DESIGNER</p>
-				<!-- <p style="font-family: 'Dogma'; font-size: 278px;  line-height: 200px;">PRODUCT DESIGNER</p> -->
-				<!-- <p>DESIGNER</p> -->
+		<div class="full-screen-margin" id="title-and-info" style="padding-top: 1rem; padding-bottom: 8rem;">
+			<div style="align-self: end;">
+				<p style="text-align: right;">*open to opportunities</p>
 			</div>
-			<ul style="font-size: 1.602rem; margin-bottom: 6rem;">
-				<li>Named Eugene</li>
-				<li style="margin-top: 0px;">4+ years in B2B startups. Based in London</li>
-				<li style="margin-top: 0px;">Open to opportunities . ݁₊ ⊹ . ݁˖ .</li>
-			</ul>
-			<!-- <p id="my-name">Named Eugene</p>
-			<p id="short-description">4+ years in B2B startups. Based in London, UK</p>
-			<p id="open-to-opportunities">Open to opportunities . ݁₊ ⊹ . ݁˖ .</p> -->
+			<div id="description" style="padding-top: 1rem;">
+				<p>PRODUCT DESIGNER</p>
+			</div>
+			<p id="title-and-info-info">Hi, I am Eugene. I do data-driven design for web and mobile apps. I have 4+ years of experience in B2B startups and a degree in Computer Science.</p>
 		</div>
-		<div class="s1-gap">
-			<section>
-				<div class="section main-margin" id="case-studies">
-					<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">CASE STUDIES</span></h2>
-				</div>
-				<div class="case-studies">
-					<a href="ui-case.html">
-						<div class="cover" id="ui-case">
-							<div class="cover-content main-margin">
-								<div class="centered-img">
-									<img src="ui-case-cover.png" alt="ui case cover">
-								</div>
-								<h2>&lt;case 1&gt; UI elements I crafted</h2>
-								<p>
-									Deep dive into individual elements from	different projects. Check out my approach to paddings, margins, layouts, animations etc.
-								</p>
-							</div>
-						</div>
-					</a>
+
+		<section id="case-studies-v2">
+			<div class="section-v2 full-screen-margin">
+				<h1>CASE STUDIES</h1>
+
+				<div class="block-of-cards">
+
 					<a href="research-case.html">
-						<div class="cover" id="research-case">
-							<div class="cover-content main-margin">
-								<div class="centered-img">
-									<img src="research-case-cover.png" alt="research case cover">
+						<div class="card-v2" id="research-case-v2">
+							<div id="image-stack-container">
+								<img src="research-case-cover-v2.png" />
+								<img src="research-case-cover-hover.png" />
+							</div>
+							<div class="card-content-v2">
+								<div class="card-content-main">
+									<p class="card-numeration-v2">&lt;case 1&gt;</p>
+									<h2>My research skills</h2>
+									<p>An examplar of user experience part of my work. I did quantitative research, interactive prototypes and launched a new feature within 2 months.</p>
 								</div>
-								<h2>&lt;case 2&gt; My research skills</h2>
-								<p>
-									An examplar of user experience part of my work. I did quantitative research, interactive prototypes and launched a new feature within 2 months.
-								</p>
+								<p class="view-more">View more</p>
 							</div>
 						</div>
 					</a>
-					
+
 					<a href="app-case.html">
-						<div class="cover" id="app-case">
-							<div class="cover-content main-margin">
-								<div class="centered-img">
-									<img src="app-case-cover.png" alt="end-to-end case cover">
+						<div class="card-v2" id="app-case-v2">
+							<div id="image-stack-container">
+								<img src="app-case-cover-v2.png" />
+								<img src="app-case-cover-v2-hover.png" />
+							</div>
+							<div class="card-content-v2">
+								<div class="card-content-main">
+									<p class="card-numeration-v2">&lt;case 2&gt;</p>
+									<h2>Mobile app I designed</h2>
+									<p>The app solves my problem of expanding my vocabulary. I consider it more of an exercise to familiarise myself with the design of mobile apps. But I have plans to code and launch the product.</p>
 								</div>
-								<h2>&lt;case 3&gt; Mobile app I designed</h2>
-								<p>
-									The app solves my problem of expanding my vocabulary. I consider it more of an exercise to familiarise myself with the design of mobile apps. But I have plans to code and launch the product.
-								</p>
+								<p class="view-more">View more</p>
 							</div>
 						</div>
 					</a>
+
 					<a href="sort-case.html">
-						<div class="cover" id="sort-case">
-							<div class="cover-content main-margin">
-								<div class="centered-img">
-									<img src="sort-case/sort-cover.png" alt="sort case cover">
+						<div class="card-v2" id="sort-case-v2">
+							<div id="image-stack-container">
+								<img src="sort-case/sort-cover.png" />
+								<img src="sort-case/sort-cover-v2-hover.png" />
+							</div>
+							<div class="card-content-v2">
+								<div class="card-content-main">
+									<p class="card-numeration-v2">&lt;case 3&gt;</p>
+									<h2>New sort button</h2>
+									<p>How I refactored the sort feature and why it was harder than I expected.</p>
 								</div>
-								<h2>&lt;case 4&gt; New sort button</h2>
-								<p>
-									How I refactored the sort feature and why it was harder than I expected.
-								</p>
+								<p class="view-more">View more</p>
+							</div>
+						</div>
+					</a>
+
+					<a href="ui-case.html">
+						<div class="card-v2" id="ui-case-v2">
+							<div id="image-stack-container">
+								<img src="ui-case-cover-v2.png" />
+								<img src="ui-case-cover-v2-hover.png" />
+							</div>
+							<div class="card-content-v2">
+								<div class="card-content-main">
+									<p class="card-numeration-v2">&lt;case 4&gt;</p>
+									<h2>UI elements I crafted</h2>
+									<p>Deep dive into individual elements from	different projects. Check out my approach to paddings, margins, layouts, animations etc.</p>
+								</div>
+								<p class="view-more">View more</p>
 							</div>
 						</div>
 					</a>
 				</div>
-			</section>
-			<section>
-				<div class="section main-margin" id="about">
-					<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">KNOW ME BETTER</span></h2>
-				</div>
-				<div class="about main-margin">
-					<ul>
-						<li>
-							My name is Eugene. I’m ux/ui designer located in London, UK
-						</li>
-						<li>I have 4+ years of experience in B2B startups</li>
-						<li>Industries I worked in: e-commerce, fintech, and proptech
-							<ul>
-								<li>zipsale: helped preloved and vintage sellers in the UK get more revenue</li>
-								<li>fishlook: brought transparency into wholesale fish trading</li>
-								<li>pik.pro: automated quality assurance on construction sites</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section>
-				<div class="section main-margin" id="fun">
-					<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">FUN STUFF I DO</span></h2>
-				</div>
-				<div class="case-studies">
-					<div class="cover" id="1sec-per-day">
-						<div class="cover-content main-margin">
-							<div class="centered-img">
-								<img src="1sec-fun-cover.png" alt="folding fun cover">
+			</div>
+		</section>
+		<section class="section-v2 full-screen-margin" id="about">
+			<h1>KNOW ME BETTER</h1>
+			<div class="about">
+				<ul>
+					<li>
+						My name is Eugene. I’m a product designer located in London, UK
+					</li>
+					<li>I have 4+ years of experience in B2B startups</li>
+					<li>Industries I worked in: e-commerce, fintech, and proptech
+						<ul>
+							<li>zipsale: helped preloved and vintage sellers in the UK get more revenue</li>
+							<li>fishlook: brought transparency into wholesale fish trading</li>
+							<li>pik.pro: automated quality assurance on construction sites</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section id="fun-cases-v2">
+			<div class="section-v2 full-screen-margin">
+				<h1>FUN STUFF I DO</h1>
+				<div class="block-of-cards">
+					<div class="card-v2" id="sec-fun-v2">
+						<img src="1sec-fun-cover.png" alt="research-case-cover">
+						<div class="card-content-v2">
+							<div class="card-content-main">
+								<p class="card-numeration-v2">&lt;fun 1&gt;</p>
+								<h2>Filming  my life</h2>
+								<p>Every (almost) day I record a video of what I do. Every month I edit a video with one second from each day. Helps me to reflect on my life journey.</p>
 							</div>
-							<h2>&lt;fun 1&gt; Filming  my life</h2>
-							<p>Every (almost) day I record a video of what I do. Every month I edit a video with one second from each day. Helps me to reflect on my life journey.</p>
-							<a href="http://instagram.com/evgenybelokurov/" target="_blank" style="white-space: nowrap;">Check out my Instagram -></a>
+							<a href="http://instagram.com/evgenybelokurov/" target="_blank">Check out my Instagram -></a>
 						</div>
 					</div>
-					<div class="cover" id="folding">
-						<div class="cover-content main-margin">
-							<div class="centered-img">
-								<img src="folding-fun-cover.png" alt="folding fun cover">
+
+					<div class="card-v2" id="research-case-v2">
+						<img src="folding-fun-cover-v2.png" alt="research-case-cover">
+						<div class="card-content-v2">
+							<div class="card-content-main">
+								<p class="card-numeration-v2">&lt;fun 2&gt;</p>
+								<h2>Folding paper</h2>
+								<p>Occasionally I exercise in folding paper to interact with real world objects.</p>
 							</div>
-							<h2>&lt;fun 2&gt; Folding paper</h2>
-							<p>Occasionally I exercise in folding paper to interact with real world objects</p>
 						</div>
 					</div>
 				</div>
-			</section>
-			<section>
-				<div class="section main-margin" id="links-title">
-					<h2><span class="my-section">&lt;section&gt;</span> <span class="section-value">MY DIGITAL FOOTPRINT</span></h2>
-				</div>
-				<div class="main-margin" id="links">
-					<a href="http://linkedin.com/in/eugenebelokurov/" target="_blank">LinkedIn -></a>
-					<a href="http://instagram.com/evgenybelokurov/" target="_blank">Instagram -></a>
-					<a href="https://www.are.na/eugene-belokurov/channels" target="_blank">Are.na -></a>
-				</div>
-			</section>
-		</div>	
+			</div>
+		</section>
+		<section class="full-screen-margin">
+			<div class="section" id="links-title">
+				<h1>MY DIGITAL FOOTPRINT</h1>
+			</div>
+			<div id="links">
+				<a href="http://linkedin.com/in/eugenebelokurov/" target="_blank">LinkedIn -></a>
+				<a href="http://instagram.com/evgenybelokurov/" target="_blank">Instagram -></a>
+				<a href="https://www.are.na/eugene-belokurov/channels" target="_blank">Are.na -></a>
+			</div>
+		</section>
 	</main>
 	<footer>
-		<div class="footer main-margin">
+		<div class="footer full-screen-margin">
 			<p id="update-date">Last updated: April, 2024</p>
 			<p id="tech">Made by me using ♡, HTML, CSS and JS</p>
 		</div>
