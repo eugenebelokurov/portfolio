@@ -230,7 +230,6 @@ header {
 	flex: 1;
 	max-width: 66%;
 	display: block;
-	margin: auto;
 }
 
 #case-studies-v2 .card-v2 img:last-child {
