@@ -88,7 +88,7 @@ h1, h2, h3, h4, p, ol, ul {
 }
 
 ul {
-	list-style-type: "~ ";
+	list-style-type: "* ";
 	padding-left: 0.8rem;
 }
 
@@ -554,6 +554,31 @@ h4 {
 	}
 }
 
+.callout {
+	display: flex;
+	flex-direction: column;
+/*	justify-content: space-between;*/
+	gap: 1rem;
+	padding: 24px 32px;
+
+	background-color: #0163E1;
+}
+
+.callout p {
+	color: #ffffff;
+}
+
+.callout p:first-child {
+	font-family: 'JetBrains Mono', monospace;
+}
+
+
+.group-of-callouts {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
 /*ui-case styles start*/
 
 .ui-element {
@@ -586,6 +611,11 @@ video {
 	flex-direction: row;
 	justify-content: space-between;
 	width: 100%;
+}
+
+.right-arrow {
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 1rem;
 }
 
 /*ui-case styles end*/
@@ -653,6 +683,12 @@ th, td {
 
 th {
 	font-weight: 700;
+}
+
+hr {
+	border: none;
+	border-top: 2px solid #ffffff;
+	margin: 0;
 }
 
 .inspiration {
@@ -813,6 +849,10 @@ th {
     	padding-top: 0.5rem;
     	font-size: 12.5vw;
     	white-space: normal;
+    }
+
+    .group-of-callouts {
+    	flex-direction: column;
     }
 }
 
