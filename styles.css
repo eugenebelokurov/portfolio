@@ -13,6 +13,11 @@ p, ul, ol, th, tr {
 	line-height: 1.4em;
 }
 
+p {
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+}
+
 main {
 	display: flex;
 	flex-direction: column;
@@ -93,7 +98,7 @@ ul {
 }
 
 li+li {
-    margin-top: 0.9em;
+    margin-top: 0.6em;
 }
 
 li>ul>li:first-child {
@@ -101,7 +106,7 @@ li>ul>li:first-child {
 }
 
 ol {
-/*	line-height: 1.5rem;*/
+/*	line-height: 1.2rem;*/
 	padding: 0px;
 }
 
@@ -162,6 +167,28 @@ nav a:active {
 
 header {
 	background-color: #FB0000;
+}
+
+.toc-container {
+	display:flex;
+	flex-direction: row;
+	border-left: 3px solid black;
+	padding-left: 24px;
+	margin-top: 1rem;
+}
+
+.toc-container a {
+	color: #000000;
+}
+
+.toc-container a:visited {
+	color: #000000;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.toc-container a:hover {
+		color: #6B6B6B;
+	}
 }
 
 #title-and-info {
@@ -410,6 +437,13 @@ h4 {
 	text-decoration: none;
 }
 
+.case-study-description-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 2rem;
+}
+
 .cover {
 	background-color: #282828;
 	padding-top: 2rem;
@@ -463,7 +497,10 @@ h4 {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
+
+	margin-top: 0.2rem;
+	margin-bottom: 0.2rem;
 }
 
 .cover-video h4 {
@@ -570,6 +607,7 @@ h4 {
 
 .callout p:first-child {
 	font-family: 'JetBrains Mono', monospace;
+	font-weight: 700;
 }
 
 
@@ -590,6 +628,8 @@ h4 {
 	background-color: #F7F7F7;
 	padding-top: 24px;
 	padding-bottom: 32px;
+	margin-top: 0.2rem;
+	margin-bottom: 0.2rem;
 }
 
 .multi-img {
@@ -854,6 +894,15 @@ hr {
     .group-of-callouts {
     	flex-direction: column;
     }
+
+	.case-study-description-container {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	li+li {
+	    margin-top: 0.2em;
+	}
 }
 
 /* Small tablet */
