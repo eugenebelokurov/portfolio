@@ -26,7 +26,6 @@ main {
 section {
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
 }
 
 img {
@@ -194,6 +193,8 @@ header {
 #title-and-info {
 	display: flex;
 	flex-direction: column;
+	padding-top: 1rem;
+	padding-bottom: 8rem;
 }
 
 #title-and-info p {
@@ -220,7 +221,7 @@ header {
 	background-color: #D7D7D7;
 }
 
-#case-studies-v2 h1 {
+#case-studies-v2 h2 {
 	color: #0027F5;
 }
 
@@ -394,17 +395,24 @@ header {
 
 h1 {
 	padding-top: 2rem;
-	padding-bottom: 4px;
+	padding-bottom: 1rem;
+	line-height: 90%;
+	letter-spacing: -3px;
 }
 
 h2 {
-	padding-top: 1.4rem;
-	padding-bottom: 1px;
+	margin-top: 5rem;
+	margin-bottom: 2rem;
+	line-height: 90%;
+	letter-spacing: -3px;
 }
 
+
 h3 {
-	padding-top: 1rem;
-	padding-bottom: 1px;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	line-height: 90%;
+	letter-spacing: -3px;
 }
 
 h4 {
@@ -829,15 +837,17 @@ hr {
     }
 
     h1 {
-    	font-size: 1.802rem;
+    	font-size: 3.402rem;
     }
 
     h2 {
-    	font-size: 1.602rem;
+    	font-size: 2.802rem;
+    	margin-top: 3rem;
+    	margin-bottom: 1rem;
     }
 
     h3 {
-    	font-size: 1.424rem;
+    	font-size: 2.024rem;
     }
 
     h4 {
@@ -900,6 +910,10 @@ hr {
 		gap: 1rem;
 	}
 
+	#title-and-info {
+		padding-bottom: 4rem;
+	}
+
 	li+li {
 	    margin-top: 0.2em;
 	}
@@ -922,11 +936,11 @@ hr {
     }
 
     h2 {
-    	font-size: 1.802rem;
+    	font-size: 3.802rem;
     }
 
     h3 {
-    	font-size: 1.602rem;
+    	font-size: 2.602rem;
     }
 
     h4 {
@@ -961,11 +975,11 @@ hr {
     }
 
     h2 {
-    	font-size: 1.802rem;
+    	font-size: 3.802rem;
     }
 
     h3 {
-    	font-size: 1.602rem;
+    	font-size: 2.602rem;
     }
 
     h4 {
@@ -994,11 +1008,11 @@ hr {
     }
 
     h2 {
-    	font-size: 1.802rem;
+    	font-size: 3.802rem;
     }
 
     h3 {
-    	font-size: 1.602rem;
+    	font-size: 2.602rem;
     }
 
     h4 {
@@ -1025,15 +1039,15 @@ hr {
     }
 
     h1 {
-    	font-size: 2.027rem;
+    	font-size: 4.027rem;
     }
 
     h2 {
-    	font-size: 1.802rem;
+    	font-size: 3.802rem;
     }
 
     h3 {
-    	font-size: 1.602rem;
+    	font-size: 2.602rem;
     }
 
     h4 {
