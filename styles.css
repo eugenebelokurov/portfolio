@@ -602,9 +602,11 @@ h4 {
 .callout {
 	display: flex;
 	flex-direction: column;
-/*	justify-content: space-between;*/
 	gap: 1rem;
 	padding: 24px 32px;
+
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 
 	background-color: #0163E1;
 }
@@ -613,11 +615,23 @@ h4 {
 	color: #ffffff;
 }
 
-.callout p:first-child {
+.callout-title {
 	font-family: 'JetBrains Mono', monospace;
 	font-weight: 700;
 }
 
+.callout-conclusion {
+	flex-direction: row;
+	background-color: #DFDFDF;
+}
+
+.callout-conclusion p {
+	color: #000000;
+}
+
+.vertical-line {
+	border: 2px solid black;
+}
 
 .group-of-callouts {
 	display: flex;
@@ -735,7 +749,7 @@ th {
 
 hr {
 	border: none;
-	border-top: 2px solid #ffffff;
+	border: 2px solid #ffffff;
 	margin: 0;
 }
 
@@ -912,6 +926,10 @@ hr {
 
 	#title-and-info {
 		padding-bottom: 4rem;
+	}
+
+	.callout-conclusion {
+		flex-direction: column;
 	}
 
 	li+li {
