@@ -213,7 +213,7 @@ header {
 }
 
 .card-content-main {
-	style="display: flex;
+	display: flex;
 	flex-direction: column;
 }
 
@@ -296,8 +296,7 @@ header {
 .block-of-cards {
 	display: flex;
 	flex-direction: column;
-	gap: 8rem;
-/*	padding-bottom: 4rem;*/
+	gap: 16rem;
 }
 
 .section-v2 {
