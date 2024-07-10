@@ -243,6 +243,17 @@ header {
 	}
 }
 
+.case-front-image {
+	border: 2px solid #FFFFFF; flex: 1; display: flex; justify-content: center; background-color: #D7D7D7;
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+	.case-front-image:hover {
+		background-image: linear-gradient(#0027F5, #D7D7D7);
+	}
+}
+
 #email-link {
 	text-decoration: underline;
 	text-align: right;
