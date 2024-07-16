@@ -1,0 +1,240 @@
+:root {
+    --phone-height: 550px;
+    --phone-width: 265px;
+    --phone-depth: 24px;
+}
+
+@-webkit-keyframes rotatingAnimationX {
+    0%{
+      -webkit-transform: rotateX(0deg);
+              transform: rotateX(0deg);
+    }
+    100% {
+      -webkit-transform: rotateX(360deg);
+              transform: rotateX(360deg);
+    }
+  }
+  @keyframes rotatingAnimationX {
+    0%{
+      -webkit-transform: rotateX(0deg);
+              transform: rotateX(0deg);
+    }
+    100% {
+      -webkit-transform: rotateX(360deg);
+              transform: rotateX(360deg);
+    }
+  }
+  @-webkit-keyframes rotatingAnimationY {
+    0%{
+      -webkit-transform: rotateY(0deg);
+              transform: rotateY(0deg);
+    }
+    100% {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+  }
+  @keyframes rotatingAnimationY {
+    0%{
+      -webkit-transform: rotateY(0deg);
+              transform: rotateY(0deg);
+    }
+    100% {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+  }
+  @-webkit-keyframes rotatingAnimationZ {
+    0%{
+      -webkit-transform: rotateZ(0deg);
+              transform: rotateZ(0deg);
+    }
+    100% {
+      -webkit-transform: rotateZ(360deg);
+              transform: rotateZ(360deg);
+    }
+  }
+  @keyframes rotatingAnimationZ {
+    0%{
+      -webkit-transform: rotateZ(0deg);
+              transform: rotateZ(0deg);
+    }
+    100% {
+      -webkit-transform: rotateZ(360deg);
+              transform: rotateZ(360deg);
+    }
+  }
+  /* html, body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 114, 255, 1);
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: #4a4a4a;
+    text-transform: uppercase;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: .1em;
+  } */
+  /* a {
+    color: inherit;
+    text-decoration: none;
+  } */
+  .container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(0, 114, 255, 1);
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .container > div {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  .phone-up {
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  .phone-container {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-animation: 7s rotatingAnimationY linear infinite;
+    animation: 7s rotatingAnimationY linear infinite;
+  }
+  .phone-container > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center center;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+  }
+  /* .phone-top, .phone-bottom, .phone-side-right {
+    background-size: auto auto;
+    background-repeat: repeat;
+    background-position: top left;
+  } */
+  .phone-front {
+    background-image: url('new-covers/app-case/front.png');
+    width: var(--phone-width);
+    height: var(--phone-height);
+    -webkit-transform: translate3d(
+        calc(var(--phone-width)/2*-1), 
+        calc(var(--phone-height)/2*-1), 
+        calc(var(--phone-depth)/2)) 
+        translate3d(0,0,0) rotateY(0deg);
+    transform: translate3d(
+        calc(var(--phone-width)/2*-1), 
+        calc(var(--phone-height)/2*-1), 
+        calc(var(--phone-depth)/2)) 
+        translate3d(0,0,0) rotateY(0deg);
+  }
+  .phone-side-left {
+    background-image: url('new-covers/app-case/left-side.png');
+    width: var(--phone-depth);
+    height: var(--phone-height);
+    -webkit-transform: translate3d(
+        calc(var(--phone-width)/2*-1),
+        calc(var(--phone-height)/2*-1),
+        calc(var(--phone-depth)/2)) 
+        translate3d(calc(var(--phone-depth)/2*-1), 0, calc(var(--phone-depth)/2*-1)) rotateY(-90deg);
+    transform: translate3d(
+        calc(var(--phone-width)/2*-1),
+        calc(var(--phone-height)/2*-1),
+        calc(var(--phone-depth)/2)) 
+        translate3d(calc(var(--phone-depth)/2*-1), 0, calc(var(--phone-depth)/2*-1)) rotateY(-90deg);
+  }
+  .phone-side-right {
+    background-image: url('new-covers/app-case/right-side.png');
+    width: var(--phone-depth);
+    height: var(--phone-height);
+    -webkit-transform: translate3d(
+        calc(var(--phone-width)/2*-1),
+        calc(var(--phone-height)/2*-1),
+        calc(var(--phone-depth)/2)) 
+        translate3d(
+          calc(var(--phone-width)), 
+          0px,
+          calc(var(--phone-depth)/2*-1)) 
+        rotateY(90deg);
+    transform: translate3d(
+        /* calc(var(--phone-width)/2*-1), */
+        -144.5px,
+        calc(var(--phone-height)/2*-1),
+        calc(var(--phone-depth)/2))
+        translate3d(
+          calc(var(--phone-width)), 
+          0px,
+          calc(var(--phone-depth)/2*-1)) 
+        rotateY(90deg);
+  }
+  .phone-top {
+    background-image: url('new-covers/app-case/top.png');
+    background-position: bottom right;
+    width: var(--phone-width);
+    height: var(--phone-depth);
+    -webkit-transform: translate3d(
+        calc(var(--phone-width)/2*-1), 
+        calc(var(--phone-height)/2*-1),
+        calc(var(--phone-depth)/2)) 
+        translate3d(0px, -29px, -29px) rotateX(90deg);
+    transform: 
+        translate3d(
+            calc(var(--phone-width)/2*-1), 
+            calc(var(--phone-height)/2*-1),
+            calc(var(--phone-depth)/2)) 
+        translate3d(
+            0,
+            calc(var(--phone-depth)/2*-1), 
+            calc(var(--phone-depth)/2*-1)) 
+        rotateX(90deg);
+  }
+  .phone-bottom {
+    background-image: url('new-covers/app-case/bottom.png');
+    width: var(--phone-width);
+    height: var(--phone-depth);
+    -webkit-transform: translate3d(
+        calc(var(--phone-width)/2*-1),
+        calc(var(--phone-height)/2*-1),
+        calc(var(--phone-depth)/2)) 
+        translate3d(
+          0px, 
+          calc(var(--phone-height)), 
+          calc(var(--phone-depth)/2*-1)) 
+        rotateX(-90deg);
+    transform: translate3d(
+        calc(var(--phone-width)/2*-1),
+        /* calc(var(--phone-height)/2*-1), */
+        -287px,
+        calc(var(--phone-depth)/2)) 
+        translate3d(
+          0px, 
+          calc(var(--phone-height)), 
+          calc((var(--phone-depth)/2*-1))) 
+        rotateX(-90deg);
+  }
+  .phone-back {
+    background-image: url('new-covers/app-case/back.png');
+    width: var(--phone-width);
+    height: var(--phone-height);
+    -webkit-transform: translate3d(
+        calc(var(--phone-width)/2*-1),
+        calc(var(--phone-height)/2*-1),
+        calc(var(--phone-depth)/2)) 
+        translate3d(0,0, calc(var(--phone-depth)*-1)) rotateY(180deg);
+    transform: translate3d(
+        calc(var(--phone-width)/2*-1),
+        calc(var(--phone-height)/2*-1),
+        calc(var(--phone-depth)/2)) 
+        translate3d(0,0, calc(var(--phone-depth)*-1)) rotateY(180deg);
+  }
