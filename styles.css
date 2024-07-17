@@ -1,7 +1,8 @@
 /* Base styles */
 body {
     margin: 0;
-    /* font-family: 'JetBrains Mono', monospace; */
+	margin-left: 24px;
+	margin-right: 24px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 22px;
 	font-weight: 400;
@@ -9,7 +10,6 @@ body {
 }
 
 p, ul, ol, th, tr {
-	/* font-family: 'Crimson Pro', serif; */
 	font-family: Arial, Helvetica, sans-serif;
 	max-width: 600px;
 	line-height: 1.4em;
@@ -18,15 +18,12 @@ p, ul, ol, th, tr {
 p {
 	padding-top: 0.2rem;
 	padding-bottom: 0.2rem;
+	font-size: 23px;
 }
 
 a:visited {
 	color: #000000;
 }
-
-/* a:hover {
-	color: #0027F5;
-} */
 
 main {
 	display: flex;
@@ -53,7 +50,8 @@ button {
 	border: none;
 	border-radius: 8px;
 	cursor: pointer;
-	font-family: 'JetBrains Mono', monospace;
+	/* font-family: 'JetBrains Mono', monospace; */
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 button:active {
@@ -65,44 +63,16 @@ button:active {
 		color: #000000;
 		background-color: #E3E3E3;
 	}
-
-	.primary-button:hover {
-		color: #FFFFFF;
-		background-color: #252525;
-	}
-
-	#home-button:hover {
-		color: #ffffff;
-		background-color: #000000;
-	}
 }
 
-#home-button {
-	border: 2px solid #000000;
-	background-color: #ffffff;
-	box-sizing: border-box;
-	border-radius: 64px;
 
-	flex-grow: 0;
-	padding-left: 64px; padding-right: 64px;
-}
-
-#home-button:active {
-	color: #ffffff;
-	background-color: #252525;
-}
-
-.other-cases button {
-	padding-left: 32px;
-	padding-right: 32px;
-}
 
 h1, h2, h3, h4, p, ol, ul {
 	margin: 0px;
 }
 
 ul {
-	list-style-type: "* ";
+	list-style-type: "↳ ";
 	padding-left: 0.8rem;
 }
 
@@ -115,36 +85,11 @@ li>ul>li:first-child {
 }
 
 ol {
-/*	line-height: 1.2rem;*/
 	padding: 0px;
 }
 
 ol li {
 	list-style-position: inside;
-}
-
-.s1-gap {
-	display: flex;
-	flex-direction: column;
-	gap: 4rem;
-}
-
-.s2-gap {
-	display: flex;
-	flex-direction: column;
-	gap: 3rem;
-}
-
-.s3-gap {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-}
-
-.s4-gap {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
 }
 
 nav {
@@ -210,261 +155,9 @@ header {
 	}
 }
 
-#title-and-info {
-	display: flex;
-	flex-direction: column;
-	padding-top: 1rem;
-	padding-bottom: 8rem;
-}
-
-#title-and-info p {
-	font-size: 1.6rem;
-}
-
-#title-and-info-info {
-	padding-top: 1rem;
-	text-indent: 1rem;
-}
-
-
-
-
-.card-content-v2 {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.card-content-main {
-	display: flex;
-	flex-direction: column;
-}
-
-.case-study-v3 {
-	display: flex;
-	flex-direction: row;
-	gap: 8px;
-}
-
-.case-study-v3 img {
-	max-width: 520px;
-	height: auto;
-}
-
-.case-study-v3 p {
-	font-size: 1.5rem;
-	font-weight: 400;
-	letter-spacing: 0px;
-	/* font-family: 'JetBrains Mono', monospace; */
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-#case-studies-v2 {
-	background-color: #D7D7D7;
-}
-
-#case-studies-v2 h2 {
-	color: #0027F5;
-}
-
-#case-studies-v2 a {
-	text-decoration: none;
-}
-
-#case-studies-v2 a:visited {
-	color: #000000;
-}
-
-@media (hover: hover) and (pointer: fine) {
-	#case-studies-v2 a:hover {
-		color: #0027F5;
-	}
-
-	a:hover .card-numeration-v2 {
-		color: #6279F5;
-	}
-}
-
-.case-front-image {
-	display: flex; 
-	flex: 2;
-	justify-content: center; 
-	background-color: #000000;
-
-	padding-top: 2%;
-	padding-bottom: 2%;
-}
-
-.case-front-image img  {
-	display: flex;
-	height: 100%;
-}
-
-.case-front-image-small {
-	max-width: 505px;
-}
-
-.case-front-image-medium {
-	max-width: 1010px;
-}
-
-@media (hover: hover) and (pointer: fine) {
-	.case-front-image:hover {
-		/* background-image: linear-gradient(#0027F5, #D7D7D7); */
-		/* background-image: repeating-linear-gradient(#0027F5, rgba(0, 39, 245, 0) 10%); */
-	}
-}
-
-.case-front-image:visited {
-	color: #000000;
-}
-
-.case-front-title {
-	display: flex;
-	flex: 1;
-	justify-content: center;
-
-	font-size: 48px;
-	font-weight: 400;
-	font-family: 'JetBrains Mono', monospace;
-
-	max-width: 100%;
-	padding-top: 16px; 
-	padding-bottom: 16px;
-}
-
 #email-link {
 	text-decoration: underline;
 	text-align: right;
-}
-
-.card-v2 {
-	display: flex;
-	flex-direction: row;
-	gap: 3rem;
-}
-
-.card-v2 img {
-	flex: 1;
-	max-width: 66%;
-	display: block;
-}
-
-#case-studies-v2 .card-v2 img:last-child {
-  display: none;  
-}
-
-@media (hover: hover) and (pointer: fine) {
-	#case-studies-v2 .card-v2:hover img:last-child {
-	  display: block;  
-	}
-
-	#case-studies-v2 .card-v2:hover img:first-child {
-	  display: none;  
-	}
-}
-
-#image-stack-container {
-	max-width: 66%;
-}
-
-#image-stack-container img{
-	max-width: 100%;
-}
-
-.card-numeration-v2 {
-	color: #7D7E7F;
-	font-size: 1.802rem;
-	font-weight: 700;
-	font-family: 'JetBrains Mono', monospace;
-}
-
-#fun-cases-v2 .card-numeration-v2 {
-	color: #C6C4B2;
-}
-
-.block-of-cards {
-	display: flex;
-	flex-direction: column;
-	gap: 16rem;
-}
-
-.section-v2 {
-	padding-bottom: 4rem;
-}
-
-.section-v2 h1 {
-	padding-bottom: 2rem;
-}
-
-#fun-cases-v2 {
-	background-color: #FFFF00;
-}
-
-.view-more {
-	text-decoration: underline;
-	font-weight: 700;
-}
-
-#sec-fun-v2 a {
-	font-weight: 700;
-/*	white-space: nowrap;*/
-}
-
-#sec-fun-v2 a:visited {
-	color: #000000;
-}
-
-@media (hover: hover) and (pointer: fine) {
-	#sec-fun-v2 a:hover {
-		color: #82821A;
-	}
-}
-
-.nav-menu {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
-.primary-button {
-	color: #FFFFFF;
-	background-color: #000000;
-}
-
-.primary-button.clicked {
-	color: #FFFFFF;
-	background-color: #A82C2C;
-	width: 160px;
-}
-
-.description-line {
-	display: flex;
-	flex-direction: row;
-}
-
-#description {
-	display: flex; 
-	flex-direction: row; 
-	justify-content: space-between;
-	margin-top: -1rem;
-/*	margin-bottom: 1rem;*/
-}
-
-#description p {
-	letter-spacing: -0.4vw;
-	font-weight: 700;
-	font-size: 6.98vw;
-	white-space: nowrap;
-	font-family: 'Mattone', monospace;
-	max-width: 100%;
-/*	margin-left: -6px;*/
-	line-height: 1.1em;
-}
-
-.full-screen-margin {
-	margin-left: 16px;
-	margin-right: 16px;
 }
 
 #project-description {
@@ -500,8 +193,10 @@ h2 {
 h3 {
 	margin-top: 2rem;
 	margin-bottom: 1rem;
-	line-height: 90%;
-	letter-spacing: -3px;
+	/* line-height: 90%; */
+	/* letter-spacing: -1px; */
+	font-weight: 400;
+	text-decoration: underline; color: #0027F5;
 }
 
 h4 {
@@ -509,29 +204,13 @@ h4 {
 	padding-bottom: 1px;
 }
 
+.case-title {
+	margin-top: 1rem; margin-bottom: 0rem; text-decoration: underline; color: #0027F5;
+}
+
 .section h1,
 .section h2 {
 	font-weight: 700;
-}
-
-.my-section {
-/*	color: #831A4A;*/
-	color: #696969;
-}
-
-.section-value {
-/*	color: #16459A;*/
-	color: #696969;
-}
-
-.case-studies {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-}
-
-.case-studies a {
-	text-decoration: none;
 }
 
 .case-study-description-container {
@@ -541,33 +220,17 @@ h4 {
 	gap: 2rem;
 }
 
-.cover {
-	background-color: #282828;
-	padding-top: 2rem;
-	padding-bottom: 3rem;
-	border-radius: 8px;
-	margin-left: 24px; 
-	margin-right: 24px;
-}
-
-.cover-content {
-	display: flex;
-	gap: 1rem;
-	flex-direction: column;
-/*	align-items: center;*/
-}
-
-.cover-content h2 {
-	color: #FFFFFF;
-}
-
-.cover-content p {
-	color: #FFFFFF;
-}
-
 .centered-img {
 	display: flex;
 	justify-content: center;
+}
+
+.cover-fun {
+	background-color: #FFFF00;
+	/* width: 100vw;
+    height: 80vh; */
+	width: 775px;
+	height: 600px;
 }
 
 .main-cover-img {
@@ -612,11 +275,6 @@ h4 {
 	justify-content: flex-end;
 }
 
-.cover-content img {
-	flex: 1;
-    max-width: 100%; 
-}
-
 .cover-secondary img {
 	flex: 1;
 	max-height: 400px;
@@ -628,10 +286,6 @@ h4 {
 	padding-left: 24px;
 	padding-right: 24px;
 	padding-bottom: 24px;
-}
-
-.cover-content a {
-	color: #FFFFFF;
 }
 
 .cover-action-button p {
@@ -649,33 +303,11 @@ h4 {
 	font-size: 2rem;
 }
 
-.tag-and-button {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	gap: 32px;
-}
-
-.tags {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	column-gap: 8px;
-	row-gap: 8px;
-/*	width: 100%;*/
-}
-
-.tag {
-	border: 2px solid #FFFFFF;
-	border-radius: 64px;
-	padding: 8px 12px 8px 12px;
-	margin: 0px;
-}
-
 #links {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
+	font-size: 23px;
 }
 
 #links a:visited {
@@ -705,7 +337,7 @@ h4 {
 }
 
 .callout-title {
-	font-family: 'JetBrains Mono', monospace;
+	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 700;
 }
 
@@ -728,6 +360,13 @@ h4 {
 	gap: 1rem;
 }
 
+video {
+	max-width: 50%; 
+	max-height: 80%;
+    height: auto; 
+    /* background-color: #F7F7F7; */
+}
+
 /*ui-case styles start*/
 
 .ui-element {
@@ -743,29 +382,8 @@ h4 {
 	margin-bottom: 0.2rem;
 }
 
-.multi-img {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	gap: 24px;
-}
-
-video {
-    width: 100%; /* Adjust width as needed */
-    max-height: 480px; /* Ensure video fits within container */
-    height: auto; /* Maintain aspect ratio */
-    background-color: #F7F7F7;
-}
-
-.other-cases button {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 100%;
-}
-
 .right-arrow {
-	font-family: 'JetBrains Mono', monospace;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1rem;
 }
 
@@ -791,9 +409,7 @@ video {
 .logo {
 	display: flex;
 	flex-direction: column;
-/*	justify-content: space-between;*/
 	gap: 16px;
-/*	align-items: center;*/
 	max-width: 10%;
 	height: auto;
 }
@@ -870,6 +486,15 @@ hr {
 	padding-bottom: 5rem;
 }
 
+.other-cases button {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	padding-left: 32px;
+	padding-right: 32px;
+}
+
 .other-cases .label {
 	text-align: left;
 }
@@ -890,11 +515,6 @@ hr {
 	text-align: right;
 }
 
-#email-button {
-	flex-grow: 0;
-	padding-left: 64px; padding-right: 64px;
-}
-
 /* Phone */
 @media only screen and (max-width: 599px) {
     .main-margin {
@@ -911,19 +531,6 @@ hr {
     	margin-left: 16px;
     	margin-right: 16px;
     }
-
-    .card-v2 {
-		flex-direction: column;
-		gap: 1rem;
-	}
-
-	#image-stack-container {
-		max-width: 100%;
-	}
-
-	.card-v2 img {
-		max-width: 100%;
-	}
 
     nav a {
 		display: none;
@@ -961,10 +568,6 @@ hr {
 		max-width: 100%;
 	}
 
-    .cover-content img {
-    	max-width: 100%;
-    }
-
     .footer {
 		flex-direction: column;
 	}
@@ -987,16 +590,6 @@ hr {
 		display: flex;
 		flex-direction: column;
 	}
-
-    #home-button {
-    	flex-grow: 1;
-    	padding-left: 0px; padding-right: 0px;
-    }
-
-    #email-button {
-    	flex-grow: 1;
-    	padding-left: 0px; padding-right: 0px;
-    }
 
     #description p {
     	padding-top: 0.5rem;
@@ -1154,7 +747,8 @@ hr {
     }
 
     h3 {
-    	font-size: 2.602rem;
+    	/* font-size: 2.602rem; */
+		font-size: 36px;
     }
 
     h4 {
@@ -1164,278 +758,4 @@ hr {
     .stack-of-examples {
     	flex-direction: row;
     }
-}
-
-@font-face {
-  	font-family: 'Nouvelle Grotesquerie';
-  	src: url('fonts/NouvelleGrotesquerie-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  	font-family: 'Mattone';
- 	src: url('fonts/Mattone-Black.woff2') format('woff2');
-}
-
-@font-face {
-  	font-family: 'Dogma';
-  	font-weight: normal;
-    font-style: normal;
-  	src: url('fonts/xe_dogma.ttf') format('truetype');
-}
-
-/* Thin */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-Thin.woff2') format('woff2');
-    font-weight: 100;
-    font-style: normal;
-}
-
-/* Thin Italic */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-ThinItalic.woff2') format('woff2');
-    font-weight: 100;
-    font-style: italic;
-}
-
-/* Extra Light */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-ExtraLight.woff2') format('woff2');
-    font-weight: 200;
-    font-style: normal;
-}
-
-/* Extra Light Italic */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-ExtraLightItalic.woff2') format('woff2');
-    font-weight: 200;
-    font-style: italic;
-}
-
-/* Light */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-Light.woff2') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-}
-
-/* Light Italic */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-LightItalic.woff2') format('woff2');
-    font-weight: 300;
-    font-style: italic;
-}
-
-/* Regular */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* Italic */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-Italic.woff2') format('woff2');
-    font-weight: 400;
-    font-style: italic;
-}
-
-/* Medium */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-}
-
-/* Medium Italic */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-MediumItalic.woff2') format('woff2');
-    font-weight: 500;
-    font-style: italic;
-}
-
-/* Semi Bold */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-SemiBold.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-}
-
-/* Semi Bold Italic */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-SemiBoldItalic.woff2') format('woff2');
-    font-weight: 600;
-    font-style: italic;
-}
-
-/* Bold */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-
-/* Bold Italic */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-BoldItalic.woff2') format('woff2');
-    font-weight: 700;
-    font-style: italic;
-}
-
-/* Extra Bold */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-ExtraBold.woff2') format('woff2');
-    font-weight: 800;
-    font-style: normal;
-}
-
-/* Extra Bold Italic */
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono-ExtraBoldItalic.woff2') format('woff2');
-    font-weight: 800;
-    font-style: italic;
-}
-
-/* Crimson Pro Black */
-@font-face {
-    font-family: 'Crimson Pro';
-    font-style: normal;
-    font-weight: 900;
-    src: url('fonts/CrimsonPro-Black.ttf') format('truetype');
-}
-
-/* Crimson Pro Black Italic */
-@font-face {
-    font-family: 'Crimson Pro';
-    font-style: italic;
-    font-weight: 900;
-    src: url('fonts/CrimsonPro-BlackItalic.ttf') format('truetype');
-}
-
-/* Crimson Pro ExtraBold */
-@font-face {
-    font-family: 'Crimson Pro';
-    font-style: normal;
-    font-weight: 800;
-    src: url('fonts/CrimsonPro-ExtraBold.ttf') format('truetype');
-}
-
-/* Crimson Pro ExtraBold Italic */
-@font-face {
-    font-family: 'Crimson Pro';
-    font-style: italic;
-    font-weight: 800;
-    src: url('fonts/CrimsonPro-ExtraBoldItalic.ttf') format('truetype');
-}
-
-/* Crimson Pro Bold */
-@font-face {
-    font-family: 'Crimson Pro';
-    font-style: normal;
-    font-weight: 700;
-    src: url('fonts/CrimsonPro-Bold.ttf') format('truetype');
-}
-
-
-/* Crimson Pro Bold Italic */
-@font-face {
-    font-family: 'Crimson Pro';
-    font-style: italic;
-    font-weight: 700;
-    src: url('fonts/CrimsonPro-BoldItalic.ttf') format('truetype');
-}
-
-/* Crimson Pro SemiBold */
-@font-face {
-    font-family: 'Crimson Pro';
-    font-style: normal;
-    font-weight: 600;
-    src: url('fonts/CrimsonPro-SemiBold.ttf') format('truetype');
-}
-
-/* Crimson Pro SemiBold Italic */
-@font-face {
-    font-family: 'Crimson Pro';
-    font-style: italic;
-    font-weight: 600;
-    src: url('fonts/CrimsonPro-SemiBoldItalic.ttf') format('truetype');
-}
-
-/* Crimson Pro Medium */
-@font-face {
-    font-family: 'Crimson Pro';
-    font-style: normal;
-    font-weight: 500;
-    src: url('fonts/CrimsonPro-Medium.ttf') format('truetype');
-}
-
-/* Crimson Pro Medium Italic */
-@font-face {
-    font-family: 'Crimson Pro';
-    font-style: italic;
-    font-weight: 500;
-    src: url('fonts/CrimsonPro-MediumItalic.ttf') format('truetype');
-}
-
-/* Crimson Pro Italic */
-@font-face {
-    font-family: 'Crimson Pro';
-    font-style: italic;
-    font-weight: 400;
-    src: url('fonts/CrimsonPro-Italic.ttf') format('truetype');
-}
-
-/* Crimson Pro Regular */
-@font-face {
-    font-family: 'Crimson Pro';
-    font-style: normal;
-    font-weight: 400;
-    src: url('fonts/CrimsonPro-Regular.ttf') format('truetype');
-}
-
-/* Crimson Pro Light */
-@font-face {
-    font-family: 'Crimson Pro';
-    font-style: normal;
-    font-weight: 300;
-    src: url('fonts/CrimsonPro-Light.ttf') format('truetype');
-}
-
-/* Crimson Pro Light Italic */
-@font-face {
-    font-family: 'Crimson Pro';
-    font-style: italic;
-    font-weight: 300;
-    src: url('fonts/CrimsonPro-LightItalic.ttf') format('truetype');
-}
-
-/* Crimson Pro ExtraLight */
-@font-face {
-    font-family: 'Crimson Pro';
-    font-style: normal;
-    font-weight: 200;
-    src: url('fonts/CrimsonPro-ExtraLight.ttf') format('truetype');
-}
-
-/* Crimson Pro ExtraLight Italic */
-@font-face {
-    font-family: 'Crimson Pro';
-    font-style: italic;
-    font-weight: 200;
-    src: url('fonts/CrimsonPro-ExtraLightItalic.ttf') format('truetype');
 }

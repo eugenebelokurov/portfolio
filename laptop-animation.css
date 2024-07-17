@@ -64,11 +64,12 @@
               transform: rotateZ(360deg);
     }
   }
-  .container {
+  .c {
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     overflow: hidden;
-    background-color: rgba(0, 114, 255, 1);
+    /* background-color: rgba(0, 114, 255, 1); */
+    background-color: #000000;
     -webkit-perspective: 1200px;
     perspective: 1200px;
     display: -webkit-box;
@@ -81,9 +82,13 @@
     -ms-flex-align: center;
     align-items: center;
   }
-  .container > div {
+  .laptop-up > div {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+  }
+  .laptop-up {
+    -webkit-animation: 7s rotatingAnimationY linear infinite;
+    animation: 7s rotatingAnimationY linear infinite;
   }
   .laptop-screen-up {
     -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.5);
@@ -94,8 +99,6 @@
   .laptop-screen-container {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    /* -webkit-animation: 7s rotatingAnimationY linear infinite;
-    animation: 7s rotatingAnimationY linear infinite; */
   }
   .laptop-screen-container > div {
     position: absolute;
@@ -107,7 +110,6 @@
     backface-visibility: visible;
   }
   .laptop-screen-front {
-    background-image: url('new-covers/app-case/laptop/screen/front.png');
     width: var(--laptop-width);
     height: var(--laptop-height);
     -webkit-transform: translate3d(
@@ -222,15 +224,13 @@
 
   .laptop-body-up {
     -webkit-transform: rotateX(0deg) rotateY(deg) rotateZ(0deg) scale(0.5);
-    transform: rotateX(45deg) rotateY(0deg) rotateZ(0deg) translateY(calc(var(--laptop-height)/2)) scale(0.5);
+    transform: rotateX(66deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 230px, -150px) scale(0.5);
     -webkit-transform-origin: center center;
     transform-origin: center center;
   }
   .laptop-body-container {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    /* -webkit-animation: 7s rotatingAnimationY linear infinite; */
-    /* animation: 7s rotatingAnimationY linear infinite; */
   }
   .laptop-body-container > div {
     position: absolute;
@@ -352,4 +352,17 @@
         calc(var(--laptop-height)/2*-1),
         calc(var(--laptop-depth)/2)) 
         translate3d(0,0, calc(var(--laptop-depth)*-1)) rotateY(180deg);
+  }
+
+  #case-three-laptop-up {
+    -webkit-animation: 7s rotatingAnimationX linear infinite;
+    animation: 7s rotatingAnimationX linear infinite;
+  }
+
+  #case-two-laptop-screen-front {
+    background-image: url('new-covers/app-case/laptop/screen/case-one-front.png');
+  }
+
+  #case-three-laptop-screen-front {
+    background-image: url('new-covers/app-case/laptop/screen/case-two-front.png');
   }
