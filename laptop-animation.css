@@ -123,8 +123,8 @@
         calc(var(--laptop-depth)/2)) 
         translate3d(0,0,0) rotateY(0deg);
   }
-  /* .laptop-screen-side-left {
-    background-image: url('new-covers/app-case/left-side.png');
+  .laptop-screen-side-left {
+    background-image: url('new-covers/app-case/laptop/screen/left-side.png');
     width: var(--laptop-depth);
     height: var(--laptop-height);
     -webkit-transform: translate3d(
@@ -137,9 +137,9 @@
         calc(var(--laptop-height)/2*-1),
         calc(var(--laptop-depth)/2)) 
         translate3d(calc(var(--laptop-depth)/2*-1), 0, calc(var(--laptop-depth)/2*-1)) rotateY(-90deg);
-  } */
-  /* .laptop-screen-side-right {
-    background-image: url('new-covers/app-case/right-side.png');
+  }
+  .laptop-screen-side-right {
+    background-image: url('new-covers/app-case/laptop/screen/right-side.png');
     width: var(--laptop-depth);
     height: var(--laptop-height);
     -webkit-transform: translate3d(
@@ -152,7 +152,7 @@
           calc(var(--laptop-depth)/2*-1)) 
         rotateY(90deg);
     transform: translate3d(
-        -144.5px,
+        -456px,
         calc(var(--laptop-height)/2*-1),
         calc(var(--laptop-depth)/2))
         translate3d(
@@ -160,9 +160,9 @@
           0px,
           calc(var(--laptop-depth)/2*-1)) 
         rotateY(90deg);
-  } */
-  /* .laptop-screen-top {
-    background-image: url('new-covers/app-case/top.png');
+  }
+  .laptop-screen-top {
+    background-image: url('new-covers/app-case/laptop/screen/top.png');
     background-position: bottom right;
     width: var(--laptop-width);
     height: var(--laptop-depth);
@@ -181,9 +181,9 @@
             calc(var(--laptop-depth)/2*-1), 
             calc(var(--laptop-depth)/2*-1)) 
         rotateX(90deg);
-  } */
-  /* .laptop-screen-bottom {
-    background-image: url('new-covers/app-case/bottom.png');
+  }
+  .laptop-screen-bottom {
+    background-image: url('new-covers/app-case/laptop/screen/bottom.png');
     width: var(--laptop-width);
     height: var(--laptop-depth);
     -webkit-transform: translate3d(
@@ -197,14 +197,14 @@
         rotateX(-90deg);
     transform: translate3d(
         calc(var(--laptop-width)/2*-1),
-        -287px,
+        -335px,
         calc(var(--laptop-depth)/2)) 
         translate3d(
           0px, 
           calc(var(--laptop-height)), 
           calc((var(--laptop-depth)/2*-1))) 
         rotateX(-90deg);
-  } */
+  }
   .laptop-screen-back {
     background-image: url('new-covers/app-case/laptop/screen/back.png');
     width: var(--laptop-width);
@@ -256,8 +256,8 @@
         calc(var(--laptop-depth)/2)) 
         translate3d(0,0,0) rotateY(0deg);
   }
-  /* .laptop-body-side-left {
-    background-image: url('new-covers/app-case/left-side.png');
+  .laptop-body-side-left {
+    background-image: url('new-covers/app-case/laptop/body/left-side.png');
     width: var(--laptop-depth);
     height: var(--laptop-height);
     -webkit-transform: translate3d(
@@ -270,9 +270,9 @@
         calc(var(--laptop-height)/2*-1),
         calc(var(--laptop-depth)/2)) 
         translate3d(calc(var(--laptop-depth)/2*-1), 0, calc(var(--laptop-depth)/2*-1)) rotateY(-90deg);
-  } */
-  /* .laptop-body-side-right {
-    background-image: url('new-covers/app-case/right-side.png');
+  }
+  .laptop-body-side-right {
+    background-image: url('new-covers/app-case/laptop/body/right-side.png');
     width: var(--laptop-depth);
     height: var(--laptop-height);
     -webkit-transform: translate3d(
@@ -285,7 +285,7 @@
           calc(var(--laptop-depth)/2*-1)) 
         rotateY(90deg);
     transform: translate3d(
-        -144.5px,
+        -456px,
         calc(var(--laptop-height)/2*-1),
         calc(var(--laptop-depth)/2))
         translate3d(
@@ -293,9 +293,9 @@
           0px,
           calc(var(--laptop-depth)/2*-1)) 
         rotateY(90deg);
-  } */
-  /* .laptop-body-top {
-    background-image: url('new-covers/app-case/laptop/body/top.png');
+  }
+  .laptop-body-top {
+    background-image: url('new-covers/app-case/laptop/body/back.png');
     background-position: bottom right;
     width: var(--laptop-width);
     height: var(--laptop-depth);
@@ -314,9 +314,9 @@
             calc(var(--laptop-depth)/2*-1), 
             calc(var(--laptop-depth)/2*-1)) 
         rotateX(90deg);
-  } */
-  /* .laptop-body-bottom {
-    background-image: url('new-covers/app-case/laptop/body/bottom.png');
+  }
+  .laptop-body-bottom {
+    background-image: url('new-covers/app-case/laptop/body/front.png');
     width: var(--laptop-width);
     height: var(--laptop-depth);
     -webkit-transform: translate3d(
@@ -330,14 +330,14 @@
         rotateX(-90deg);
     transform: translate3d(
         calc(var(--laptop-width)/2*-1),
-        -287px,
+        -330px,
         calc(var(--laptop-depth)/2)) 
         translate3d(
           0px, 
           calc(var(--laptop-height)), 
           calc((var(--laptop-depth)/2*-1))) 
         rotateX(-90deg);
-  } */
+  }
   .laptop-body-back {
     background-image: url('new-covers/app-case/laptop/body/bottom.png');
     width: var(--laptop-width);
