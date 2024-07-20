@@ -4,6 +4,24 @@
     --laptop-depth: 12px;
 }
 
+@media only screen and (max-width: 599px) {
+  :root {
+    --laptop-scale: 0.4;
+    --laptop-screen-Y: -70px;
+    --laptop-body-Y: 150px;
+    --laptop-body-Z: -55px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  :root {
+    --laptop-scale: 0.5;
+    --laptop-screen-Y: -70px;
+    --laptop-body-Y: 200px;
+    --laptop-body-Z: -85px;
+  }
+}
+
 @-webkit-keyframes rotatingAnimationX {
     0%{
       -webkit-transform: rotateX(0deg);
@@ -65,10 +83,9 @@
     }
   }
   .container {
-    width: 100vw;
+    width: 100%;
     height: 80vh;
     overflow: hidden;
-    /* background-color: rgba(0, 114, 255, 1); */
     background-color: #000000;
     -webkit-perspective: 1200px;
     perspective: 1200px;
@@ -91,10 +108,11 @@
     animation: 7s rotatingAnimationY linear infinite;
   }
   .laptop-screen-up {
-    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.5);
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.5);
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0,var(--laptop-screen-Y),0) scale(var(--laptop-scale));
     -webkit-transform-origin: center center;
     transform-origin: center center;
+    
   }
   .laptop-screen-container {
     -webkit-transform-style: preserve-3d;
@@ -223,8 +241,9 @@
 
 
   .laptop-body-up {
-    -webkit-transform: rotateX(0deg) rotateY(deg) rotateZ(0deg) scale(0.5);
-    transform: rotateX(66deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 230px, -150px) scale(0.5);
+    -webkit-transform: rotateX(0deg) rotateY(deg) rotateZ(0deg);
+    /* transform: rotateX(66deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 230px, -150px) scale(0.5); */
+    transform: rotateX(66deg) rotateY(0deg) rotateZ(0deg) translate3d(0, var(--laptop-body-Y), var(--laptop-body-Z)) scale(var(--laptop-scale));
     -webkit-transform-origin: center center;
     transform-origin: center center;
   }

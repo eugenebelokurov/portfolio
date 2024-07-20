@@ -64,27 +64,10 @@
               transform: rotateZ(360deg);
     }
   }
-  /* html, body {
-    margin: 0;
-    padding: 0;
-    background-color: rgba(0, 114, 255, 1);
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-    color: #4a4a4a;
-    text-transform: uppercase;
-    font-size: 10px;
-    text-align: center;
-    letter-spacing: .1em;
-  } */
-  /* a {
-    color: inherit;
-    text-decoration: none;
-  } */
   .container {
-    /* width: 100vw; */
     width: 100%;
     height: 80vh;
     overflow: hidden;
-    /* background-color: rgba(0, 114, 255, 1); */
     background-color: #000000;
     -webkit-perspective: 1200px;
     perspective: 1200px;
