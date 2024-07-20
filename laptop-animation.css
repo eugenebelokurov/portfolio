@@ -1,6 +1,6 @@
 :root {
     --laptop-height: 650px;
-    --laptop-width: 900px;
+    --laptop-width: 915px;
     --laptop-depth: 12px;
 }
 
@@ -170,7 +170,7 @@
           calc(var(--laptop-depth)/2*-1)) 
         rotateY(90deg);
     transform: translate3d(
-        -456px,
+        -464px,
         calc(var(--laptop-height)/2*-1),
         calc(var(--laptop-depth)/2))
         translate3d(
@@ -304,7 +304,7 @@
           calc(var(--laptop-depth)/2*-1)) 
         rotateY(90deg);
     transform: translate3d(
-        -456px,
+        -464px,
         calc(var(--laptop-height)/2*-1),
         calc(var(--laptop-depth)/2))
         translate3d(
@@ -373,15 +373,24 @@
         translate3d(0,0, calc(var(--laptop-depth)*-1)) rotateY(180deg);
   }
 
-  #case-three-laptop-up {
+  #sort-case-laptop-up {
     -webkit-animation: 7s rotatingAnimationX linear infinite;
     animation: 7s rotatingAnimationX linear infinite;
   }
 
-  #case-two-laptop-screen-front {
+  #ui-case-laptop-up {
+    -webkit-animation: 16s rotatingAnimationZ linear infinite;
+    animation: 16s rotatingAnimationZ linear infinite;
+  }
+
+  #research-case-laptop-screen-front {
     background-image: url('new-covers/app-case/laptop/screen/case-one-front.png');
   }
 
-  #case-three-laptop-screen-front {
+  #sort-case-laptop-screen-front {
     background-image: url('new-covers/app-case/laptop/screen/case-two-front.png');
+  }
+
+  #ui-case-laptop-screen-front {
+    background-image: url('new-covers/app-case/laptop/screen/ui-case-front.png');
   }
