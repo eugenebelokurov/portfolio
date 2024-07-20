@@ -121,11 +121,6 @@
     -webkit-backface-visibility: visible;
     backface-visibility: visible;
   }
-  /* .phone-top, .phone-bottom, .phone-side-right {
-    background-size: auto auto;
-    background-repeat: repeat;
-    background-position: top left;
-  } */
   .phone-front {
     width: var(--phone-width);
     height: var(--phone-height);
@@ -243,3 +238,15 @@
   #case-one-phone-front {
     background-image: url('new-covers/app-case/front.png');
   }
+
+@media only screen and (max-width: 599px) {
+    .phone-up {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .phone-up {
+        transform: scale(0.9);
+    }
+}

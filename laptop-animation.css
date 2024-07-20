@@ -64,7 +64,7 @@
               transform: rotateZ(360deg);
     }
   }
-  .c {
+  .container {
     width: 100vw;
     height: 80vh;
     overflow: hidden;
