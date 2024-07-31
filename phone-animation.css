@@ -111,15 +111,6 @@
   /* opacity: 30%; */
 }
 
-.phone-side-left-top, .phone-side-left-bottom,
-.phone-top-left, .phone-top-right,
-.phone-side-right-top, .phone-side-right-bottom,
-.phone-bottom-right, .phone-bottom-left {
-  background: linear-gradient(#3E4042, #585A5C);
-  transform-origin: top left;
-  width: var(--phone-depth);
-  height: var(--corner-length);
-}
 .phone-front {
   width: var(--phone-width);
   height: var(--phone-height);
@@ -149,27 +140,8 @@
       calc(var(--phone-depth)/2)) 
       translate3d(calc(var(--phone-depth)/2*-1), 0, calc(var(--phone-depth)/2*-1)) rotateY(-90deg);
 }
-.phone-side-left-top {
-  transform: 
-    translate3d(
-      calc((var(--phone-width))/2*-1),
-      calc((var(--phone-height) - var(--dislocation))/2*-1),
-      calc(var(--phone-depth)/2))
-    rotateZ(-90deg) rotateY(90deg) rotateX(calc(90deg - var(--corner-degree)))
-  ;
-}
-.phone-side-left-bottom {
-  transform: 
-    translate3d(
-      calc((var(--phone-width))/2*-1),
-      calc((var(--phone-height) - var(--dislocation))/2*1),
-      calc(var(--phone-depth)/2))
-    rotateZ(-90deg) rotateY(90deg) rotateX(calc((90deg - var(--corner-degree))*-1))
-  ;
-}
-
 .phone-side-right {
-  background-image: url('new-covers/app-case/right-side.png');
+  background-image: url('new-covers/app-case/right-side-short.png');
   width: var(--phone-depth);
   height: calc(var(--phone-height) - var(--dislocation));
   -webkit-transform: translate3d(
@@ -192,25 +164,6 @@
         calc(var(--phone-depth)/2*-1)) 
       rotateY(90deg);
 }
-.phone-side-right-top {
-  transform: 
-    translate3d(
-      calc((var(--phone-width))/2*1),
-      calc((var(--phone-height) - var(--dislocation))/2*-1),
-      calc(var(--phone-depth)/2))
-    rotateZ(-90deg) rotateY(90deg) rotateX(calc((270deg - var(--corner-degree))*-1))
-  ;
-}
-.phone-side-right-bottom {
-  transform: 
-    translate3d(
-      calc((var(--phone-width))/2*1),
-      calc((var(--phone-height) - var(--dislocation))/2*1),
-      calc(var(--phone-depth)/2))
-    rotateZ(-90deg) rotateY(90deg) rotateX(calc(270deg - var(--corner-degree)))
-  ;
-}
-
 .phone-top {
   background-image: url('new-covers/app-case/top.png');
   background-position: bottom right;
@@ -232,25 +185,6 @@
           calc(var(--phone-depth)/2*-1)) 
       rotateX(90deg);
 }
-.phone-top-left {
-  transform: 
-    translate3d(
-      calc((var(--phone-width) - var(--dislocation))/2*-1),
-      calc(var(--phone-height)/2*-1),
-      calc(var(--phone-depth)/2*1))
-    rotateZ(0deg) rotateY(90deg) rotateX(calc((90deg - var(--corner-degree))*-1))
-  ;
-}
-.phone-top-right {
-  transform: 
-    translate3d(
-      calc((var(--phone-width) - var(--dislocation))/2*1),
-      calc(var(--phone-height)/2*-1),
-      calc(var(--phone-depth)/2*1))
-    rotateZ(0deg) rotateY(90deg) rotateX(calc((90deg - var(--corner-degree))))
-  ;
-}
-
 .phone-bottom {
   background-image: url('new-covers/app-case/bottom.png');
   width: calc(var(--phone-width) - var(--dislocation));
@@ -275,40 +209,21 @@
         calc((var(--phone-depth)/2*-1))) 
       rotateX(-90deg);
 }
-.phone-bottom-left {
-  transform: 
-    translate3d(
-      calc((var(--phone-width) - var(--dislocation))/2*-1),
-      calc(var(--phone-height)/2*1),
-      calc(var(--phone-depth)/2*1))
-    rotateZ(0deg) rotateY(90deg) rotateX(calc((90deg + var(--corner-degree))*-1))
-  ;
+.phone-back {
+  background-image: url('new-covers/app-case/back.png');
+  width: var(--phone-width);
+  height: var(--phone-height);
+  -webkit-transform: translate3d(
+      calc(var(--phone-width)/2*-1),
+      calc(var(--phone-height)/2*-1),
+      calc(var(--phone-depth)/2)) 
+      translate3d(0,0, calc(var(--phone-depth)*-1)) rotateY(180deg);
+  transform: translate3d(
+      calc(var(--phone-width)/2*-1),
+      calc(var(--phone-height)/2*-1),
+      calc(var(--phone-depth)/2)) 
+      translate3d(0,0, calc(var(--phone-depth)*-1)) rotateY(180deg);
 }
-.phone-bottom-right {
-  transform: 
-    translate3d(
-      calc((var(--phone-width) - var(--dislocation))/2*1),
-      calc(var(--phone-height)/2*1),
-      calc(var(--phone-depth)/2*1))
-    rotateZ(0deg) rotateY(90deg) rotateX(calc((90deg + var(--corner-degree))))
-  ;
-}
-
-  .phone-back {
-    background-image: url('new-covers/app-case/back.png');
-    width: var(--phone-width);
-    height: var(--phone-height);
-    -webkit-transform: translate3d(
-        calc(var(--phone-width)/2*-1),
-        calc(var(--phone-height)/2*-1),
-        calc(var(--phone-depth)/2)) 
-        translate3d(0,0, calc(var(--phone-depth)*-1)) rotateY(180deg);
-    transform: translate3d(
-        calc(var(--phone-width)/2*-1),
-        calc(var(--phone-height)/2*-1),
-        calc(var(--phone-depth)/2)) 
-        translate3d(0,0, calc(var(--phone-depth)*-1)) rotateY(180deg);
-  }
 
 #case-one-phone-front {
   background-image: url('new-covers/app-case/front-black.png');
