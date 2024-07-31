@@ -652,10 +652,11 @@ canvas {
 
     .footer {
 		flex-direction: column;
+		align-items: center;
 	}
 
 	#tech {
-		text-align: left;
+		text-align: center;
 	}
 
 	.stack-of-examples {
