@@ -149,12 +149,12 @@
         calc(var(--laptop-width)/2*-1),
         calc(var(--laptop-height)/2*-1),
         calc(var(--laptop-depth)/2)) 
-        translate3d(calc(var(--laptop-depth)/2*-1), 0, calc(var(--laptop-depth)/2*-1)) rotateY(-90deg);
+        translate3d(calc(var(--laptop-depth)/2*-1), 0, calc(var(--laptop-depth)/2*-1)) rotateY(-90.0001deg);
     transform: translate3d(
         calc(var(--laptop-width)/2*-1),
         calc(var(--laptop-height)/2*-1),
         calc(var(--laptop-depth)/2)) 
-        translate3d(calc(var(--laptop-depth)/2*-1), 0, calc(var(--laptop-depth)/2*-1)) rotateY(-90deg);
+        translate3d(calc(var(--laptop-depth)/2*-1), 0, calc(var(--laptop-depth)/2*-1)) rotateY(-90.0001deg);
   }
   .laptop-screen-side-right {
     background-image: url('new-covers/app-case/laptop/screen/right-side.png');
@@ -168,7 +168,7 @@
           calc(var(--laptop-width)), 
           0px,
           calc(var(--laptop-depth)/2*-1)) 
-        rotateY(90deg);
+        rotateY(90.0001deg);
     transform: translate3d(
         -464px,
         calc(var(--laptop-height)/2*-1),
@@ -177,7 +177,7 @@
           calc(var(--laptop-width)), 
           0px,
           calc(var(--laptop-depth)/2*-1)) 
-        rotateY(90deg);
+        rotateY(90.0001deg);
   }
   .laptop-screen-top {
     background-image: url('new-covers/app-case/laptop/screen/top.png');
@@ -188,7 +188,7 @@
         calc(var(--laptop-width)/2*-1), 
         calc(var(--laptop-height)/2*-1),
         calc(var(--laptop-depth)/2)) 
-        translate3d(0px, -29px, -29px) rotateX(90deg);
+        translate3d(0px, -29px, -29px) rotateX(90.0001deg);
     transform: 
         translate3d(
             calc(var(--laptop-width)/2*-1), 
@@ -198,7 +198,7 @@
             0,
             calc(var(--laptop-depth)/2*-1), 
             calc(var(--laptop-depth)/2*-1)) 
-        rotateX(90deg);
+        rotateX(90.0001deg);
   }
   .laptop-screen-bottom {
     background-image: url('new-covers/app-case/laptop/screen/bottom.png');
@@ -212,7 +212,7 @@
           0px, 
           calc(var(--laptop-height)), 
           calc(var(--laptop-depth)/2*-1)) 
-        rotateX(-90deg);
+        rotateX(-90.0001deg);
     transform: translate3d(
         calc(var(--laptop-width)/2*-1),
         -335px,
@@ -221,7 +221,7 @@
           0px, 
           calc(var(--laptop-height)), 
           calc((var(--laptop-depth)/2*-1))) 
-        rotateX(-90deg);
+        rotateX(-90.0001deg);
   }
   .laptop-screen-back {
     background-image: url('new-covers/app-case/laptop/screen/back.png');
@@ -282,12 +282,12 @@
         calc(var(--laptop-width)/2*-1),
         calc(var(--laptop-height)/2*-1),
         calc(var(--laptop-depth)/2)) 
-        translate3d(calc(var(--laptop-depth)/2*-1), 0, calc(var(--laptop-depth)/2*-1)) rotateY(-90deg);
+        translate3d(calc(var(--laptop-depth)/2*-1), 0, calc(var(--laptop-depth)/2*-1)) rotateY(-90.0001deg);
     transform: translate3d(
         calc(var(--laptop-width)/2*-1),
         calc(var(--laptop-height)/2*-1),
         calc(var(--laptop-depth)/2)) 
-        translate3d(calc(var(--laptop-depth)/2*-1), 0, calc(var(--laptop-depth)/2*-1)) rotateY(-90deg);
+        translate3d(calc(var(--laptop-depth)/2*-1), 0, calc(var(--laptop-depth)/2*-1)) rotateY(-90.0001deg);
   }
   .laptop-body-side-right {
     background-image: url('new-covers/app-case/laptop/body/right-side.png');
@@ -301,7 +301,7 @@
           calc(var(--laptop-width)), 
           0px,
           calc(var(--laptop-depth)/2*-1)) 
-        rotateY(90deg);
+        rotateY(90.0001deg);
     transform: translate3d(
         -464px,
         calc(var(--laptop-height)/2*-1),
@@ -310,7 +310,7 @@
           calc(var(--laptop-width)), 
           0px,
           calc(var(--laptop-depth)/2*-1)) 
-        rotateY(90deg);
+        rotateY(90.0001deg);
   }
   .laptop-body-top {
     background-image: url('new-covers/app-case/laptop/body/back.png');
@@ -321,7 +321,7 @@
         calc(var(--laptop-width)/2*-1), 
         calc(var(--laptop-height)/2*-1),
         calc(var(--laptop-depth)/2)) 
-        translate3d(0px, -29px, -29px) rotateX(90deg);
+        translate3d(0px, -29px, -29px) rotateX(90.0001deg);
     transform: 
         translate3d(
             calc(var(--laptop-width)/2*-1), 
@@ -331,7 +331,7 @@
             0,
             calc(var(--laptop-depth)/2*-1), 
             calc(var(--laptop-depth)/2*-1)) 
-        rotateX(90deg);
+        rotateX(90.0001deg);
   }
   .laptop-body-bottom {
     background-image: url('new-covers/app-case/laptop/body/front.png');
@@ -345,7 +345,7 @@
           0px, 
           calc(var(--laptop-height)), 
           calc(var(--laptop-depth)/2*-1)) 
-        rotateX(-90deg);
+        rotateX(-90.0001deg);
     transform: translate3d(
         calc(var(--laptop-width)/2*-1),
         -330px,
@@ -354,7 +354,7 @@
           0px, 
           calc(var(--laptop-height)), 
           calc((var(--laptop-depth)/2*-1))) 
-        rotateX(-90deg);
+        rotateX(-90.0001deg);
   }
   .laptop-body-back {
     background-image: url('new-covers/app-case/laptop/body/bottom.png');
