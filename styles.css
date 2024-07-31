@@ -27,10 +27,6 @@ a {
 	color: #000000;
 }
 
-a:visited {
-	color: #000000;
-}
-
 main {
 	display: flex;
 	flex-direction: column;
@@ -110,14 +106,17 @@ nav {
 }
 
 header p {
-	font-size: 48px; 
+	font-size: 42px; 
+	font-weight: 500;
 	max-width: 100%; 
 	color: #000000;
-	padding-top: 3rem; 
-	padding-bottom: 8rem; 
-	line-height: 1.2em; 
-	text-align: justify; 
-	text-indent: 16px;
+	line-height: 1.2em;
+	letter-spacing: -1px;
+	text-align: center; 
+	max-width: 60%;
+	
+	text-transform: lowercase;
+	text-indent: 0px;
 }
 
 nav a {
@@ -141,9 +140,10 @@ nav a:active {
 	color: #000000;
 }
 
-/* header {
-	background-color: #FB0000;
-} */
+header a {
+	text-decoration: underline;
+	color: #0027F5;
+}
 
 .toc-container {
 	display:flex;
@@ -151,6 +151,27 @@ nav a:active {
 	border-left: 3px solid black;
 	padding-left: 24px;
 	margin-top: 1rem;
+}
+
+.case-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.case-header a {
+	color: #000000;
+}
+
+.description-of-myself {
+	padding-top: 3rem;
+	padding-bottom: 4rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
 }
 
 .toc-container a {
@@ -210,17 +231,25 @@ h4 {
 	padding-bottom: 1px;
 }
 
-.description-of-me {
-	font-size: 36px;
+.case-description {
+	display: flex; 
+	flex-direction: column; 
+	align-items: center;
 }
 
-.description-of-me a {
-	text-decoration: underline;
-	color: #0027F5;
+.case-description p {
+	max-width: 60%;
+	text-align: center;
+	font-size: 28px;
+	font-weight: 500;
+	line-height: 1.2em;
 }
 
 .case-title {
-	margin-top: 1rem; margin-bottom: 0rem; text-decoration: underline; color: #0027F5;
+	margin-top: 1rem; 
+	margin-bottom: 0rem; 
+	text-decoration: underline; 
+	color: #0027F5;
 }
 
 .section h1,
@@ -323,8 +352,10 @@ h4 {
 #links {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	gap: 1rem;
-	font-size: 23px;
+	font-size: 28px;
+	padding-top: 0rem;
 }
 
 #links a {
@@ -569,6 +600,11 @@ hr {
 	text-align: right;
 }
 
+canvas {
+	display: block;
+}
+.three-container { width: 100%; height: 100%; position: relative; visibility: visible; }
+
 /* Phone */
 @media only screen and (max-width: 599px) {
     .main-margin {
@@ -610,8 +646,13 @@ hr {
     }
 
 
-	.description-of-me {
-		font-size: 28px;
+	header p {
+		font-size: 32px;
+		max-width: 100%;
+	}
+
+	.case-description p {
+		max-width: 100%;
 	}
 
     .main-cover-img img {

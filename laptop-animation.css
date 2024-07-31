@@ -242,7 +242,6 @@
 
   .laptop-body-up {
     -webkit-transform: rotateX(0deg) rotateY(deg) rotateZ(0deg);
-    /* transform: rotateX(66deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 230px, -150px) scale(0.5); */
     transform: rotateX(66deg) rotateY(0deg) rotateZ(0deg) translate3d(0, var(--laptop-body-Y), var(--laptop-body-Z)) scale(var(--laptop-scale));
     -webkit-transform-origin: center center;
     transform-origin: center center;
