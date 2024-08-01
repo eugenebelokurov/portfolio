@@ -328,10 +328,34 @@
     .phone-up {
         transform: scale(1);
     }
+
+    .static-image img {
+      width: calc(var(--phone-width)*1);
+      height: auto;
+    }
 }
 
 @media only screen and (min-width: 600px) {
     .phone-up {
         transform: scale(0.9);
     }
+
+    .static-image img {
+      width: calc(var(--phone-width)*0.9);
+      height: auto;
+    }
 }
+
+.animated-model {
+  display: none;
+}
+
+.static-image {
+  display: flex; /* Show static image by default */
+  background-color: #000000;
+  height: 80vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
