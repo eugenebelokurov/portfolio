@@ -75,56 +75,110 @@
 	</header>
 
 	<main>
-		<div class="main-cover-img">
+		<h1 class="case-title-v2">
+			How I designed mobile app from scratch
+		</h1>
+		<div class="main-cover-img" style="background-color: #000000;">
 			<img src="app-case/app-case-cover.png">
 		</div>
-		<div class="spacer"></div>
-		<div class="main-margin">
-				<h1 style="padding-top: 2rem;">How I designed mobile app from scratch</h1>
-				<div class="case-study-description-container">
-					<div class="case-study-description">
-						<p>
-							The app solves my problem of expanding my vocabulary. I consider it more of an exercise to familiarise myself with the design of mobile apps. But I have plans to code and launch the product.
-						</p>
-					</div>
-					<p>Time to read: 6 minutes</p>
-				</div>
-				<div>
-					<h3>Table of contents</h3>
-					<div class="toc-container">
-					    <ol>
-					      <li><a href="#problem-and-idea">Problem and idea</a></li>
-					      <li><a href="#metrics-I-would-track">Metrics I would track</a></li>
-					      <li><a href="#competitors">Competitors</a></li>
-					      <li><a href="#business-model">Business model</a></li>
-					      <li><a href="#design-process">Design process</a></li>
-					      <li><a href="#colour-palette">Colour palette</a></li>
-					      <li><a href="#typography">Typography</a></li>
-					      <li><a href="#result">Result: high fidelity wireframes</a></li>
-					      <li><a href="#key-takeaways">Key takeways</a></li>
-					    </ol>
-					</div>
-				</div>
-			<section>
-				<div>
-					<h2 id="problem-and-idea" class="h2-case-study">Problem and idea</h2>
-					<ol>
-						<li>I am advanced english speaker. BUT I want to achieve native’s level</li>
-						<li>Need to grow my vocabulary
-							<ul style="padding-left: 1.75rem;">
-								<li>english word <-> translation. WRONG WAY</li>
-								<li>english word <-> definition. RIGHT WAY</li>
-							</ul>
-						</li>
-						<li>Need a tool to effortlessly save and practice relevant to me words</li>
-					</ol>
+		
+		<div>
+			<div style="display: flex; justify-content: center;">
+				<p style="font-size: 32px; max-width: 50rem; padding-top: 4rem;">
+					The app solves my problem of expanding my vocabulary. I consider it more of an exercise to familiarise myself with the design of mobile apps. 
+					I am developing the app using React Native at the moment.
+				</p>
+			</div>
+			
+			<section style="margin-bottom: 0rem; margin-top: 4rem;">
+				<div style="display: flex; flex-direction: column; align-items: center;">
+					<h2 class="h2-case-study" style="font-size: 48px; max-width: 50rem; font-weight: 500; letter-spacing: -2px; line-height: 90%;">
+						Problem<br/> it is hard to expand vocabulary for advanced english-speakers
+					</h2>
+					<p style="font-size: 23px; max-width: 50rem; text-align: left; line-height: 150%;">
+						Imagine being new to the english-speaking environment. You would want to express your thoughts with ease 
+						hence you are in need of extensive vocabulary. To store and practice regularly you need a tool. My market research
+						showed that there is no one-stop solution.
+					</p>
 				</div>
 			</section>
-			<section>
-				<div>
-					<h2 id="metrics-I-would-track" class="h2-case-study">Metrics I would track</h3>
-					<p>Since the app isn't live yet I can only theorise here.</p>
-					<div class="group-of-callouts">
+
+			<section style="margin-bottom: 0rem; margin-top: 4rem;">
+				<div style="display: flex; flex-direction: column; align-items: center;">
+					<h2 class="h2-case-study" style="font-size: 48px; max-width: 50rem; font-weight: 500; letter-spacing: -2px; line-height: 90%;">
+						Solution<br/> mobile app to collect and practice your vocabulary
+					</h2>
+					<p style="font-size: 23px; max-width: 50rem; text-align: left; line-height: 150%;">
+						Imagine being new to the english-speaking environment. You would want to express your thoughts with ease 
+						hence you are in need of extensive vocabulary. To store and practice regularly you need a tool. My market research
+						showed that there is no one-stop solution.
+					</p>
+					<p style="font-size: 23px; max-width: 50rem; text-align: left; line-height: 150%; margin-top: 2rem; margin-bottom: 4rem;">
+						The apps revolves around three main Job Stories: [1] saving new words; [2] learning using spaced 
+						repetition methods and flash cards; [3] navigating your dictionary.
+					</p>
+					<div class="video-container" style="margin-bottom: 24px; background-color: #D4483A;">
+						<div>
+							<video loop autoplay muted playsinline preload="auto" class="rounded-video">
+								<source src="app-case/saving-new-words.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+						<p style="text-align: center; font-style: italic; background-color: #000000; color: #ffffff; font-weight: 550;">saving new words</p>
+					</div>
+					<div class="group-of-covers" style="justify-content: space-between; gap: 24px; width: 100%; margin-bottom: 24px;">
+						<div class="video-container" style="background-color: #65b152;">
+							<div class="video-wrapper">
+								<video loop autoplay muted playsinline preload="auto" class="rounded-video">
+									<source src="app-case/accessing-dictionary.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</div>
+							<p style="text-align: center; font-style: italic; background-color: #000000; color: #ffffff; font-weight: 550;">
+								working with dictionary
+							</p>
+						</div>	
+						<div class="video-container" style="background-color: #65b152;">
+							<div class="video-wrapper">
+								<video loop autoplay muted playsinline preload="auto" class="rounded-video">
+									<source src="app-case/searching-for-words.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</div>
+							<p style="text-align: center; font-style: italic; background-color: #000000; color: #ffffff; font-weight: 550;">
+								searching for saved words
+							</p>
+						</div>	
+					</div>
+					<div class="video-container" style="background-color: #467DF6;">
+						<div class="video-wrapper">
+							<video loop autoplay muted playsinline preload="auto" class="rounded-video">
+								<source src="app-case/practicing.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+						<p style="text-align: center; font-style: italic; background-color: #000000; color: #ffffff; font-weight: 550;">
+							memorizing saved words
+						</p>
+					</div>	
+				</div>
+			</section>
+
+			<section style="margin-bottom: 0rem;  margin-top: 4rem;">
+				<div style="display: flex; flex-direction: column; align-items: center;">
+					<div style="align-items: left;">
+						<h2 class="h2-case-study" style="font-size: 48px; max-width: 50rem; font-weight: 500; letter-spacing: -2px; line-height: 90%;">
+							Metrics I would track
+						</h2>
+						<p style="font-size: 23px; max-width: 50rem; text-align: left; line-height: 150%;">
+							Since the app isn't live yet I can only theorise here.
+						</p>
+						<p style="font-size: 23px; max-width: 50rem; text-align: left; line-height: 150%;">
+							In addition to the below, I would watch Hotjar sessions and track the total number 
+							of words saved and practised per user per day to understand if people actually use the product.
+						</p>
+					</div>
+					<div class="group-of-callouts" style="max-width: 90vw;">
 						<div class="callout">
 							<p class="callout-title">Daily Active Users (DAU) + WAU + MAU</p>
 							<hr>
@@ -144,316 +198,50 @@
 							<p><strong>Why:</strong> to identify areas for improvement</p>
 						</div>
 					</div>
-					<p>In addition to the above, I would watch Hotjar sessions and track the total number of words saved and practised per user per day to understand if people actually use the product.</p>
 				</div>
 			</section>
-			<section>
-				<div>
-					<h2 id="competitors" class="h2-case-study">Competitors</h2>
-					<p>
-						I don't want to solve the problem that is already solved. Are there any products fitting my criteria?
-					</p>
-					<div class="table-container">
-						<table>
-							<thead>
-								<tr>
-									<th>Logo</th>
-									<th>Name</th>
-									<th>Can add your of words</th>
-									<th>Source of definition</th>
-									<th>Can practice</th>
-									<th>Revenue model</th>
-									<th># of users</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><div class="logo"><img src="app-case/logos/atlas.png"></div></td>
-									<td>Atlas</td>
-									<td>Yes</td>
-									<td>Oxford dictionary</td>
-									<td>Yes</td>
-									<td>Subscription</td>
-									<td>TBD</td>
-								</tr>
-								<tr>
-									<td><div class="logo"><img src="app-case/logos/oxford-dictionary.png"></div></td>
-									<td>Oxford dictionary</td>
-									<td>Yes</td>
-									<td>Oxford dictionary</td>
-									<td>No</td>
-									<td>Subscription + Ads</td>
-									<td>TBD</td>
-								</tr>
-								<tr>
-									<td><div class="logo"><img src="app-case/logos/cambridge-dictionary-plus.png"></div></td>
-									<td>Cambridge Dictionary +Plus</td>
-									<td>Yes</td>
-									<td>Cambridge dictionary</td>
-									<td>No</td>
-									<td>Subscription + Ads</td>
-									<td>TBD</td>
-								</tr>
-								<tr>
-									<td><div class="logo"><img src="app-case/logos/fluent-forever.png"></div></td>
-									<td>Fluent Forever</td>
-									<td>Yes</td>
-									<td>User input</td>
-									<td>Yes</td>
-									<td>Subscription</td>
-									<td>TBD</td>
-								</tr>
-								<tr>
-									<td><div class="logo"><img src="app-case/logos/word-up.png"></div></td>
-									<td>Word Up</td>
-									<td>No</td>
-									<td>Some(?) dictionary</td>
-									<td>Yes</td>
-									<td>Subscription</td>
-									<td>TBD</td>
-								</tr>
-								<tr>
-									<td><div class="logo"><img src="app-case/logos/word-of-the-day.png"></div></td>
-									<td>Word of the Day</td>
-									<td>No</td>
-									<td>Oxford dictionary</td>
-									<td>No</td>
-									<td>Subscription</td>
-									<td>TBD</td>
-								</tr>
-								<tr>
-									<td><div class="logo"><img src="app-case/logos/linq.png"></div></td>
-									<td>LinQ</td>
-									<td>No</td>
-									<td>Some(?) dictionary</td>
-									<td>Yes</td>
-									<td>Subscription</td>
-									<td>TBD</td>
-								</tr>
-								<tr>
-									<td><div class="logo"><img src="app-case/logos/magoosh-gre.png"></div></td>
-									<td>GRE Vocabulary Flashcards</td>
-									<td>No</td>
-									<td>Some(?) dictionary</td>
-									<td>Yes</td>
-									<td>Free</td>
-									<td>TBD</td>
-								</tr>
-								<tr>
-									<td><div class="logo"><img src="app-case/logos/lockcard.png"></div></td>
-									<td>Lockcard</td>
-									<td>Yes</td>
-									<td>Some(?) dictionary</td>
-									<td>No</td>
-									<td>Subscription</td>
-									<td>TBD</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="callout callout-conclusion">
-						<p class="callout-title">Conclusion</p>
-						<div class="vertical-line"></div>
-						<p>"Atlas" app solves fits my criteria. But it focuses on B2C segment.</p>
-					</div>
-				</div>
-			</section>
-			<section>
-				<div>
-					<h2 id="business-model" class="h2-case-study">Business model</h2>
-					<p>Solution and user segments are only a few parameters defining the product. How can I distinguish myself from competitors and make a 10x better product?</p>
-					<p>I use "Lean Canvas" when business modeling. I find it more intuitive and comprehensive rather than Business Model Canvas, Value Propositions Canvas and other models.</p>
-					<div class="cover-secondary">
-						<div class="centered-img">
-							<img src="app-case/lean-canvas.png" alt="lean canvas" loading="lazy">
-						</div>
-					</div>
-				</div>
-			</section>
-			<section>
-				<div>
-					<h2 id="design-process" class="h2-case-study">Design process</h2>
-						<h3>Jobs To Be Done</h3>
-						<p>I found the Job Stories framework the most exhaustive way to frame my ideation process. It allows me to start with a problem rather than solution.</p>
-							<h4>Saving new word</h4>
-							<div class="cover-secondary">
-								<div class="centered-img">
-									<img src="app-case/jtbd-saving-new-word.png" alt="jtbd saving new words">
-								</div>
-							</div>
-							<h4>Accessing saved words</h4>
-							<div class="cover-secondary">
-								<div class="centered-img">
-									<img src="app-case/jtbd-saving-new-word.png" alt="jtbd saving new words">
-								</div>
-							</div>
-							<h4>Practicing your words</h4>
-							<div class="cover-secondary">
-								<div class="centered-img">
-									<img src="app-case/jtbd-practicing.png" alt="jtbd saving new words">
-								</div>
-							</div>
-							
-							
-						<h3>Sketches and low fidelity wireframes</h3>
-						<p>I started with exploring the structure of modern printed dictionaries. Advanced learners already use dictionaries. I don't want to disrupt familiar workflows.</p>
-						<div class="inspiration">
-							<img src="app-case/explore-structure.png" loading="lazy">
-							<img src="app-case/explore-old-dict.png" loading="lazy">
-							<img src="app-case/explore-book.png" loading="lazy">
-							<img src="app-case/explore-structure-full.png" loading="lazy">
-						</div>
 
-						<p>Researching apps of competitors helped to [1] identify established workflows and [2] get inspired by some of thier solutions. E.g. flashcards are used among almost all apps. But learning algorithms are different.</p>
-						<div class="inspiration">
-							<img src="app-case/examples-quizlet.png" loading="lazy">
-							<img src="app-case/examples-atlas.png" loading="lazy">
-							<img src="app-case/examples-anki.png" loading="lazy">
-							<img src="app-case/examples-anki-2.png" loading="lazy">
-						</div>
-
-						<p>Drawing sketches using pen and paper helps to activate my brain and gives more freedom.</p>
-						<div class="inspiration">
-							<img src="app-case/explore-sketch-one.png" loading="lazy">
-							<img src="app-case/explore-sketch-two.png" loading="lazy">
-						</div>
-						<p>Did low-fidelity mockups to test if main workflows make sence and solve initial problems.</p>
-						<div class="cover-secondary">
-							<div class="centered-img">
-								<img src="app-case/examples-low-fidelity.png" loading="lazy">
-							</div>
-						</div>
-						<p>And experimented with forms to add a pinch of me into design.</p>
-						<div class="cover-secondary">
-							<div class="centered-img">
-								<img src="app-case/examples-experiments.png">
-							</div>
-						</div>
-				</div>
-			</section>
-			<section>
-				<div>
-					<h2 id="colour-palette" class="h2-case-study">Colour palette</h2>
-					<p>WORK IN PROGRESS</p>
-					<p>Primary. The core of each dictionary are words and their background. Black and white. I wanted to stick with classics.</p>
-					<p>Secondary. Red often used to for accents e.g. in old books. Green is a complementary colour.</p>
-					<p>Tertiary. I needed a bunch of different colours to distinguish 8 parts of speech.</p>
-					<div class="cover-secondary">
-						<div class="centered-img">
-							<img src="app-case/colour-palette.png">
-						</div>
-					</div>
-					<p>I combined colours to make sure they work on each other</p>
-					<div class="cover-secondary">
-						<div class="centered-img">
-							<img src="app-case/combined-colours.png">
-						</div>
-					</div>
-			</div>
-			</section>
-			<section>
-				<div>
-					<h2 id="typography" class="h2-case-study">Typography</h2>
-					<p>WORK IN PROGRESS</p>
-				</div>
-			</section>
-			<section>
-				<div>
-					<div class="section">
-						<h2 id="result" class="h2-case-study">Result: high fidelity wireframes</h2>
-					</div>
-					<h3>Saving new words</h3>
-					<div class="video-container">
-						<div class="video-wrapper">
-							<video loop autoplay muted playsinline preload="auto">
-								<source src="app-case/saving-new-words.mp4" type="video/mp4">
-								Your browser does not support the video tag.
-							</video>
-						</div>
-					</div>		
-
-					<h3>Accessing saved words</h3>
-					<div class="stack-of-examples">
-						<div class="cover-video">
-							<h4>Working with saved words</h4>
-							<div class="video-container">
-								<div class="video-wrapper">
-									<video loop autoplay muted playsinline preload="auto">
-										<source src="app-case/accessing-dictionary.mp4" type="video/mp4">
-										Your browser does not support the video tag.
-									</video>
-								</div>
-							</div>
-						</div>
-						<div class="cover-video">
-							<h4>Searching for saved words</h4>
-							<div class="video-container">
-								<div class="video-wrapper">
-									<video loop autoplay muted playsinline preload="auto">
-										<source src="app-case/searching-for-words.mp4" type="video/mp4">
-										Your browser does not support the video tag.
-									</video>
-								</div>
-							</div>
-						</div>
-					</div>
-					<h3>Practicing your words</h3>
-					<div class="cover-video">
-						<div class="video-layout">
-							<div class="video-container">
-								<div class="video-wrapper">
-									<video loop autoplay muted playsinline preload="auto">
-										<source src="app-case/practicing.mp4" type="video/mp4">
-										Your browser does not support the video tag.
-									</video>
-								</div>
-							</div>
-						</div>
+			<section style="margin-bottom: 0rem; margin-top: 4rem;">
+				<div style="display: flex; flex-direction: column; align-items: center;">
+					<div style="align-items: center;">
+						<h2 class="h2-case-study" style="font-size: 48px; max-width: 50rem; font-weight: 500; letter-spacing: -2px; line-height: 90%;">
+							Lessons learned
+						</h2>
+						<ul style="font-size: 23px; max-width: 50rem; text-align: left; line-height: 150%;">
+							<li><b>Interactive prototypes are hard.</b> Gained a deep dive into prototyping entire workflows and utilising interactive components in Figma. Also got a chance to learn other tools e.g. Protopie.</li>
+							<li><b>MD and HIG are a good starting point.</b> I relied on both Material Design by Google and Human Interface Guidelines by Apple in choosing the layout grid, margins, paddings, touch areas etc. By doing so, I was able to ensure that my designs were in line with industry standards.</li>
+							<li><b>Design systems speed up development.</b> I studied design systems made by Uber, Atlassian and OpenAI. They guided me in creating individual elements and components for my app.</li>
+							<li><b>Colour palette, typography, grid systems.</b> I relied on "Grid Systems in Graphic Design" by Josef Müller-Brockmann, "The New Typography" by Ian Tschichold and YouTube videos by some brilliant people. These topics are of an infinite depth. But at least I started.</li>
+						</ul>
 					</div>
 				</div>
 			</section>
 
+			<a href="app-case-full.html">
+				<div style="width: 100%; margin-top: 8rem; margin-bottom: 4rem;">
+					<div class="rotating-circle" style=" width: 300px; height:300px; border-radius: 50%; background-color: #000000; 
+					display: flex; align-items: center; justify-content: center; margin: auto;">
+						<p style="color: #ffffff; text-transform: uppercase; font-weight: 700;">Read full case</p>
+					</div>
+				</div>
+			</a>
 			<section>
-				<div>
-					<h2 id="key-takeaways" class="h2-case-study">Key takeways</h2>
-					<h3>Results</h3>
-					<ul>
-						<li>The whole mobile app I designed myself and quite happy with :)</li>
-					</ul>
-					<h3>Lessons learned</h3>
-					<ul>
-						<li><b>Interactive prototypes.</b> Gained a deep dive into prototyping entire workflows and utilising interactive components in Figma. Also got a chance to learn other tools e.g. Protopie.</li>
-						<li><b>Familiarity with guidelines.</b> I relied on both Material Design by Google and Human Interface Guidelines by Apple while choosing the layout grid, margins, paddings, touch areas etc. By doing so, I was able to ensure that my designs were in line with industry standards.</li>
-						<li><b>Design system and interactive components.</b> I studied design systems made by Uber, Atlassian and OpenAI. They guided me in creating individual elements and components for my app.</li>
-						<li><b>Colour palette, typography, grid systems.</b> I relied on "Grid Systems in Graphic Design" by Josef Müller-Brockmann, "The New Typography" by Ian Tschichold and YouTube videos by some brilliant people. These topics are of an infinite depth. But at least I started.</li>
-					</ul>
-					<h3>Next steps</h3>
-					<ul>
-						<li>onboarding</li>
-						<li>profile</li>
-						<li>subscription page</li>
-						<li>teacher’s side of interface</li>
-						<li>web version</li>
-						<li>more user interviews</li>
-						<li>find engineering buddy or learn React Native myself</li>
-					</ul>
+				<div class="other-cases" style="width: 50rem; margin: auto;">
+					<h2 style="font-size: 48px; max-width: 50rem; font-weight: 500; letter-spacing: -2px; line-height: 90%;">Other case studies</h2>
+					<button onclick="location.href='research-case.html'">
+						<div class="label">RESEARCH CASE</div>
+						<div class="arrow">></div>
+					</button>
+					<button onclick="location.href='ui-case.html'">
+						<div class="label">UI CASE</div>
+						<div class="arrow">></div>
+					</button>
+					<button onclick="location.href='sort-case.html'">
+						<div class="label">SORT BUTTON CASE</div>
+						<div class="arrow">></div>
+					</button>
 				</div>
 			</section>
-			<div class="other-cases">
-				<h2>Other case studies</h2>
-				<button onclick="location.href='research-case.html'">
-					<div class="label">RESEARCH CASE</div>
-					<div class="arrow">-></div>
-				</button>
-				<button onclick="location.href='ui-case.html'">
-					<div class="label">UI CASE</div>
-					<div class="arrow">-></div>
-				</button>
-				<button onclick="location.href='sort-case.html'">
-					<div class="label">SORT BUTTON CASE</div>
-					<div class="arrow">-></div>
-				</button>
-			</div>
 		</div>
 	</main>
 </body>

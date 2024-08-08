@@ -37,7 +37,7 @@ section {
 	margin-bottom: 8rem;
 	display: flex;
 	flex-direction: column;
-	gap: 8rem;
+	gap: 4rem;
 }
 
 img {
@@ -77,8 +77,8 @@ h1, h2, h3, h4, p, ol, ul {
 }
 
 ul {
-	list-style-type: "↳ ";
-	padding-left: 1.6rem;
+	list-style-type: "● ";
+	padding-left: 1.4rem;
 }
 
 li+li {
@@ -252,6 +252,15 @@ h4 {
 	color: #0027F5;
 }
 
+.case-title-v2 {
+	font-weight: 500;
+	padding-top: 30vh;
+	padding-bottom: 4rem;
+	font-size: 80px;
+	max-width: 80%;
+	text-transform: lowercase;
+}
+
 .section h1,
 .section h2 {
 	font-weight: 700;
@@ -284,7 +293,9 @@ h4 {
 	display: flex;
 	align-content: center; 
 	justify-content: center;
-	padding: 16px;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+	max-height: 80vh;
 }
 
 .main-cover-img img {
@@ -373,6 +384,20 @@ h4 {
 	}
 }
 
+@keyframes rotateAntiClockwise {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+.rotating-circle {
+	animation: rotateAntiClockwise 10s linear infinite;
+}
+
+
 .callout {
 	display: flex;
 	flex-direction: column;
@@ -382,7 +407,7 @@ h4 {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 
-	background-color: #0163E1;
+	background-color: #000000;
 }
 
 .callout p {
@@ -420,28 +445,40 @@ h4 {
 }
 
 .video-container {
-background-color: #F7F7F7;
-width: 100%;
-height: 80vh;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 36px;
-box-sizing: border-box;
+	background-color: #ff1b1b;
+	width: 100%;
+	min-height: 60vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	gap: 2rem;
 }
 
 .video-wrapper {
-width: 100%;
-height: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
+	max-height: 100%;
+	box-sizing: border-box;
+	/* margin-left: auto;
+	margin-right: auto; */
+	margin-left: 48px;
+	margin-right: 48px;
+}
+
+.rounded-video {
+	border-radius: 40px;
+    overflow: hidden;
 }
 
 video {
-max-width: 100%;
-max-height: 100%;
-object-fit: contain;
+	object-fit: contain;
+	max-height: 80vh;
+	width: 100%;
+}
+
+.group-of-covers {
+	display: flex;
+	flex-direction: row;
 }
 
 /*ui-case styles start*/
@@ -700,6 +737,16 @@ canvas {
 	li+li {
 	    margin-top: 0.2em;
 	}
+
+	.group-of-covers {
+		flex-direction: column;
+	}
+
+	.case-title-v2 {
+		padding-top: 20vh;
+		font-size: 72px;
+		max-width: 100%;
+	}
 }
 
 /* Small tablet */
@@ -736,6 +783,14 @@ canvas {
 
     .stack-of-examples {
     	flex-direction: row;
+    }
+
+	.group-of-covers {
+		flex-direction: column;
+	}
+
+	.group-of-callouts {
+    	flex-direction: column;
     }
 }
 
