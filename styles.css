@@ -293,8 +293,9 @@ h4 {
 	display: flex;
 	align-content: center; 
 	justify-content: center;
-	padding-top: 4rem;
-	padding-bottom: 4rem;
+	/* padding-top: 4rem;
+	padding-bottom: 4rem; */
+	padding: 4rem;
 	max-height: 80vh;
 }
 
@@ -445,7 +446,7 @@ h4 {
 }
 
 .video-container {
-	background-color: #ff1b1b;
+	/* background-color: #ff1b1b; */
 	width: 100%;
 	min-height: 60vh;
 	display: flex;
@@ -454,6 +455,26 @@ h4 {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 	gap: 2rem;
+}
+
+.container-video {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 80vh;
+	/* justify-content: center; */
+	align-items: center;
+	background-color: #b33ad4;
+	padding-top: 32px;
+}
+
+.container-video p {
+	text-align: center;
+	font-style: italic;
+	background-color: #000000;
+	color: #ffffff;
+	font-weight: 550;
+	margin-top: 3rem;
 }
 
 .video-wrapper {
@@ -466,13 +487,28 @@ h4 {
 }
 
 .rounded-video {
-	border-radius: 40px;
+	/* border-radius: 24px; */
+	max-width: 80%;
+	max-height: 80vh;
     overflow: hidden;
+}
+
+.iphone-bezel {
+	background-image: url("app-case/iphone-15-bezel.png");
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	transform-origin: center center;
+	top: 0;
+	left: 21px;
+	scale: 1.03;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 video {
 	object-fit: contain;
-	max-height: 80vh;
+	max-height: 100%;
 	width: 100%;
 }
 
