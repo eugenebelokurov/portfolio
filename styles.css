@@ -468,6 +468,7 @@ h4 {
 	align-items: center;
 	background-color: #b33ad4;
 	padding-top: 32px;
+	padding-bottom: 32px;
 }
 
 .container-video p {
@@ -489,7 +490,6 @@ h4 {
 }
 
 .rounded-video {
-	/* border-radius: 24px; */
 	max-width: 80%;
 	max-height: 80vh;
     overflow: hidden;

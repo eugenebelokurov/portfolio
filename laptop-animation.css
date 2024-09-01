@@ -105,7 +105,8 @@
   }
   .laptop-up {
     -webkit-animation: 7s rotatingAnimationY linear infinite;
-    animation: 7s rotatingAnimationY linear infinite;
+    /* animation: 7s rotatingAnimationY linear infinite; */
+    animation: 4s rotatingAnimationY cubic-bezier(0.66, 0.03, 0.32, 0.96) infinite;
   }
   .laptop-screen-up {
     -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
@@ -374,7 +375,8 @@
 
   #sort-case-laptop-up {
     -webkit-animation: 7s rotatingAnimationX linear infinite;
-    animation: 7s rotatingAnimationX linear infinite;
+    /* animation: 7s rotatingAnimationX linear infinite; */
+    animation: 4s rotatingAnimationX cubic-bezier(0.66, 0.03, 0.32, 0.96) infinite;
   }
 
   #ui-case-laptop-up {

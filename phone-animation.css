@@ -98,7 +98,8 @@
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-animation: 7s rotatingAnimationY linear infinite;
-  animation: 7s rotatingAnimationY linear infinite;
+  /* animation: 7s rotatingAnimationY linear infinite; */
+  animation: 4s rotatingAnimationY cubic-bezier(0.66, 0.03, 0.32, 0.96) infinite;
 }
 .phone-container > div {
   position: absolute;
