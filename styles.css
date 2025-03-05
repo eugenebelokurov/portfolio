@@ -471,7 +471,7 @@ h4 {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	min-height: 80vh;
+	/* min-height: 80vh; */
 	/* justify-content: center; */
 	align-items: center;
 	background-color: #b33ad4;
@@ -486,6 +486,7 @@ h4 {
 	color: #ffffff;
 	font-weight: 550;
 	margin-top: 3rem;
+	max-width: 80%;
 }
 
 .video-wrapper {
@@ -734,6 +735,13 @@ canvas {
 		max-width: 100%;
 	}
 
+	.cover-img {
+		padding: 2rem;
+	}
+	.cover-img img {
+		max-width: 100%;
+	}
+
     .footer {
 		flex-direction: column;
 		align-items: center;
@@ -791,7 +799,7 @@ canvas {
 
 	.case-title-v2 {
 		padding-top: 20vh;
-		font-size: 72px;
+		font-size: 3rem;
 		max-width: 100%;
 	}
 }
